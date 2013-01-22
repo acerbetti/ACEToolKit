@@ -1,4 +1,4 @@
-// AceToolKit.h
+// ACEToolKit.h
 //
 // Copyright (c) 2013 Stefano Acerbetti
 //
@@ -36,8 +36,8 @@
 
 
 // blocks
-typedef void (^SelectBlock)(NSInteger index, NSString *title);
-typedef void (^CancelBlock)(void);
+typedef BOOL (^SelectBlock)(NSInteger index, NSString *title);
+typedef BOOL (^DismissBlock)(void);
 
 
 // import all the headers
