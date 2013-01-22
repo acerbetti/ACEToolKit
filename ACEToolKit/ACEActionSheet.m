@@ -76,10 +76,6 @@
 }
 
 
-#pragma mark - Show
-
-
-
 #pragma mark - UIActionSheetDelegate
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex

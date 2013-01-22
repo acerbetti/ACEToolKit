@@ -22,6 +22,7 @@
 		7B03602E16AF0132002140DF /* ACEAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03602B16AF0132002140DF /* ACEAlertView.m */; };
 		7B03603716AF1C1F002140DF /* UIView+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03603616AF1C1F002140DF /* UIView+ACEToolKit.m */; };
 		7B03603B16AF2014002140DF /* UIColor+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03603A16AF2014002140DF /* UIColor+ACEToolKit.m */; };
+		7B27004316AF4A9400B1531C /* UILabel+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B27004216AF4A9400B1531C /* UILabel+ACEToolKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		7B03603616AF1C1F002140DF /* UIView+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ACEToolKit.m"; sourceTree = "<group>"; };
 		7B03603916AF2014002140DF /* UIColor+ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ACEToolKit.h"; sourceTree = "<group>"; };
 		7B03603A16AF2014002140DF /* UIColor+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ACEToolKit.m"; sourceTree = "<group>"; };
+		7B27004116AF4A9400B1531C /* UILabel+ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ACEToolKit.h"; sourceTree = "<group>"; };
+		7B27004216AF4A9400B1531C /* UILabel+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ACEToolKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,8 @@
 			children = (
 				7B03603916AF2014002140DF /* UIColor+ACEToolKit.h */,
 				7B03603A16AF2014002140DF /* UIColor+ACEToolKit.m */,
+				7B27004116AF4A9400B1531C /* UILabel+ACEToolKit.h */,
+				7B27004216AF4A9400B1531C /* UILabel+ACEToolKit.m */,
 				7B03603516AF1C1F002140DF /* UIView+ACEToolKit.h */,
 				7B03603616AF1C1F002140DF /* UIView+ACEToolKit.m */,
 			);
@@ -227,6 +232,7 @@
 				7B03602E16AF0132002140DF /* ACEAlertView.m in Sources */,
 				7B03603716AF1C1F002140DF /* UIView+ACEToolKit.m in Sources */,
 				7B03603B16AF2014002140DF /* UIColor+ACEToolKit.m in Sources */,
+				7B27004316AF4A9400B1531C /* UILabel+ACEToolKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
