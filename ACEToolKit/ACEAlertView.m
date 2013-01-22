@@ -144,4 +144,16 @@
     }
 }
 
+#if !ACE_HAS_ARC
+
+- (void)dealloc
+{
+    self.alertDelegate = nil;
+    self.selectBlock = nil;
+    self.cancelBlock = nil;
+    [super dealloc];
+}
+
+#endif
+
 @end

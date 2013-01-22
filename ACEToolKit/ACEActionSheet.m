@@ -147,4 +147,17 @@
     self.actionSheetDelegate = nil;
 }
 
+#if !ACE_HAS_ARC
+
+- (void)dealloc
+{
+    self.actionSheetDelegate = nil;
+    self.selectBlock = nil;
+    self.destructiveBlock = nil;
+    self.cancelBlock = nil;
+    [super dealloc];
+}
+
+#endif
+
 @end
