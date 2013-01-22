@@ -77,7 +77,7 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    BOOL notifyDelegate;
+    BOOL notifyDelegate = YES;
     
     if (alertView.cancelButtonIndex != buttonIndex) {
         if (self.selectBlock != nil) {

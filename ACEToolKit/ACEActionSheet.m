@@ -84,7 +84,7 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    BOOL notifyDelegate;
+    BOOL notifyDelegate = YES;
     
     if (actionSheet.destructiveButtonIndex == buttonIndex) {
         if (self.destructiveBlock != nil) {
