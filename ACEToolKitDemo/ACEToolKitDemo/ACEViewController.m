@@ -7,6 +7,7 @@
 //
 
 #import "ACEViewController.h"
+#import "AceToolKit.h"
 
 @interface ACEViewController ()
 
@@ -14,16 +15,20 @@
 
 @implementation ACEViewController
 
-- (void)viewDidLoad
+- (IBAction)demoAlertView:(id)sender
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ACEAlertView"
+                                                        message:@"Test with blocks"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"Option 1", @"Option 2", nil];
+    
+    [alertView showWithSelectBlock:^(NSInteger index, NSString *title) {
+        self.messageLabel.text = [NSString stringWithFormat:@"Selected option '%@'", title];
+        
+    } cancel:^{
+        self.messageLabel.text = @"No selection";
+    }];
 }
 
 @end

@@ -10,4 +10,8 @@
 
 @interface ACEViewController : UIViewController
 
+@property (nonatomic, unsafe_unretained) IBOutlet UILabel *messageLabel;
+
+- (IBAction)demoAlertView:(id)sender;
+
 @end
