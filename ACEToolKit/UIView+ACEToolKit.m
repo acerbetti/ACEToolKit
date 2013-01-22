@@ -1,4 +1,4 @@
-//  UIView+ACEToolKit.m
+// UIView+ACEToolKit.m
 //
 // Copyright (c) 2013 Stefano Acerbetti
 //
@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "UIView+ACEToolKit.h"
+#import "ACEToolKit.h"
 
 @implementation UIView (ACEToolKit)
 

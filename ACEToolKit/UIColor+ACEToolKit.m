@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "ACEToolKit.h"
 
 NSString * const AliceBlue = @"0xFFF0F8FF";
 NSString * const AntiqueWhite = @"0xFFFAEBD7";
@@ -163,7 +164,6 @@ NSString * const WhiteSmoke = @"0xFFF5F5F5";
 NSString * const Yellow = @"0xFFFFFF00";
 NSString * const YellowGreen = @"0xFF9ACD32";
 
-#import "UIColor+ACEToolKit.h"
 
 CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length)
 {

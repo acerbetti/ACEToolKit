@@ -45,6 +45,7 @@ typedef BOOL (^DismissBlock)(void);
 #import "ACEAlertView.h"
 
 // additions
+#import "NSData+Base64.h"
 #import "UIColor+ACEToolKit.h"
 #import "UIView+ACEToolKit.h"
 
