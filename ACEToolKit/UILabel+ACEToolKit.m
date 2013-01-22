@@ -37,7 +37,7 @@
 
 - (void)topAlignment
 {
-    [self topAlignmentWithPredefiniteHeight:self.frame.size.height];
+    [self topAlignmentWithPredefiniteHeight:self.height];
 }
 
 @end
