@@ -43,7 +43,7 @@
 		7B03602916AF0132002140DF /* ACEActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEActionSheet.m; sourceTree = "<group>"; };
 		7B03602A16AF0132002140DF /* ACEAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEAlertView.h; sourceTree = "<group>"; };
 		7B03602B16AF0132002140DF /* ACEAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEAlertView.m; sourceTree = "<group>"; };
-		7B03602C16AF0132002140DF /* ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEToolKit.h; sourceTree = "<group>"; };
+		7B03602C16AF0132002140DF /* ACE2ToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACE2ToolKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +122,7 @@
 				7B03602916AF0132002140DF /* ACEActionSheet.m */,
 				7B03602A16AF0132002140DF /* ACEAlertView.h */,
 				7B03602B16AF0132002140DF /* ACEAlertView.m */,
-				7B03602C16AF0132002140DF /* ACEToolKit.h */,
+				7B03602C16AF0132002140DF /* ACE2ToolKit.h */,
 			);
 			path = ACEToolKit;
 			sourceTree = SOURCE_ROOT;
