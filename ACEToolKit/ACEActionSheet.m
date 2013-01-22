@@ -20,8 +20,131 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AceToolKit.h"
+#import "ACEToolKit.h"
+
+@interface ACEActionSheet ()<UIActionSheetDelegate>
+@property (nonatomic, assign) id<UIActionSheetDelegate> actionSheetDelegate;
+@end
+
+#pragma mark -
 
 @implementation ACEActionSheet
+
+- (id)initWithTitle:(NSString *)title delegate:(id<UIActionSheetDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle destructiveButtonTitle:(NSString *)destructiveButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...
+{
+    self = [super initWithTitle:title delegate:delegate cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
+    if (self != nil) {
+        
+        // add the other buttons from the list
+        va_list args;
+        va_start(args, otherButtonTitles);
+        
+        // start with the destructive button
+        if (destructiveButtonTitle.length > 0) {
+            self.destructiveButtonIndex = [self addButtonWithTitle:destructiveButtonTitle];
+        }
+        
+        // adding the rest of the buttons
+        if (otherButtonTitles.length > 0) {
+            [self addButtonWithTitle:otherButtonTitles];
+        }
+        
+        NSString* buttonTitle;
+        while ((buttonTitle = va_arg(args, NSString *))) {
+            [self addButtonWithTitle:buttonTitle];
+        }
+        
+        // end with the cancel button
+        if (cancelButtonTitle.length > 0) {
+            self.cancelButtonIndex = [self addButtonWithTitle:cancelButtonTitle];
+        }
+        
+        self.delegate = delegate;
+    }
+    return self;
+}
+
+- (id)delegate
+{
+    return self.actionSheetDelegate;
+}
+
+- (void)setDelegate:(id)delegate
+{
+    [super setDelegate:self];
+    self.actionSheetDelegate = delegate;
+}
+
+
+#pragma mark - Show
+
+
+
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    BOOL notifyDelegate;
+    
+    if (actionSheet.destructiveButtonIndex == buttonIndex) {
+        if (self.destructiveBlock != nil) {
+            notifyDelegate = self.destructiveBlock();
+        }
+        
+    } else if (actionSheet.cancelButtonIndex == buttonIndex) {
+        if (self.cancelBlock != nil) {
+            notifyDelegate = self.cancelBlock();
+        }
+        
+    } else {
+        if (self.selectBlock != nil) {
+            notifyDelegate = self.selectBlock(buttonIndex, [actionSheet buttonTitleAtIndex:buttonIndex]);
+        }
+    }
+    
+    if (notifyDelegate && [self.actionSheetDelegate respondsToSelector:_cmd]) {
+        [self.actionSheetDelegate actionSheet:actionSheet clickedButtonAtIndex:buttonIndex];
+    }
+    
+}
+
+- (void)actionSheetCancel:(UIActionSheet *)actionSheet
+{
+    if ([self.actionSheetDelegate respondsToSelector:_cmd]) {
+        [self.actionSheetDelegate actionSheetCancel:actionSheet];
+    }
+}
+
+- (void)willPresentActionSheet:(UIActionSheet *)actionSheet
+{
+    if ([self.actionSheetDelegate respondsToSelector:_cmd]) {
+        [self.actionSheetDelegate willPresentActionSheet:actionSheet];
+    }
+}
+
+- (void)didPresentActionSheet:(UIActionSheet *)actionSheet
+{
+    if ([self.actionSheetDelegate respondsToSelector:_cmd]) {
+        [self.actionSheetDelegate didPresentActionSheet:actionSheet];
+    }
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if ([self.actionSheetDelegate respondsToSelector:_cmd]) {
+        [self.actionSheetDelegate actionSheet:actionSheet willDismissWithButtonIndex:buttonIndex];
+    }
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if ([self.actionSheetDelegate respondsToSelector:_cmd]) {
+        [self.actionSheetDelegate actionSheet:actionSheet didDismissWithButtonIndex:buttonIndex];
+    }
+    
+    // clean the delegate
+    self.delegate = nil;
+    self.actionSheetDelegate = nil;
+}
 
 @end

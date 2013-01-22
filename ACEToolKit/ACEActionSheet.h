@@ -24,4 +24,8 @@
 
 @interface ACEActionSheet : UIActionSheet
 
+@property (nonatomic, copy) SelectBlock selectBlock;
+@property (nonatomic, copy) DismissBlock destructiveBlock;
+@property (nonatomic, copy) DismissBlock cancelBlock;
+
 @end

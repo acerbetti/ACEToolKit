@@ -20,12 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AceToolKit.h"
+#import "ACEToolKit.h"
 
 @interface ACEAlertView ()<UIAlertViewDelegate>
 @property (nonatomic, assign) id<UIAlertViewDelegate> alertDelegate;
-@property (nonatomic, copy) SelectBlock selectBlock;
-@property (nonatomic, copy) CancelBlock cancelBlock;
 @end
 
 #pragma mark -
@@ -43,7 +41,7 @@
         
         NSString* buttonTitle;
         while ((buttonTitle = va_arg(args, NSString *))) {
-            [super addButtonWithTitle:buttonTitle];
+            [self addButtonWithTitle:buttonTitle];
         }
         
         // reset the cancel button and store the delegate
@@ -64,7 +62,10 @@
     self.alertDelegate = delegate;
 }
 
-- (void)showWithSelectBlock:(SelectBlock)select cancel:(CancelBlock)cancel
+
+#pragma mark - Show
+
+- (void)showWithSelectBlock:(SelectBlock)select cancel:(DismissBlock)cancel
 {
     self.selectBlock = select;
     self.cancelBlock = cancel;
@@ -76,18 +77,26 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
+    BOOL notifyDelegate;
+    
     if (alertView.cancelButtonIndex != buttonIndex) {
         if (self.selectBlock != nil) {
-            self.selectBlock(buttonIndex, [alertView buttonTitleAtIndex:buttonIndex]);
+            notifyDelegate = self.selectBlock(buttonIndex, [alertView buttonTitleAtIndex:buttonIndex]);
         }
         
-    } else if (self.cancelBlock != nil) {
-        self.cancelBlock();
+    } else {
+        if (self.cancelBlock != nil) {
+            notifyDelegate = self.cancelBlock();
+        }
     }
     
-    if ([self.alertDelegate respondsToSelector:_cmd]) {
+    if (notifyDelegate && [self.alertDelegate respondsToSelector:_cmd]) {
         [self.alertDelegate alertView:alertView clickedButtonAtIndex:buttonIndex];
     }
+    
+    // clean the delegate
+    self.delegate = nil;
+    self.alertDelegate = nil;
 }
 
 - (void)alertViewCancel:(UIAlertView *)alertView

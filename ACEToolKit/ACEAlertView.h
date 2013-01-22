@@ -24,6 +24,9 @@
 
 @interface ACEAlertView : UIAlertView
 
-- (void)showWithSelectBlock:(SelectBlock)select cancel:(CancelBlock)cancel;
+@property (nonatomic, copy) SelectBlock selectBlock;
+@property (nonatomic, copy) DismissBlock cancelBlock;
+
+- (void)showWithSelectBlock:(SelectBlock)select cancel:(DismissBlock)cancel;
 
 @end
