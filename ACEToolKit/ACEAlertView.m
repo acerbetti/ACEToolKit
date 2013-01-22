@@ -23,7 +23,7 @@
 #import "AceToolKit.h"
 
 @interface ACEAlertView ()<UIAlertViewDelegate>
-@property (nonatomic, strong) id<UIAlertViewDelegate> alertDelegate;
+@property (nonatomic, assign) id<UIAlertViewDelegate> alertDelegate;
 @property (nonatomic, copy) SelectBlock selectBlock;
 @property (nonatomic, copy) CancelBlock cancelBlock;
 @end

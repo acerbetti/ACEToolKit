@@ -1,5 +1,5 @@
-// AceToolKit.h
-//
+// ACEActionSheet.m
+// 
 // Copyright (c) 2013 Stefano Acerbetti
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -8,10 +8,10 @@
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-//
+// 
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-//
+// 
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -20,31 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "AceToolKit.h"
 
-// ARC
-#if __has_feature(objc_arc)
-#define ACE_HAS_ARC 1
-#define ACE_RETAIN(exp) (exp)
-#define ACE_RELEASE(exp)
-#define ACE_AUTORELEASE(exp) (exp)
-#else
-#define ACE_HAS_ARC 0
-#define ACE_RETAIN(exp) [(exp) retain]
-#define ACE_RELEASE(exp) [(exp) release]
-#define ACE_AUTORELEASE(exp) [(exp) autorelease]
-#endif
+@implementation ACEActionSheet
 
-
-// blocks
-typedef void (^SelectBlock)(NSInteger index, NSString *title);
-typedef void (^CancelBlock)(void);
-
-
-// import all the headers
-#import "ACEActionSheet.h"
-#import "ACEAlertView.h"
-
-
-// override default classes
-#define UIActionSheet       ACEActionSheet
-#define UIAlertView         ACEAlertView
+@end
