@@ -49,4 +49,7 @@
 - (UIView *)ancestorOrSelfWithClass:(Class)cls;
 - (void)removeAllSubviews;
 
+// rounded corners
+- (void)setRoundedCorners:(UIRectCorner)corners radius:(CGFloat)radius;
+
 @end

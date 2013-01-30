@@ -23,6 +23,7 @@
 		7B03603716AF1C1F002140DF /* UIView+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03603616AF1C1F002140DF /* UIView+ACEToolKit.m */; };
 		7B03603B16AF2014002140DF /* UIColor+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03603A16AF2014002140DF /* UIColor+ACEToolKit.m */; };
 		7B27004316AF4A9400B1531C /* UILabel+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B27004216AF4A9400B1531C /* UILabel+ACEToolKit.m */; };
+		7B64ECAB16B9E6710043763E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B64ECAA16B9E6710043763E /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		7B03603A16AF2014002140DF /* UIColor+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ACEToolKit.m"; sourceTree = "<group>"; };
 		7B27004116AF4A9400B1531C /* UILabel+ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ACEToolKit.h"; sourceTree = "<group>"; };
 		7B27004216AF4A9400B1531C /* UILabel+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ACEToolKit.m"; sourceTree = "<group>"; };
+		7B64ECAA16B9E6710043763E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B64ECAB16B9E6710043763E /* QuartzCore.framework in Frameworks */,
 				7B035FF016AEEDCC002140DF /* UIKit.framework in Frameworks */,
 				7B035FF216AEEDCC002140DF /* Foundation.framework in Frameworks */,
 				7B035FF416AEEDCC002140DF /* CoreGraphics.framework in Frameworks */,
@@ -89,9 +92,10 @@
 		7B035FEE16AEEDCC002140DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7B035FEF16AEEDCC002140DF /* UIKit.framework */,
-				7B035FF116AEEDCC002140DF /* Foundation.framework */,
 				7B035FF316AEEDCC002140DF /* CoreGraphics.framework */,
+				7B035FF116AEEDCC002140DF /* Foundation.framework */,
+				7B64ECAA16B9E6710043763E /* QuartzCore.framework */,
+				7B035FEF16AEEDCC002140DF /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
