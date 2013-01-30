@@ -9,7 +9,7 @@ This toolkit is a collection of classes and categories that I'm using in many of
 #### Categories
 - UIColor (some macros and HEX string parser)
 - UILabel (resize the label to contain the text)
-- UIView (many shortcuts to get position, dimensions and other properties)
+- UIView (many shortcuts to get position, dimensions, round corners and other properties)
 
 Usage
 -----
