@@ -35,13 +35,15 @@
     self = [super initWithTitle:title message:message delegate:delegate cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles, nil];
     if (self != nil) {
         
-        // add the other buttons from the list
-        va_list args;
-        va_start(args, otherButtonTitles);
-        
-        NSString* buttonTitle;
-        while ((buttonTitle = va_arg(args, NSString *))) {
-            [self addButtonWithTitle:buttonTitle];
+        if (otherButtonTitles != nil) {
+            // add the other buttons from the list
+            va_list args;
+            va_start(args, otherButtonTitles);
+            
+            NSString* buttonTitle;
+            while ((buttonTitle = va_arg(args, NSString *))) {
+                [self addButtonWithTitle:buttonTitle];
+            }
         }
         
         // reset the cancel button and store the delegate

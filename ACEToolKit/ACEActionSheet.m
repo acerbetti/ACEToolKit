@@ -35,23 +35,20 @@
     self = [super initWithTitle:title delegate:delegate cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
     if (self != nil) {
         
-        // add the other buttons from the list
-        va_list args;
-        va_start(args, otherButtonTitles);
-        
         // start with the destructive button
         if (destructiveButtonTitle.length > 0) {
             self.destructiveButtonIndex = [self addButtonWithTitle:destructiveButtonTitle];
         }
         
-        // adding the rest of the buttons
-        if (otherButtonTitles.length > 0) {
-            [self addButtonWithTitle:otherButtonTitles];
-        }
-        
-        NSString* buttonTitle;
-        while ((buttonTitle = va_arg(args, NSString *))) {
-            [self addButtonWithTitle:buttonTitle];
+        if (otherButtonTitles != nil) {
+            // add the other buttons from the list
+            va_list args;
+            va_start(args, otherButtonTitles);
+            
+            NSString* buttonTitle;
+            while ((buttonTitle = va_arg(args, NSString *))) {
+                [self addButtonWithTitle:buttonTitle];
+            }
         }
         
         // end with the cancel button
