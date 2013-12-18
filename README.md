@@ -10,6 +10,7 @@ This toolkit is a collection of classes and categories that I'm using in many of
 - UIColor (some macros and HEX string parser)
 - UILabel (resize the label to contain the text)
 - UIView (many shortcuts to get position, dimensions, round corners and other properties)
+- UIViewController (add helper to manager child view controllers)
 
 Usage
 -----
