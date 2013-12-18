@@ -48,7 +48,7 @@ typedef BOOL (^DismissBlock)(void);
 #import "UIColor+ACEToolKit.h"
 #import "UILabel+ACEToolKit.h"
 #import "UIView+ACEToolKit.h"
-
+#import "UIViewController+ACEToolKit.h"
 
 // override default classes
 #define UIActionSheet       ACEActionSheet

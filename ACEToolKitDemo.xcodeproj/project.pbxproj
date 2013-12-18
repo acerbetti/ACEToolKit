@@ -24,6 +24,7 @@
 		7B03603B16AF2014002140DF /* UIColor+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03603A16AF2014002140DF /* UIColor+ACEToolKit.m */; };
 		7B27004316AF4A9400B1531C /* UILabel+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B27004216AF4A9400B1531C /* UILabel+ACEToolKit.m */; };
 		7B64ECAB16B9E6710043763E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B64ECAA16B9E6710043763E /* QuartzCore.framework */; };
+		7B83BCB8186144C9000880FB /* UIViewController+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B83BCB7186144C9000880FB /* UIViewController+ACEToolKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		7B27004116AF4A9400B1531C /* UILabel+ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ACEToolKit.h"; sourceTree = "<group>"; };
 		7B27004216AF4A9400B1531C /* UILabel+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ACEToolKit.m"; sourceTree = "<group>"; };
 		7B64ECAA16B9E6710043763E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7B83BCB6186144C9000880FB /* UIViewController+ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ACEToolKit.h"; sourceTree = "<group>"; };
+		7B83BCB7186144C9000880FB /* UIViewController+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ACEToolKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 				7B27004216AF4A9400B1531C /* UILabel+ACEToolKit.m */,
 				7B03603516AF1C1F002140DF /* UIView+ACEToolKit.h */,
 				7B03603616AF1C1F002140DF /* UIView+ACEToolKit.m */,
+				7B83BCB6186144C9000880FB /* UIViewController+ACEToolKit.h */,
+				7B83BCB7186144C9000880FB /* UIViewController+ACEToolKit.m */,
 			);
 			name = Additions;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 			files = (
 				7B035FFC16AEEDCC002140DF /* main.m in Sources */,
 				7B03600016AEEDCC002140DF /* ACEAppDelegate.m in Sources */,
+				7B83BCB8186144C9000880FB /* UIViewController+ACEToolKit.m in Sources */,
 				7B03600916AEEDCC002140DF /* ACEViewController.m in Sources */,
 				7B03602D16AF0132002140DF /* ACEActionSheet.m in Sources */,
 				7B03602E16AF0132002140DF /* ACEAlertView.m in Sources */,
