@@ -45,10 +45,9 @@
             va_list args;
             va_start(args, otherButtonTitles);
             
-            NSString* buttonTitle;
-            while ((buttonTitle = va_arg(args, NSString *))) {
-                [self addButtonWithTitle:buttonTitle];
-            }
+            do {
+                [self addButtonWithTitle:otherButtonTitles];
+            } while ((otherButtonTitles = va_arg(args, NSString *)));
         }
         
         // end with the cancel button
