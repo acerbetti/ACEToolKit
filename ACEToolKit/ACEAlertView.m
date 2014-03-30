@@ -40,9 +40,10 @@
             va_list args;
             va_start(args, otherButtonTitles);
             
-            do {
-                [self addButtonWithTitle:otherButtonTitles];
-            } while ((otherButtonTitles = va_arg(args, NSString *)));
+            NSString* buttonTitle;
+            while ((buttonTitle = va_arg(args, NSString *))) {
+                [self addButtonWithTitle:buttonTitle];
+            }
         }
         
         // reset the cancel button and store the delegate

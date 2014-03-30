@@ -6,6 +6,9 @@ This toolkit is a collection of classes and categories that I'm using in many of
 - ACEActionSheet (UIActionSheet with blocks)
 - ACEAlertView (UIAlertView with blocks)
 
+#### Utils
+- ACEPathUtils (Shortcuts for standard path folders)
+
 #### Categories
 - UIColor (some macros and HEX string parser)
 - UILabel (resize the label to contain the text)

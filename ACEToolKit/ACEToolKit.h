@@ -43,6 +43,7 @@ typedef BOOL (^DismissBlock)(void);
 // import all the headers
 #import "ACEActionSheet.h"
 #import "ACEAlertView.h"
+#import "ACEPathUtils.h"
 
 // additions
 #import "UIColor+ACEToolKit.h"
