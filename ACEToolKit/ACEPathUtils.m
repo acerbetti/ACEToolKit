@@ -21,7 +21,7 @@
     static NSString *documentsPath = nil;
     if (nil == documentsPath) {
         NSArray* dirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        documentsPath = [dirs objectAtIndex:0];
+        documentsPath = [[dirs objectAtIndex:0] copy];
     }
     return [documentsPath stringByAppendingPathComponent:relativePath];
 }
@@ -31,7 +31,7 @@
     static NSString *libraryPath = nil;
     if (nil == libraryPath) {
         NSArray* dirs = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
-        libraryPath = [dirs objectAtIndex:0];
+        libraryPath = [[dirs objectAtIndex:0] copy];
     }
     return [libraryPath stringByAppendingPathComponent:relativePath];
 }
@@ -41,7 +41,7 @@
     static NSString* cachesPath = nil;
     if (nil == cachesPath) {
         NSArray* dirs = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-        cachesPath = [dirs objectAtIndex:0];
+        cachesPath = [[dirs objectAtIndex:0] copy];
     }
     return [cachesPath stringByAppendingPathComponent:relativePath];
 }
