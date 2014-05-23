@@ -24,6 +24,9 @@
 
 @implementation UILabel (ACEToolKit)
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 - (void)topAlignmentWithPredefiniteHeight:(CGFloat)height
 {
     // calculate the new height
@@ -34,6 +37,8 @@
     // resize the frame
     self.height = size.height;
 }
+
+#pragma clang diagnostic pop
 
 - (void)topAlignment
 {

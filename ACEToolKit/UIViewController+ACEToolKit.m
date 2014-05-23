@@ -28,6 +28,7 @@
 {
     [self addChildViewController:childViewController];
     [view addSubview:childViewController.view];
+    [childViewController.view setFrame:view.bounds];
     [childViewController didMoveToParentViewController:self];
 }
 
