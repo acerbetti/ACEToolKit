@@ -1,4 +1,4 @@
-// ACEToolKit.h
+// UIColor+ACEToolKit.h
 //
 // Copyright (c) 2013 Stefano Acerbetti
 //
@@ -20,38 +20,27 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "ACEToolKit.h"
 
-// ARC
-#if __has_feature(objc_arc)
-#define ACE_HAS_ARC 1
-#define ACE_RETAIN(exp) (exp)
-#define ACE_RELEASE(exp)
-#define ACE_AUTORELEASE(exp) (exp)
-#else
-#define ACE_HAS_ARC 0
-#define ACE_RETAIN(exp) [(exp) retain]
-#define ACE_RELEASE(exp) [(exp) release]
-#define ACE_AUTORELEASE(exp) [(exp) autorelease]
-#endif
+@implementation NSMutableDictionary (ACEToolKit)
 
+- (void)setNonEmptyArray:(NSArray *)array forKey:(id<NSCopying>)aKey
+{
+    if (array.count > 0) {
+        [self setObject:array forKey:aKey];
+    }
+}
 
-// blocks
-typedef BOOL (^SelectBlock)(NSInteger index, NSString *title);
-typedef BOOL (^DismissBlock)(void);
+- (void)setNonEmptyString:(NSString *)string forKey:(id<NSCopying>)aKey
+{
+    if (string.length > 0) {
+        [self setObject:string forKey:aKey];
+    }
+}
 
+- (void)setBoolean:(BOOL)value forKey:(id<NSCopying>)aKey
+{
+    [self setObject:(value) ? @"true" : @"false" forKey:aKey];
+}
 
-// import all the headers
-#import "ACEActionSheet.h"
-#import "ACEAlertView.h"
-#import "ACEPathUtils.h"
-
-// additions
-#import "NSMutableDictionary+ACEToolKit.h"
-#import "UIColor+ACEToolKit.h"
-#import "UILabel+ACEToolKit.h"
-#import "UIView+ACEToolKit.h"
-#import "UIViewController+ACEToolKit.h"
-
-// override default classes
-#define UIActionSheet       ACEActionSheet
-#define UIAlertView         ACEAlertView
+@end

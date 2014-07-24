@@ -26,6 +26,7 @@
 		7B64ECAB16B9E6710043763E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B64ECAA16B9E6710043763E /* QuartzCore.framework */; };
 		7B83BCB8186144C9000880FB /* UIViewController+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B83BCB7186144C9000880FB /* UIViewController+ACEToolKit.m */; };
 		7BDE4BBD18E872DC00C3B114 /* ACEPathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDE4BBC18E872DC00C3B114 /* ACEPathUtils.m */; };
+		803351FB1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 803351FA1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,8 @@
 		7B83BCB7186144C9000880FB /* UIViewController+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ACEToolKit.m"; sourceTree = "<group>"; };
 		7BDE4BBB18E872DC00C3B114 /* ACEPathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEPathUtils.h; sourceTree = "<group>"; };
 		7BDE4BBC18E872DC00C3B114 /* ACEPathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEPathUtils.m; sourceTree = "<group>"; };
+		803351F91981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+ACEToolKit.h"; sourceTree = "<group>"; };
+		803351FA1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+ACEToolKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 		7B03602716AF0132002140DF /* ACEToolKit */ = {
 			isa = PBXGroup;
 			children = (
+				7B03603816AF1C26002140DF /* Additions */,
+				7BDE4BBE18E872DF00C3B114 /* Core */,
 				7B03603416AF1B30002140DF /* UI */,
 				7B03602C16AF0132002140DF /* ACEToolKit.h */,
 			);
@@ -146,8 +151,6 @@
 		7B03603416AF1B30002140DF /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				7BDE4BBE18E872DF00C3B114 /* Core */,
-				7B03603816AF1C26002140DF /* Additions */,
 				7B03602816AF0132002140DF /* ACEActionSheet.h */,
 				7B03602916AF0132002140DF /* ACEActionSheet.m */,
 				7B03602A16AF0132002140DF /* ACEAlertView.h */,
@@ -159,6 +162,8 @@
 		7B03603816AF1C26002140DF /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				803351F91981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.h */,
+				803351FA1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m */,
 				7B03603916AF2014002140DF /* UIColor+ACEToolKit.h */,
 				7B03603A16AF2014002140DF /* UIColor+ACEToolKit.m */,
 				7B27004116AF4A9400B1531C /* UILabel+ACEToolKit.h */,
@@ -255,6 +260,7 @@
 				7B03602D16AF0132002140DF /* ACEActionSheet.m in Sources */,
 				7B03602E16AF0132002140DF /* ACEAlertView.m in Sources */,
 				7B03603716AF1C1F002140DF /* UIView+ACEToolKit.m in Sources */,
+				803351FB1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m in Sources */,
 				7B03603B16AF2014002140DF /* UIColor+ACEToolKit.m in Sources */,
 				7B27004316AF4A9400B1531C /* UILabel+ACEToolKit.m in Sources */,
 			);
