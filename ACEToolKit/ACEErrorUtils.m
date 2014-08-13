@@ -1,4 +1,4 @@
-// ACEPathUtils.h
+// ACEErrorUtils.m
 //
 // Copyright (c) 2014 Stefano Acerbetti
 //
@@ -20,13 +20,47 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import "ACEToolKit.h"
 
-@interface ACEPathUtils : NSObject
+@implementation ACEErrorUtils
 
-+ (NSString *)pathForBundleResource:(NSBundle *)bundle withPath:(NSString *)relativePath;
-+ (NSString *)pathForDocumentsResource:(NSString *)relativePath;
-+ (NSString *)pathForLibraryResource:(NSString *)relativePath;
-+ (NSString *)pathForCachesResource:(NSString *)relativePath;
++ (instancetype)defaultManager
+{
+    static ACEErrorUtils *_instance = nil;
+    static dispatch_once_t oncePredicate;
+    dispatch_once(&oncePredicate, ^{
+        
+        // try to load the previous context
+        _instance = [self new];
+    });
+    
+    return _instance;
+}
+
+- (void)handleError:(NSError *)error withCustomText:(NSString *)errorText
+{
+    if (self.errorBlock) {
+        // custom implementation
+        self.errorBlock(error, errorText);
+        
+    } else {
+        // simple error message
+        [self showSimpleErrorMessage:errorText withTitle:@"Error"];
+    }
+}
+
+- (void)handleError:(NSError *)error
+{
+    [self handleError:error withCustomText:error.localizedDescription];
+}
+
+- (void)showSimpleErrorMessage:(NSString *)message withTitle:(NSString *)title
+{
+    [[[UIAlertView alloc] initWithTitle:title
+                                message:message
+                               delegate:nil
+                      cancelButtonTitle:@"OK"
+                      otherButtonTitles:nil] show];
+}
 
 @end

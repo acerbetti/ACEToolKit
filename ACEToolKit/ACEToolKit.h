@@ -1,6 +1,6 @@
 // ACEToolKit.h
 //
-// Copyright (c) 2013 Stefano Acerbetti
+// Copyright (c) 2014 Stefano Acerbetti
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -43,6 +43,8 @@ typedef BOOL (^DismissBlock)(void);
 // import all the headers
 #import "ACEActionSheet.h"
 #import "ACEAlertView.h"
+
+#import "ACEErrorUtils.h"
 #import "ACEPathUtils.h"
 
 // additions

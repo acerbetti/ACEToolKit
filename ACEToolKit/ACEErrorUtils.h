@@ -1,4 +1,4 @@
-// ACEPathUtils.h
+// ACEErrorUtils.h
 //
 // Copyright (c) 2014 Stefano Acerbetti
 //
@@ -18,15 +18,22 @@
 // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
+// THE SOFTWARE.  Copyright (c) 2014 Stefano Acerbetti. All rights reserved.
+//
 
 #import <Foundation/Foundation.h>
 
-@interface ACEPathUtils : NSObject
+typedef void (^ACEErrorUtilsBlock)(NSError *error, NSString *errorText);
 
-+ (NSString *)pathForBundleResource:(NSBundle *)bundle withPath:(NSString *)relativePath;
-+ (NSString *)pathForDocumentsResource:(NSString *)relativePath;
-+ (NSString *)pathForLibraryResource:(NSString *)relativePath;
-+ (NSString *)pathForCachesResource:(NSString *)relativePath;
+@interface ACEErrorUtils : NSObject
+
+@property (nonatomic, copy) ACEErrorUtilsBlock errorBlock;
+
+- (void)handleError:(NSError *)error withCustomText:(NSString *)errorText;
+- (void)handleError:(NSError *)error;
+
+- (void)showSimpleErrorMessage:(NSString *)message withTitle:(NSString *)title;
+
++ (instancetype)defaultManager;
 
 @end

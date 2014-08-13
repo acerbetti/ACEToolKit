@@ -26,6 +26,7 @@
 		7B64ECAB16B9E6710043763E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B64ECAA16B9E6710043763E /* QuartzCore.framework */; };
 		7B83BCB8186144C9000880FB /* UIViewController+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B83BCB7186144C9000880FB /* UIViewController+ACEToolKit.m */; };
 		7BDE4BBD18E872DC00C3B114 /* ACEPathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDE4BBC18E872DC00C3B114 /* ACEPathUtils.m */; };
+		800834AC199BE4DD00249590 /* ACEErrorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 800834AB199BE4DD00249590 /* ACEErrorUtils.m */; };
 		803351FB1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 803351FA1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,8 @@
 		7B83BCB7186144C9000880FB /* UIViewController+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ACEToolKit.m"; sourceTree = "<group>"; };
 		7BDE4BBB18E872DC00C3B114 /* ACEPathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEPathUtils.h; sourceTree = "<group>"; };
 		7BDE4BBC18E872DC00C3B114 /* ACEPathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEPathUtils.m; sourceTree = "<group>"; };
+		800834AA199BE4DD00249590 /* ACEErrorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEErrorUtils.h; sourceTree = "<group>"; };
+		800834AB199BE4DD00249590 /* ACEErrorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEErrorUtils.m; sourceTree = "<group>"; };
 		803351F91981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+ACEToolKit.h"; sourceTree = "<group>"; };
 		803351FA1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+ACEToolKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,6 +182,8 @@
 		7BDE4BBE18E872DF00C3B114 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				800834AA199BE4DD00249590 /* ACEErrorUtils.h */,
+				800834AB199BE4DD00249590 /* ACEErrorUtils.m */,
 				7BDE4BBB18E872DC00C3B114 /* ACEPathUtils.h */,
 				7BDE4BBC18E872DC00C3B114 /* ACEPathUtils.m */,
 			);
@@ -262,6 +267,7 @@
 				7B03603716AF1C1F002140DF /* UIView+ACEToolKit.m in Sources */,
 				803351FB1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m in Sources */,
 				7B03603B16AF2014002140DF /* UIColor+ACEToolKit.m in Sources */,
+				800834AC199BE4DD00249590 /* ACEErrorUtils.m in Sources */,
 				7B27004316AF4A9400B1531C /* UILabel+ACEToolKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
