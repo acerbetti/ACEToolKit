@@ -29,7 +29,7 @@ typedef void (^ACEErrorUtilsBlock)(NSError *error, NSString *errorText);
 
 @property (nonatomic, copy) ACEErrorUtilsBlock errorBlock;
 
-- (void)handleError:(NSError *)error withCustomText:(NSString *)errorText;
+- (void)handleError:(NSError *)error withCustomFormat:(NSString *)errorFormat, ...;
 - (void)handleError:(NSError *)error;
 
 - (void)showSimpleErrorMessage:(NSString *)message withTitle:(NSString *)title;

@@ -37,21 +37,32 @@
     return _instance;
 }
 
-- (void)handleError:(NSError *)error withCustomText:(NSString *)errorText
+- (void)handleError:(NSError *)error withCustomFormat:(NSString *)errorFormat, ...
 {
-    if (self.errorBlock) {
-        // custom implementation
-        self.errorBlock(error, errorText);
+    if (errorFormat) {
+        va_list args;
+        va_start(args, errorFormat);
         
-    } else {
-        // simple error message
-        [self showSimpleErrorMessage:errorText withTitle:@"Error"];
+        NSString *errorMessage = [[NSString alloc] initWithFormat:errorFormat arguments:args];
+        if (self.errorBlock) {
+            // custom implementation
+            self.errorBlock(error, errorMessage);
+            
+        } else {
+            // simple error message
+            [self showSimpleErrorMessage:errorMessage withTitle:@"Error"];
+        }
+        
+        va_end(args);
+        
+    } else if (error != nil) {
+        [self handleError:error];
     }
 }
 
 - (void)handleError:(NSError *)error
 {
-    [self handleError:error withCustomText:error.localizedDescription];
+    [self handleError:error withCustomFormat:error.localizedDescription];
 }
 
 - (void)showSimpleErrorMessage:(NSString *)message withTitle:(NSString *)title
