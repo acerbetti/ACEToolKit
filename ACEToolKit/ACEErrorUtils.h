@@ -23,16 +23,18 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^ACEErrorUtilsBlock)(NSError *error, NSString *errorText);
+typedef BOOL (^ACEErrorRetryBlock)(void); // returns if the retry block was succesful
+typedef void (^ACEErrorUtilsBlock)(NSError *error, ACEErrorRetryBlock retryBlock, NSString *errorText);
 
 @interface ACEErrorUtils : NSObject
 
 @property (nonatomic, copy) ACEErrorUtilsBlock errorBlock;
 
-- (void)handleError:(NSError *)error withCustomFormat:(NSString *)errorFormat, ...;
+- (void)handleError:(NSError *)error retryBlock:(ACEErrorRetryBlock)retryBlock withCustomFormat:(NSString *)errorFormat, ...;
+- (void)handleError:(NSError *)error retryBlock:(ACEErrorRetryBlock)retryBlock;
 - (void)handleError:(NSError *)error;
 
-- (void)showSimpleErrorMessage:(NSString *)message withTitle:(NSString *)title;
+- (void)showSimpleErrorMessage:(NSString *)message withTitle:(NSString *)title retryBlock:(ACEErrorRetryBlock)retryBlock;
 
 + (instancetype)defaultManager;
 
