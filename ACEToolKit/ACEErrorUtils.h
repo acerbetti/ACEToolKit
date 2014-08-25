@@ -30,6 +30,8 @@ typedef void (^ACEErrorUtilsBlock)(NSError *error, ACEErrorRetryBlock retryBlock
 
 @property (nonatomic, copy) ACEErrorUtilsBlock errorBlock;
 
+- (void)handleErrorFormat:(NSString *)errorFormat, ...;
+
 - (void)handleError:(NSError *)error retryBlock:(ACEErrorRetryBlock)retryBlock withCustomFormat:(NSString *)errorFormat, ...;
 - (void)handleError:(NSError *)error retryBlock:(ACEErrorRetryBlock)retryBlock;
 - (void)handleError:(NSError *)error;

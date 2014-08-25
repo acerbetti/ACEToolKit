@@ -37,6 +37,22 @@
     return _instance;
 }
 
+
+#pragma mark - Error handlers
+
+- (void)handleErrorFormat:(NSString *)errorFormat, ...
+{
+    if (errorFormat) {
+        va_list args;
+        va_start(args, errorFormat);
+        
+        NSString *errorMessage = [[NSString alloc] initWithFormat:errorFormat arguments:args];
+        [self handleError:nil retryBlock:nil withCustomFormat:errorMessage];
+        
+        va_end(args);
+    }
+}
+
 - (void)handleError:(NSError *)error retryBlock:(ACEErrorRetryBlock)retryBlock withCustomFormat:(NSString *)errorFormat, ...
 {
     if (errorFormat) {
@@ -67,8 +83,11 @@
 
 - (void)handleError:(NSError *)error
 {
-    [self handleError:error retryBlock:nil withCustomFormat:error.localizedDescription];
+    [self handleError:error retryBlock:nil];
 }
+
+
+#pragma mark - Default Alert Message
 
 - (void)showSimpleErrorMessage:(NSString *)message withTitle:(NSString *)title retryBlock:(ACEErrorRetryBlock)retryBlock
 {
