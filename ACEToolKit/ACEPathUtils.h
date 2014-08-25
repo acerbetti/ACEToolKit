@@ -28,5 +28,6 @@
 + (NSString *)pathForDocumentsResource:(NSString *)relativePath;
 + (NSString *)pathForLibraryResource:(NSString *)relativePath;
 + (NSString *)pathForCachesResource:(NSString *)relativePath;
++ (NSString *)pathForTemporaryResource:(NSString *)relativePath;
 
 @end

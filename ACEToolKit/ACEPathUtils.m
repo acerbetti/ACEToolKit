@@ -60,4 +60,9 @@
     return [cachesPath stringByAppendingPathComponent:relativePath];
 }
 
++ (NSString *)pathForTemporaryResource:(NSString *)relativePath
+{
+    return [NSTemporaryDirectory() stringByAppendingPathComponent:relativePath];
+}
+
 @end
