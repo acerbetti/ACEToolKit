@@ -24,18 +24,19 @@
 #import <Foundation/Foundation.h>
 
 typedef void (^ACEErrorRetryBlock)(BOOL retry); // returns if the retry block was succesful
-typedef void (^ACEErrorUtilsBlock)(NSString *message, NSString *title, NSString *retryLabel, NSString *dismissLabel, ACEErrorRetryBlock retryBlock);
+typedef void (^ACEErrorUtilsBlock)(NSError *error, NSString *message, NSString *title, NSString *retryLabel, NSString *dismissLabel, ACEErrorRetryBlock retryBlock);
 
 @interface ACEErrorUtils : NSObject
 
 @property (nonatomic, copy) ACEErrorUtilsBlock errorBlock;
 
 // handlers
-- (void)handleErrorMessage:(NSString *)message
-                 withTitle:(NSString *)title
-                retryLabel:(NSString *)retryLabel
-              dismissLabel:(NSString *)dismissLabel
-             andRetryBlock:(ACEErrorRetryBlock)retryBlock;
+- (void)handleError:(NSError *)error
+        withMessage:(NSString *)message
+           andTitle:(NSString *)title
+         retryLabel:(NSString *)retryLabel
+       dismissLabel:(NSString *)dismissLabel
+      andRetryBlock:(ACEErrorRetryBlock)retryBlock;
 
 - (void)handleErrorTitle:(NSString *)title withMessageFormat:(NSString *)errorFormat, ...;
 - (void)handleError:(NSError *)error;

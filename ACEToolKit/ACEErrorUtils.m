@@ -40,19 +40,25 @@
 
 #pragma mark - Error handlers
 
-- (void)handleErrorMessage:(NSString *)message
-                 withTitle:(NSString *)title
-                retryLabel:(NSString *)retryLabel
-              dismissLabel:(NSString *)dismissLabel
-             andRetryBlock:(ACEErrorRetryBlock)retryBlock
+- (void)handleError:(NSError *)error
+        withMessage:(NSString *)message
+           andTitle:(NSString *)title
+         retryLabel:(NSString *)retryLabel
+       dismissLabel:(NSString *)dismissLabel
+      andRetryBlock:(ACEErrorRetryBlock)retryBlock
 {
     if (self.errorBlock) {
         // custom implementation
-        self.errorBlock(message, title, retryLabel, dismissLabel, retryBlock);
+        self.errorBlock(error,
+                        message ?: error.localizedDescription,
+                        title,
+                        retryLabel,
+                        dismissLabel,
+                        retryBlock);
         
     } else {
         // simple error message
-        [self showSimpleErrorMessage:message
+        [self showSimpleErrorMessage:message ?: error.localizedDescription
                            withTitle:title
                           retryLabel:retryLabel
                         dismissLabel:dismissLabel
@@ -62,35 +68,31 @@
 
 - (void)handleErrorTitle:(NSString *)title withMessageFormat:(NSString *)errorFormat, ...
 {
+    NSString *errorMessage;
+    
     if (errorFormat) {
         va_list args;
         va_start(args, errorFormat);
-        
-        NSString *errorMessage = [[NSString alloc] initWithFormat:errorFormat arguments:args];
-        [self handleErrorMessage:errorMessage
-                       withTitle:title
-                      retryLabel:nil
-                    dismissLabel:nil
-                   andRetryBlock:nil];
-        
+        errorMessage = [[NSString alloc] initWithFormat:errorFormat arguments:args];
         va_end(args);
-        
-    } else {
-        [self handleErrorMessage:nil
-                       withTitle:title
-                      retryLabel:nil
-                    dismissLabel:nil
-                   andRetryBlock:nil];
     }
+    
+    [self handleError:nil
+          withMessage:errorMessage
+             andTitle:title
+           retryLabel:nil
+         dismissLabel:nil
+        andRetryBlock:nil];
 }
 
 - (void)handleError:(NSError *)error
 {
-    [self handleErrorMessage:error.localizedDescription
-                   withTitle:@"Error"
-                  retryLabel:nil
-                dismissLabel:nil
-               andRetryBlock:nil];
+    [self handleError:error
+          withMessage:error.localizedDescription
+             andTitle:@"Error"
+           retryLabel:nil
+         dismissLabel:nil
+        andRetryBlock:nil];
 }
 
 
