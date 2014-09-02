@@ -23,20 +23,32 @@
 
 #import <Foundation/Foundation.h>
 
-typedef BOOL (^ACEErrorRetryBlock)(void); // returns if the retry block was succesful
-typedef void (^ACEErrorUtilsBlock)(NSError *error, ACEErrorRetryBlock retryBlock, NSString *errorText);
+typedef void (^ACEErrorRetryBlock)(BOOL retry); // returns if the retry block was succesful
+typedef void (^ACEErrorUtilsBlock)(NSString *message, NSString *title, NSString *retryLabel, NSString *dismissLabel, ACEErrorRetryBlock retryBlock);
 
 @interface ACEErrorUtils : NSObject
 
 @property (nonatomic, copy) ACEErrorUtilsBlock errorBlock;
 
-- (void)handleErrorFormat:(NSString *)errorFormat, ...;
+// handlers
+- (void)handleErrorMessage:(NSString *)message
+                 withTitle:(NSString *)title
+                retryLabel:(NSString *)retryLabel
+              dismissLabel:(NSString *)dismissLabel
+             andRetryBlock:(ACEErrorRetryBlock)retryBlock;
 
-- (void)handleError:(NSError *)error retryBlock:(ACEErrorRetryBlock)retryBlock withCustomFormat:(NSString *)errorFormat, ...;
-- (void)handleError:(NSError *)error retryBlock:(ACEErrorRetryBlock)retryBlock;
+- (void)handleErrorTitle:(NSString *)title withMessageFormat:(NSString *)errorFormat, ...;
 - (void)handleError:(NSError *)error;
 
-- (void)showSimpleErrorMessage:(NSString *)message withTitle:(NSString *)title retryBlock:(ACEErrorRetryBlock)retryBlock;
+
+// default implementation
+- (void)showSimpleErrorMessage:(NSString *)message
+                     withTitle:(NSString *)title
+                    retryLabel:(NSString *)retryLabel
+                  dismissLabel:(NSString *)dismissLabel
+                 andRetryBlock:(ACEErrorRetryBlock)retryBlock;
+
+- (void)showSimpleErrorMessage:(NSString *)message;
 
 + (instancetype)defaultManager;
 

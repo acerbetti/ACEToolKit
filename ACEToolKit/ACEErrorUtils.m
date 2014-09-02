@@ -40,78 +40,105 @@
 
 #pragma mark - Error handlers
 
-- (void)handleErrorFormat:(NSString *)errorFormat, ...
+- (void)handleErrorMessage:(NSString *)message
+                 withTitle:(NSString *)title
+                retryLabel:(NSString *)retryLabel
+              dismissLabel:(NSString *)dismissLabel
+             andRetryBlock:(ACEErrorRetryBlock)retryBlock
+{
+    if (self.errorBlock) {
+        // custom implementation
+        self.errorBlock(message, title, retryLabel, dismissLabel, retryBlock);
+        
+    } else {
+        // simple error message
+        [self showSimpleErrorMessage:message
+                           withTitle:title
+                          retryLabel:retryLabel
+                        dismissLabel:dismissLabel
+                       andRetryBlock:retryBlock];
+    }
+}
+
+- (void)handleErrorTitle:(NSString *)title withMessageFormat:(NSString *)errorFormat, ...
 {
     if (errorFormat) {
         va_list args;
         va_start(args, errorFormat);
         
         NSString *errorMessage = [[NSString alloc] initWithFormat:errorFormat arguments:args];
-        [self handleError:nil retryBlock:nil withCustomFormat:errorMessage];
-        
-        va_end(args);
-    }
-}
-
-- (void)handleError:(NSError *)error retryBlock:(ACEErrorRetryBlock)retryBlock withCustomFormat:(NSString *)errorFormat, ...
-{
-    if (errorFormat) {
-        va_list args;
-        va_start(args, errorFormat);
-        
-        NSString *errorMessage = [[NSString alloc] initWithFormat:errorFormat arguments:args];
-        if (self.errorBlock) {
-            // custom implementation
-            self.errorBlock(error, retryBlock, errorMessage);
-            
-        } else {
-            // simple error message
-            [self showSimpleErrorMessage:errorMessage withTitle:@"Error" retryBlock:retryBlock];
-        }
+        [self handleErrorMessage:errorMessage
+                       withTitle:title
+                      retryLabel:nil
+                    dismissLabel:nil
+                   andRetryBlock:nil];
         
         va_end(args);
         
-    } else if (error != nil) {
-        [self handleError:error];
+    } else {
+        [self handleErrorMessage:nil
+                       withTitle:title
+                      retryLabel:nil
+                    dismissLabel:nil
+                   andRetryBlock:nil];
     }
-}
-
-- (void)handleError:(NSError *)error retryBlock:(ACEErrorRetryBlock)retryBlock
-{
-    [self handleError:error retryBlock:retryBlock withCustomFormat:error.localizedDescription];
 }
 
 - (void)handleError:(NSError *)error
 {
-    [self handleError:error retryBlock:nil];
+    [self handleErrorMessage:error.localizedDescription
+                   withTitle:@"Error"
+                  retryLabel:nil
+                dismissLabel:nil
+               andRetryBlock:nil];
 }
 
 
 #pragma mark - Default Alert Message
 
-- (void)showSimpleErrorMessage:(NSString *)message withTitle:(NSString *)title retryBlock:(ACEErrorRetryBlock)retryBlock
+- (void)showSimpleErrorMessage:(NSString *)message
+                     withTitle:(NSString *)title
+                    retryLabel:(NSString *)retryLabel
+                  dismissLabel:(NSString *)dismissLabel
+                 andRetryBlock:(ACEErrorRetryBlock)retryBlock
 {
     UIAlertView *alertView =
     [[UIAlertView alloc] initWithTitle:title
-                                message:message
-                               delegate:nil
-                      cancelButtonTitle:@"OK"
+                               message:message
+                              delegate:nil
+                     cancelButtonTitle:dismissLabel
                      otherButtonTitles:nil];
     
     // add the retry block if necessary
     if (retryBlock != nil) {
-        [alertView addButtonWithTitle:@"Retry"];
-    }
-    
-    [alertView showWithSelectBlock:^BOOL(NSInteger index, NSString *title) {
-        // try to call the retry block
-        if (!retryBlock()) {
-            // failed again, show the same error message
-            [self showSimpleErrorMessage:message withTitle:title retryBlock:retryBlock];
-        }
-        return NO;
+        [alertView addButtonWithTitle:retryLabel];
+        [alertView showWithSelectBlock:^BOOL(NSInteger index, NSString *title) {
+            // try to call the retry block
+            retryBlock(index == 1);
+            
+            // don't pass the info to the delegate
+            return NO;
+            
+        } cancel:^BOOL{
+            // try to call the retry block
+            retryBlock(NO);
+            
+            // don't pass the info to the delegate
+            return NO;
+        }];
         
-    } cancel:nil];
+    } else {
+        [alertView show];
+    }
+}
+
+- (void)showSimpleErrorMessage:(NSString *)message
+{
+    return [self showSimpleErrorMessage:message
+                              withTitle:nil
+                             retryLabel:nil
+                           dismissLabel:nil
+                          andRetryBlock:nil];
 }
 
 @end
