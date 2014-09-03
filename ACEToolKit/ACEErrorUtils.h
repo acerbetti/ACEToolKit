@@ -27,6 +27,7 @@ typedef void (^ACEErrorUtilsBlock)(NSError *error, NSString *message, NSString *
 
 @interface ACEErrorUtils : NSObject
 
+@property (nonatomic, copy) NSString *defaultErrorTitle;
 @property (nonatomic, copy) ACEErrorUtilsBlock errorBlock;
 
 // error handlers

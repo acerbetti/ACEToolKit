@@ -53,7 +53,7 @@
         // custom implementation
         self.errorBlock(error,
                         message ?: error.localizedDescription,
-                        title,
+                        title ?: self.defaultErrorTitle,
                         retryLabel,
                         dismissLabel,
                         retryBlock);
@@ -61,7 +61,7 @@
     } else {
         // simple error message
         [self showSimpleErrorMessage:message ?: error.localizedDescription
-                           withTitle:title
+                           withTitle:title ?: self.defaultErrorTitle
                           retryLabel:retryLabel
                         dismissLabel:dismissLabel
                        andRetryBlock:retryBlock];
@@ -103,7 +103,7 @@
 {
     [self handleError:error
           withMessage:error.localizedDescription
-             andTitle:@"Error"
+             andTitle:self.defaultErrorTitle
            retryLabel:nil
          dismissLabel:nil
         andRetryBlock:nil];
