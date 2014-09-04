@@ -21,16 +21,16 @@
 // THE SOFTWARE.  Copyright (c) 2014 Stefano Acerbetti. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 
 typedef void (^ACEErrorRetryBlock)(BOOL retry); // returns if the retry block was succesful
 typedef void (^ACEErrorUtilsBlock)(NSError *error, NSString *message, NSString *title, NSString *retryLabel, NSString *dismissLabel, ACEErrorRetryBlock retryBlock);
 
 @interface ACEErrorUtils : NSObject
 
+@property (nonatomic, copy) NSString *defaultErrorTitle;
 @property (nonatomic, copy) ACEErrorUtilsBlock errorBlock;
 
-// handlers
+// error handlers
 - (void)handleError:(NSError *)error
         withMessage:(NSString *)message
            andTitle:(NSString *)title
@@ -38,11 +38,16 @@ typedef void (^ACEErrorUtilsBlock)(NSError *error, NSString *message, NSString *
        dismissLabel:(NSString *)dismissLabel
       andRetryBlock:(ACEErrorRetryBlock)retryBlock;
 
+- (void)handleError:(NSError *)error
+        withMessage:(NSString *)message
+           andTitle:(NSString *)title;
+
+// other helpers
 - (void)handleErrorTitle:(NSString *)title withMessageFormat:(NSString *)errorFormat, ...;
 - (void)handleError:(NSError *)error;
 
 
-// default implementation
+// default alert implementation
 - (void)showSimpleErrorMessage:(NSString *)message
                      withTitle:(NSString *)title
                     retryLabel:(NSString *)retryLabel
