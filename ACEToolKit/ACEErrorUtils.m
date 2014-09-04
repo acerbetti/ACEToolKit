@@ -112,7 +112,7 @@
                      otherButtonTitles:nil];
     
     // add the retry block if necessary
-    if (retryBlock != nil) {
+    if (retryLabel.length > 0 && retryBlock != nil) {
         [alertView addButtonWithTitle:retryLabel];
         [alertView showWithSelectBlock:^BOOL(NSInteger index, NSString *title) {
             // try to call the retry block
