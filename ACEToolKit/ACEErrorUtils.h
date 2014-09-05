@@ -54,7 +54,8 @@ typedef void (^ACEErrorUtilsBlock)(NSError *error, NSString *message, NSString *
                   dismissLabel:(NSString *)dismissLabel
                  andRetryBlock:(ACEErrorRetryBlock)retryBlock;
 
-- (void)showSimpleErrorMessage:(NSString *)message;
+- (void)showSimpleErrorMessage:(NSString *)message
+                     withTitle:(NSString *)title;
 
 + (instancetype)defaultManager;
 

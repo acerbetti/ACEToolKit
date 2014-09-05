@@ -149,11 +149,12 @@
 }
 
 - (void)showSimpleErrorMessage:(NSString *)message
+                     withTitle:(NSString *)title
 {
     return [self showSimpleErrorMessage:message
-                              withTitle:nil
+                              withTitle:title
                              retryLabel:nil
-                           dismissLabel:nil
+                           dismissLabel:@"OK"
                           andRetryBlock:nil];
 }
 
