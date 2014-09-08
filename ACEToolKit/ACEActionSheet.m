@@ -64,7 +64,7 @@
 
 - (id)delegate
 {
-    return self.actionSheetDelegate;
+    return self;
 }
 
 - (void)setDelegate:(id)delegate

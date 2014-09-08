@@ -57,7 +57,7 @@
 
 - (id)delegate
 {
-    return self.alertDelegate;
+    return self;
 }
 
 - (void)setDelegate:(id)delegate
