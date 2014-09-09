@@ -24,9 +24,9 @@
 
 // allow read/write properties
 @interface ACENavigationController : UINavigationController
-@property (nonatomic, assign) BOOL shouldAutorotate;
-@property (nonatomic, assign) NSUInteger supportedInterfaceOrientations;
-@property (nonatomic, assign) UIInterfaceOrientation preferredInterfaceOrientationForPresentation;
+@property (nonatomic, assign) BOOL autorotate;
+@property (nonatomic, assign) NSUInteger interfaceOrientations;
+@property (nonatomic, assign) UIInterfaceOrientation preferredInterfaceOrientation;
 @end
 
 // fixed orientation in portrait

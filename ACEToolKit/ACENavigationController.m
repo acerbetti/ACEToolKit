@@ -26,6 +26,21 @@
 
 @implementation ACENavigationController
 
+- (BOOL)shouldAutorotate
+{
+    return self.autorotate;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return self.interfaceOrientations;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return self.preferredInterfaceOrientation;
+}
+
 @end
 
 
