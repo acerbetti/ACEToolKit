@@ -1,4 +1,4 @@
-// ACEToolKit.h
+// UIImage+ACEToolKit.m
 //
 // Copyright (c) 2014 Stefano Acerbetti
 //
@@ -22,45 +22,23 @@
 //
 
 
+#import "ACEToolKit.h"
 
-// ARC
-#if __has_feature(objc_arc)
-#define ACE_HAS_ARC 1
-#define ACE_RETAIN(exp) (exp)
-#define ACE_RELEASE(exp)
-#define ACE_AUTORELEASE(exp) (exp)
-#else
-#define ACE_HAS_ARC 0
-#define ACE_RETAIN(exp) [(exp) retain]
-#define ACE_RELEASE(exp) [(exp) release]
-#define ACE_AUTORELEASE(exp) [(exp) autorelease]
-#endif
+@implementation UIImage (ACEToolKit)
 
++ (UIImage *)imageWithColor:(UIColor *)color
+{
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-
-// blocks
-typedef BOOL (^SelectBlock)(NSInteger index, NSString *title);
-typedef BOOL (^DismissBlock)(void);
-
-
-// import all the headers
-#import "ACEActionSheet.h"
-#import "ACEAlertView.h"
-#import "ACENavigationController.h"
-
-#import "ACEErrorUtils.h"
-#import "ACEPathUtils.h"
-
-// additions
-#import "NSMutableDictionary+ACEToolKit.h"
-#import "UIColor+ACEToolKit.h"
-#import "UILabel+ACEToolKit.h"
-#import "UIImage+ACEToolKit.h"
-#import "UIView+ACEToolKit.h"
-#import "UIViewController+ACEToolKit.h"
-
-// override default classes
-#define UIActionSheet       ACEActionSheet
-#define UIAlertView         ACEAlertView
+@end
