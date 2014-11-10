@@ -21,12 +21,42 @@
 // THE SOFTWARE.  Copyright (c) 2014 Stefano Acerbetti. All rights reserved.
 //
 
+@interface ACEAlertAction : NSObject <NSCopying>
 
-@interface ACEAlertView : UIAlertView
++ (instancetype)actionWithTitle:(NSString *)title style:(UIAlertActionStyle)style handler:(void (^)(ACEAlertAction *action))handler;
 
-@property (nonatomic, copy) SelectBlock selectBlock;
-@property (nonatomic, copy) DismissBlock cancelBlock;
+@property (nonatomic, readonly) NSString *title;
+@property (nonatomic, readonly) UIAlertActionStyle style;
+@property (nonatomic, getter=isEnabled) BOOL enabled;
 
+@end
+
+@interface ACEAlertView : NSObject
+
+- (instancetype)initWithTitle:(NSString *)title
+                      message:(NSString *)message
+                     delegate:(id)delegate // deprecated
+            cancelButtonTitle:(NSString *)cancelButtonTitle
+            otherButtonTitles:(NSString *)otherButtonTitles, ... NS_REQUIRES_NIL_TERMINATION;
+
+
+// deprecated show methods
 - (void)showWithSelectBlock:(SelectBlock)select cancel:(DismissBlock)cancel;
+- (void)show;
+
+@end
+
+
+@interface ACEAlertView (Proxy)
+
+- (void)addAction:(ACEAlertAction *)action;
+@property (nonatomic, readonly) NSArray *actions;
+- (void)addTextFieldWithConfigurationHandler:(void (^)(UITextField *textField))configurationHandler;
+@property (nonatomic, readonly) NSArray *textFields;
+
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *message;
+
+- (void)showInViewController:(UIViewController *)controller;
 
 @end

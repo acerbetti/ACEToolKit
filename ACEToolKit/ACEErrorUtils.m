@@ -122,30 +122,25 @@
     [[UIAlertView alloc] initWithTitle:title
                                message:message
                               delegate:nil
-                     cancelButtonTitle:dismissLabel
+                     cancelButtonTitle:nil
                      otherButtonTitles:nil];
     
     // add the retry block if necessary
     if (retryLabel.length > 0 && retryBlock != nil) {
-        [alertView addButtonWithTitle:retryLabel];
-        [alertView showWithSelectBlock:^BOOL(NSInteger index, NSString *title) {
-            // try to call the retry block
-            retryBlock(index == 1);
-            
-            // don't pass the info to the delegate
-            return NO;
-            
-        } cancel:^BOOL{
-            // try to call the retry block
-            retryBlock(NO);
-            
-            // don't pass the info to the delegate
-            return NO;
-        }];
-        
-    } else {
-        [alertView show];
+        [alertView addAction:[ACEAlertAction actionWithTitle:retryLabel
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(ACEAlertAction *action) {
+                                                         retryBlock(YES);
+                                                     }]];
     }
+    
+    [alertView addAction:[ACEAlertAction actionWithTitle:dismissLabel
+                                                   style:UIAlertActionStyleCancel
+                                                 handler:^(ACEAlertAction *action) {
+                                                     retryBlock(NO);
+                                                 }]];
+    
+    [alertView show];
 }
 
 - (void)showSimpleErrorMessage:(NSString *)message

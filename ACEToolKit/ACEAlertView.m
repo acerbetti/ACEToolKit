@@ -24,20 +24,232 @@
 
 #import "ACEToolKit.h"
 
-@interface ACEAlertView ()<UIAlertViewDelegate>
-@property (nonatomic, assign) id<UIAlertViewDelegate> alertDelegate;
+// disable the override method
+#ifdef UIAlertView
+#undef UIAlertView
+#endif
+
+#pragma mark - UIAlertViewHelper
+
+@interface ACEAlertAction ()
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, assign) UIAlertActionStyle style;
+@property (nonatomic, copy) void (^handler)(ACEAlertAction *action);
+
+@property (nonatomic, strong) UIAlertAction *alertAction;
+@end
+
+#pragma mark -
+
+@implementation ACEAlertAction
+
++ (instancetype)actionWithTitle:(NSString *)title style:(UIAlertActionStyle)style handler:(void (^)(ACEAlertAction *action))handler
+{
+    return [[ACEAlertAction alloc] initWithTitle:title style:style handler:handler];
+}
+
+- (instancetype)initWithTitle:(NSString *)title style:(UIAlertActionStyle)style handler:(void (^)(ACEAlertAction *action))handler
+{
+    self = [super init];
+    if (self == nil) { return nil; }
+    
+    _title = title;
+    _style = style;
+    _handler = handler;
+    
+    if ([UIAlertController class]) {
+        __weak typeof(self) weakSelf = self;
+        self.alertAction = [UIAlertAction actionWithTitle:title style:style handler:^(UIAlertAction *alertAction) {
+            __strong typeof (self) strongSelf = weakSelf;
+            handler(strongSelf);
+        }];
+    }
+    
+    return self;
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    ACEAlertAction *alertAction = [self.class new];
+    alertAction.title = self.title;
+    alertAction.style = self.style;
+    alertAction.handler = self.handler;
+    alertAction.alertAction = self.alertAction;
+    return alertAction;
+}
+
+
+#pragma mark Setter
+
+- (void)setEnabled:(BOOL)enabled
+{
+    _enabled = enabled;
+    
+    if (self.alertAction != nil) {
+        self.alertAction.enabled = enabled;
+    }
+}
+
+@end
+
+
+#pragma mark - UIAlertViewHelper
+
+@interface UIAlertViewHelper : NSObject<UIAlertViewDelegate>
+@property (nonatomic, strong) UIAlertView *alertView;
+@property (nonatomic, strong) NSMutableArray *internalActions;
+@end
+
+#pragma mark -
+
+@implementation UIAlertViewHelper
+
++ (instancetype)alertViewFromWrapper:(ACEAlertView *)wrapper
+{
+    return [[UIAlertViewHelper alloc] init];
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.alertView = [UIAlertView new];
+        self.alertView.delegate = self;
+        
+        self.internalActions = [NSMutableArray new];
+    }
+    return self;
+}
+
+- (void)setTitle:(NSString *)title
+{
+    self.alertView.title = title;
+}
+
+- (void)setMessage:(NSString *)message
+{
+    self.alertView.message = message;
+}
+
+- (NSArray *)actions
+{
+    return [self.internalActions copy];
+}
+
+- (void)addAction:(ACEAlertAction *)action
+{
+    NSInteger buttonIndex = [self.alertView addButtonWithTitle:action.title];
+    if (action.style == UIAlertActionStyleCancel) {
+        self.alertView.cancelButtonIndex = buttonIndex;
+    }
+    
+    [self.internalActions addObject:action];
+}
+
+- (void)showInViewController:(UIViewController *)controller
+{
+    [self.alertView show];
+}
+
+
+#pragma mark - Alert View Delegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    ACEAlertAction *alertAction = self.internalActions[buttonIndex];
+    void (^callback)(ACEAlertAction *action) = alertAction.handler;
+    if (callback) {
+        callback(alertAction);
+    }
+}
+
+@end
+
+
+#pragma mark - UIAlertControllerHelper
+
+@interface UIAlertControllerHelper : UIAlertController
+@property (nonatomic, weak) ACEAlertView *alertWrapper;
+@end
+
+#pragma mark -
+
+@implementation UIAlertControllerHelper
+
++ (instancetype)alertViewFromWrapper:(ACEAlertView *)wrapper
+{
+    return [UIAlertControllerHelper alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleAlert];
+}
+
+- (NSString *)buttonTitleAtIndex:(NSInteger)buttonIndex
+{
+    UIAlertAction *action = self.actions[buttonIndex];
+    return action.title;
+}
+
+- (void)addAction:(ACEAlertAction *)action
+{
+    [super addAction:action.alertAction];
+}
+
+- (void)showInViewController:(UIViewController *)controller
+{
+    if (controller == nil) {
+        // get the root controller on the main window
+        UIWindow *window = [[UIApplication sharedApplication] windows][0];
+        controller = window.rootViewController;
+    }
+    [controller presentViewController:self animated:YES completion:nil];
+}
+
+@end
+
+
+#pragma mark - ACEAlertView
+
+@interface ACEAlertView ()
+@property (nonatomic, copy) SelectBlock selectBlock;
+@property (nonatomic, copy) DismissBlock cancelBlock;
+@property (nonatomic, strong) id alertController;
 @end
 
 #pragma mark -
 
 @implementation ACEAlertView
 
-- (id)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...
+- (instancetype)init
 {
-    self = [super initWithTitle:(title ?: @"") message:message delegate:delegate cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles, nil];
+    self = [super init];
+    if (self) {
+        if ([UIAlertController class]) {
+            // iOS > 7.x
+            self.alertController = [UIAlertControllerHelper alertViewFromWrapper:self];
+            
+        } else {
+            // iOS <= 7.x
+            self.alertController = [UIAlertViewHelper alertViewFromWrapper:self];
+        }
+    }
+    return self;
+}
+
+- (instancetype)initWithTitle:(NSString *)title
+            message:(NSString *)message
+           delegate:(id)delegate
+  cancelButtonTitle:(NSString *)cancelButtonTitle
+  otherButtonTitles:(NSString *)otherButtonTitles, ...
+{
+    self = [self init];
     if (self != nil) {
         
+        // set the properties
+        self.title = title;
+        self.message = message;
+        
         if (otherButtonTitles != nil) {
+            
+            [self addButtonWithTitle:otherButtonTitles];
+            
             // add the other buttons from the list
             va_list args;
             va_start(args, otherButtonTitles);
@@ -48,22 +260,36 @@
             }
         }
         
-        // reset the cancel button and store the delegate
-        self.cancelButtonIndex = 0;
-        self.delegate = delegate;
+        if (cancelButtonTitle.length > 0) {
+            [self addButtonWithTitle:cancelButtonTitle style:UIAlertActionStyleCancel];
+        }
     }
     return self;
 }
 
-- (id)delegate
+- (NSInteger)addButtonWithTitle:(NSString *)title
 {
-    return self;
+    return [self addButtonWithTitle:title style:UIAlertActionStyleDefault];
 }
 
-- (void)setDelegate:(id)delegate
+- (NSInteger)addButtonWithTitle:(NSString *)title style:(UIAlertActionStyle)style
 {
-    [super setDelegate:self];
-    self.alertDelegate = delegate;
+    __block NSInteger buttonIndex = self.actions.count;
+    
+    [self addAction:[ACEAlertAction actionWithTitle:title
+                                              style:style
+                                            handler:^(ACEAlertAction *action) {
+                                                if (style == UIAlertActionStyleCancel && self.cancelBlock) {
+                                                    self.cancelBlock();
+                                                    
+                                                } else if (style == UIAlertActionStyleDefault && self.selectBlock) {
+                                                    self.selectBlock(buttonIndex, title);
+                                                }
+                                                
+                                                // this will free the memory
+                                                self.alertController = nil;
+                                            }]];
+    return buttonIndex;
 }
 
 
@@ -76,88 +302,31 @@
     [self show];
 }
 
-
-#pragma mark - Alert View Delegate
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+- (void)show
 {
-    BOOL notifyDelegate = YES;
-    
-    if (alertView.cancelButtonIndex != buttonIndex) {
-        if (self.selectBlock != nil) {
-            notifyDelegate = self.selectBlock(buttonIndex, [alertView buttonTitleAtIndex:buttonIndex]);
-        }
-        
-    } else {
-        if (self.cancelBlock != nil) {
-            notifyDelegate = self.cancelBlock();
-        }
+    [self showInViewController:nil];
+}
+
+
+#pragma mark Forwarding
+
+- (id)forwardingTargetForSelector:(SEL)selector
+{
+    // Dispatch all messages from the Proxy category to the alert controller
+    if ([self.alertController respondsToSelector:selector]) {
+        return self.alertController;
     }
     
-    if (notifyDelegate && [self.alertDelegate respondsToSelector:_cmd]) {
-        [self.alertDelegate alertView:alertView clickedButtonAtIndex:buttonIndex];
-    }
-    
-    // clean the delegate
-    self.delegate = nil;
-    self.alertDelegate = nil;
+    return [super forwardingTargetForSelector:selector];
 }
-
-- (void)alertViewCancel:(UIAlertView *)alertView
-{
-    if ([self.alertDelegate respondsToSelector:_cmd]) {
-        [self.alertDelegate alertViewCancel:alertView];
-    }
-}
-
-- (void)willPresentAlertView:(UIAlertView *)alertView
-{
-    if ([self.alertDelegate respondsToSelector:_cmd]) {
-        [self.alertDelegate willPresentAlertView:alertView];
-    }
-}
-
-- (void)didPresentAlertView:(UIAlertView *)alertView
-{
-    if ([self.alertDelegate respondsToSelector:_cmd]) {
-        [self.alertDelegate didPresentAlertView:alertView];
-    }
-}
-
-- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
-{
-    if ([self.alertDelegate respondsToSelector:_cmd]) {
-        [self.alertDelegate alertView:alertView willDismissWithButtonIndex:buttonIndex];
-    }
-}
-
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
-{
-    if ([self.alertDelegate respondsToSelector:_cmd]) {
-        [self.alertDelegate alertView:alertView didDismissWithButtonIndex:buttonIndex];
-    }
-}
-
-- (BOOL)alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView
-{
-    if ([self.alertDelegate respondsToSelector:_cmd]) {
-        return [self.alertDelegate alertViewShouldEnableFirstOtherButton:alertView];
-        
-    } else {
-        return YES;
-    }
-}
-
-#if !ACE_HAS_ARC
 
 - (void)dealloc
 {
-    self.alertDelegate = nil;
+#if !ACE_HAS_ARC
     self.selectBlock = nil;
     self.cancelBlock = nil;
     [super dealloc];
-}
-
 #endif
+}
 
 @end

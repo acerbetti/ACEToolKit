@@ -12,7 +12,7 @@
 
 @property (nonatomic, unsafe_unretained) IBOutlet UILabel *messageLabel;
 
-- (IBAction)delegateAlertView:(id)sender;
+- (IBAction)newAlertView:(id)sender;
 - (IBAction)blockAlertView:(id)sender;
 
 - (IBAction)delegateActionSheet:(id)sender;

@@ -16,7 +16,7 @@
 
 #pragma mark - Alert View
 
-- (IBAction)delegateAlertView:(id)sender
+- (IBAction)newAlertView:(id)sender
 {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ACEAlertView"
                                                         message:@"Test with blocks"
@@ -44,16 +44,6 @@
         return NO;
         
     }];
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (alertView.cancelButtonIndex != buttonIndex) {
-        self.messageLabel.text = [NSString stringWithFormat:@"Selected option '%@'", [alertView buttonTitleAtIndex:buttonIndex]];
-        
-    } else {
-        self.messageLabel.text = @"No selection";
-    }
 }
 
 
