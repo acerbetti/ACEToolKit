@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
-		<int key="IBDocument.SystemTarget">2048</int>
+		<int key="IBDocument.SystemTarget">1536</int>
 		<string key="IBDocument.SystemVersion">13F34</string>
 		<string key="IBDocument.InterfaceBuilderVersion">6250</string>
 		<string key="IBDocument.AppKitVersion">1265.21</string>
@@ -56,7 +56,7 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
 						</object>
-						<string key="IBUINormalTitle">AlertView (Delegate)</string>
+						<string key="IBUINormalTitle">AlertView (V2)</string>
 						<object class="NSColor" key="IBUINormalTitleShadowColor" id="74967663">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>

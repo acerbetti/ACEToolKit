@@ -23,6 +23,9 @@
 
 
 #import "ACEToolKit.h"
+#import <objc/runtime.h>
+
+static char const * const AlertViewTagKey = "AlertViewTag";
 
 // disable the override method
 #ifdef UIAlertView
@@ -51,18 +54,16 @@
 - (instancetype)initWithTitle:(NSString *)title style:(UIAlertActionStyle)style handler:(void (^)(ACEAlertAction *action))handler
 {
     self = [super init];
-    if (self == nil) { return nil; }
-    
-    _title = title;
-    _style = style;
-    _handler = handler;
-    
-    if ([UIAlertController class]) {
-        __weak typeof(self) weakSelf = self;
-        self.alertAction = [UIAlertAction actionWithTitle:title style:style handler:^(UIAlertAction *alertAction) {
-            __strong typeof (self) strongSelf = weakSelf;
-            handler(strongSelf);
-        }];
+    if (self) {
+        self.title = title;
+        self.style = style;
+        self.handler = handler;
+        
+        if ([UIAlertController class]) {
+            self.alertAction = [UIAlertAction actionWithTitle:title style:style handler:^(UIAlertAction *alertAction) {
+                handler(self);
+            }];
+        }
     }
     
     return self;
@@ -76,6 +77,17 @@
     alertAction.handler = self.handler;
     alertAction.alertAction = self.alertAction;
     return alertAction;
+}
+
+- (void)dealloc
+{
+    self.title = nil;
+    self.style = nil;
+    self.handler = nil;
+    self.alertAction = nil;
+#if !ACE_HAS_ARC
+    [super dealloc];
+#endif
 }
 
 
@@ -96,6 +108,7 @@
 #pragma mark - UIAlertViewHelper
 
 @interface UIAlertViewHelper : NSObject<UIAlertViewDelegate>
+@property (nonatomic, weak) UIViewController *controller;
 @property (nonatomic, strong) UIAlertView *alertView;
 @property (nonatomic, strong) NSMutableArray *internalActions;
 @end
@@ -104,7 +117,7 @@
 
 @implementation UIAlertViewHelper
 
-+ (instancetype)alertViewFromWrapper:(ACEAlertView *)wrapper
++ (instancetype)alertView
 {
     return [[UIAlertViewHelper alloc] init];
 }
@@ -148,7 +161,20 @@
 
 - (void)showInViewController:(UIViewController *)controller
 {
+    // keep a reference of the controller
+    self.controller = controller;
+    objc_setAssociatedObject(controller, AlertViewTagKey, self, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
     [self.alertView show];
+}
+
+- (void)dealloc
+{
+    self.alertView = nil;
+    self.internalActions = nil;
+#if !ACE_HAS_ARC
+    [super dealloc];
+#endif
 }
 
 
@@ -160,6 +186,9 @@
     void (^callback)(ACEAlertAction *action) = alertAction.handler;
     if (callback) {
         callback(alertAction);
+        
+        // free the memory
+        objc_removeAssociatedObjects(self.controller);
     }
 }
 
@@ -169,14 +198,14 @@
 #pragma mark - UIAlertControllerHelper
 
 @interface UIAlertControllerHelper : UIAlertController
-@property (nonatomic, weak) ACEAlertView *alertWrapper;
+
 @end
 
 #pragma mark -
 
 @implementation UIAlertControllerHelper
 
-+ (instancetype)alertViewFromWrapper:(ACEAlertView *)wrapper
++ (instancetype)alertView
 {
     return [UIAlertControllerHelper alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleAlert];
 }
@@ -223,11 +252,11 @@
     if (self) {
         if ([UIAlertController class]) {
             // iOS > 7.x
-            self.alertController = [UIAlertControllerHelper alertViewFromWrapper:self];
+            self.alertController = [UIAlertControllerHelper alertView];
             
         } else {
             // iOS <= 7.x
-            self.alertController = [UIAlertViewHelper alertViewFromWrapper:self];
+            self.alertController = [UIAlertViewHelper alertView];
         }
     }
     return self;
@@ -308,7 +337,7 @@
 }
 
 
-#pragma mark Forwarding
+#pragma mark - Forwarding
 
 - (id)forwardingTargetForSelector:(SEL)selector
 {
@@ -322,9 +351,10 @@
 
 - (void)dealloc
 {
-#if !ACE_HAS_ARC
+    self.alertController = nil;
     self.selectBlock = nil;
     self.cancelBlock = nil;
+#if !ACE_HAS_ARC
     [super dealloc];
 #endif
 }

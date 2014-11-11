@@ -18,13 +18,35 @@
 
 - (IBAction)newAlertView:(id)sender
 {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ACEAlertView"
-                                                        message:@"Test with blocks"
-                                                       delegate:self
-                                              cancelButtonTitle:@"Cancel"
-                                              otherButtonTitles:@"Option 1", @"Option 2", nil];
+    UIAlertView *alertView = [UIAlertView new];
+    alertView.title = @"ACEAlertView";
+    alertView.message = @"Test with blocks";
     
-    [alertView show];
+    [alertView addAction:[ACEAlertAction actionWithTitle:@"Erase ALL"
+                                                   style:UIAlertActionStyleDestructive
+                                                 handler:^(ACEAlertAction *action) {
+                                                     self.messageLabel.text = @"Destructive action";
+                                                 }]];
+    
+    [alertView addAction:[ACEAlertAction actionWithTitle:@"Cancel"
+                                                   style:UIAlertActionStyleCancel
+                                                 handler:^(ACEAlertAction *action) {
+                                                     self.messageLabel.text = @"No selection";
+                                                 }]];
+    
+    [alertView addAction:[ACEAlertAction actionWithTitle:@"Option 1"
+                                                   style:UIAlertActionStyleDefault
+                                                 handler:^(ACEAlertAction *action) {
+                                                     self.messageLabel.text = [NSString stringWithFormat:@"Selected option '%@'", action.title];
+                                                 }]];
+    
+    [alertView addAction:[ACEAlertAction actionWithTitle:@"Option 2"
+                                                   style:UIAlertActionStyleDefault
+                                                 handler:^(ACEAlertAction *action) {
+                                                     self.messageLabel.text = [NSString stringWithFormat:@"Selected option '%@'", action.title];
+                                                 }]];
+    
+    [alertView showInViewController:self];
 }
 
 - (IBAction)blockAlertView:(id)sender
