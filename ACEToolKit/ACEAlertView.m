@@ -108,7 +108,6 @@ static char const * const AlertViewTagKey = "AlertViewTag";
 #pragma mark - UIAlertViewHelper
 
 @interface UIAlertViewHelper : NSObject<UIAlertViewDelegate>
-@property (nonatomic, weak) UIViewController *controller;
 @property (nonatomic, strong) UIAlertView *alertView;
 @property (nonatomic, strong) NSMutableArray *internalActions;
 @end
@@ -161,10 +160,7 @@ static char const * const AlertViewTagKey = "AlertViewTag";
 
 - (void)showInViewController:(UIViewController *)controller
 {
-    // keep a reference of the controller
-    self.controller = controller;
-    objc_setAssociatedObject(controller, AlertViewTagKey, self, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    
+    objc_setAssociatedObject([UIApplication sharedApplication], AlertViewTagKey, self, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [self.alertView show];
 }
 
@@ -188,7 +184,7 @@ static char const * const AlertViewTagKey = "AlertViewTag";
         callback(alertAction);
         
         // free the memory
-        objc_removeAssociatedObjects(self.controller);
+        objc_setAssociatedObject([UIApplication sharedApplication], AlertViewTagKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
 }
 

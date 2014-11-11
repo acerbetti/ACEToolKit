@@ -22,7 +22,7 @@
     alertView.title = @"ACEAlertView";
     alertView.message = @"Test with blocks";
     
-    [alertView addAction:[ACEAlertAction actionWithTitle:@"Erase ALL"
+    [alertView addAction:[ACEAlertAction actionWithTitle:@"Danger here"
                                                    style:UIAlertActionStyleDestructive
                                                  handler:^(ACEAlertAction *action) {
                                                      self.messageLabel.text = @"Destructive action";
