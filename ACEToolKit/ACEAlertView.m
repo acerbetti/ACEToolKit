@@ -79,7 +79,6 @@
 - (void)dealloc
 {
     self.title = nil;
-    self.style = nil;
     self.handler = nil;
     self.alertAction = nil;
 #if !ACE_HAS_ARC
@@ -194,16 +193,18 @@
 #pragma mark - UIAlertControllerHelper
 
 @interface UIAlertControllerHelper : UIAlertController
-
+@property (nonatomic, strong) ACEAlertView *container;
 @end
 
 #pragma mark -
 
 @implementation UIAlertControllerHelper
 
-+ (instancetype)alertView
++ (instancetype)alertViewWithContainer:(ACEAlertView *)container
 {
-    return [UIAlertControllerHelper alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertControllerHelper *helper = [UIAlertControllerHelper alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleAlert];
+    helper.container = container;
+    return helper;
 }
 
 - (NSString *)buttonTitleAtIndex:(NSInteger)buttonIndex
@@ -217,6 +218,36 @@
     [super addAction:action.alertAction];
 }
 
+- (void)setAlertViewStyle:(UIAlertViewStyle)style
+{
+    switch (style) {
+        case UIAlertViewStylePlainTextInput:
+            [self addTextFieldWithConfigurationHandler:nil];
+            break;
+            
+        case UIAlertViewStyleSecureTextInput:
+            [self addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+                textField.secureTextEntry = YES;
+            }];
+            break;
+            
+        case UIAlertViewStyleLoginAndPasswordInput:
+            [self addTextFieldWithConfigurationHandler:nil];
+            [self addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+                textField.secureTextEntry = YES;
+            }];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (UITextField *)textFieldAtIndex:(NSInteger)textFieldIndex
+{
+    return self.textFields[textFieldIndex];
+}
+
 - (void)showInViewController:(UIViewController *)controller
 {
     if (controller == nil) {
@@ -224,12 +255,18 @@
         UIWindow *window = [[UIApplication sharedApplication] windows][0];
         controller = window.rootViewController;
     }
-    [controller presentViewController:self animated:YES completion:nil];
+    
+    if (controller.presentedViewController != nil) {
+        [controller.presentedViewController presentViewController:self animated:YES completion:nil];
+        
+    } else {
+        [controller presentViewController:self animated:YES completion:nil];
+    }
 }
 
 - (void)dealloc
 {
-    
+    self.container = nil;
 }
 
 @end
@@ -253,7 +290,7 @@
     if (self) {
         if ([UIAlertController class]) {
             // iOS > 7.x
-            self.alertController = [UIAlertControllerHelper alertView];
+            self.alertController = [UIAlertControllerHelper alertViewWithContainer:self];
             
         } else {
             // iOS <= 7.x
@@ -273,11 +310,14 @@
     if (self != nil) {
         
         // set the properties
-        self.title = title;
+        self.title = title ?: @"";
         self.message = message;
         
+        if (cancelButtonTitle.length > 0) {
+            [self addButtonWithTitle:cancelButtonTitle style:UIAlertActionStyleCancel];
+        }
+        
         if (otherButtonTitles != nil) {
-            
             [self addButtonWithTitle:otherButtonTitles];
             
             // add the other buttons from the list
@@ -288,10 +328,6 @@
             while ((buttonTitle = va_arg(args, NSString *))) {
                 [self addButtonWithTitle:buttonTitle];
             }
-        }
-        
-        if (cancelButtonTitle.length > 0) {
-            [self addButtonWithTitle:cancelButtonTitle style:UIAlertActionStyleCancel];
         }
     }
     return self;
@@ -316,6 +352,9 @@
                                                 } else if (style == UIAlertActionStyleDefault && weakSelf.selectBlock) {
                                                     weakSelf.selectBlock(buttonIndex, title);
                                                 }
+                                                
+                                                // clean the memory loop
+                                                weakSelf.alertController = nil;
                                             }]];
     return buttonIndex;
 }

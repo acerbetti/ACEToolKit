@@ -49,13 +49,17 @@
 
 @interface ACEAlertView (Proxy)
 
-- (void)addAction:(ACEAlertAction *)action;
 @property (nonatomic, readonly) NSArray *actions;
-- (void)addTextFieldWithConfigurationHandler:(void (^)(UITextField *textField))configurationHandler;
 @property (nonatomic, readonly) NSArray *textFields;
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *message;
+
+@property (nonatomic, assign) UIAlertViewStyle alertViewStyle;
+
+- (void)addAction:(ACEAlertAction *)action;
+- (void)addTextFieldWithConfigurationHandler:(void (^)(UITextField *textField))configurationHandler;
+- (UITextField *)textFieldAtIndex:(NSInteger)textFieldIndex;
 
 - (void)showInViewController:(UIViewController *)controller;
 
