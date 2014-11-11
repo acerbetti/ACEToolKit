@@ -23,9 +23,6 @@
 
 
 #import "ACEToolKit.h"
-#import <objc/runtime.h>
-
-static char const * const AlertViewTagKey = "AlertViewTag";
 
 // disable the override method
 #ifdef UIAlertView
@@ -108,6 +105,7 @@ static char const * const AlertViewTagKey = "AlertViewTag";
 #pragma mark - UIAlertViewHelper
 
 @interface UIAlertViewHelper : NSObject<UIAlertViewDelegate>
+@property (nonatomic, strong) ACEAlertView *container;
 @property (nonatomic, strong) UIAlertView *alertView;
 @property (nonatomic, strong) NSMutableArray *internalActions;
 @end
@@ -116,15 +114,17 @@ static char const * const AlertViewTagKey = "AlertViewTag";
 
 @implementation UIAlertViewHelper
 
-+ (instancetype)alertView
++ (instancetype)alertViewWithContainer:(ACEAlertView *)container
 {
-    return [[UIAlertViewHelper alloc] init];
+    return [[UIAlertViewHelper alloc] initWithContainer:container];
 }
 
-- (instancetype)init
+- (instancetype)initWithContainer:(ACEAlertView *)container
 {
     self = [super init];
     if (self) {
+        self.container = container;
+        
         self.alertView = [UIAlertView new];
         self.alertView.delegate = self;
         
@@ -160,12 +160,12 @@ static char const * const AlertViewTagKey = "AlertViewTag";
 
 - (void)showInViewController:(UIViewController *)controller
 {
-    objc_setAssociatedObject([UIApplication sharedApplication], AlertViewTagKey, self, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [self.alertView show];
 }
 
 - (void)dealloc
 {
+    self.container = nil;
     self.alertView = nil;
     self.internalActions = nil;
 #if !ACE_HAS_ARC
@@ -183,8 +183,8 @@ static char const * const AlertViewTagKey = "AlertViewTag";
     if (callback) {
         callback(alertAction);
         
-        // free the memory
-        objc_setAssociatedObject([UIApplication sharedApplication], AlertViewTagKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        // clean the memory loop
+        self.container = nil;
     }
 }
 
@@ -227,6 +227,11 @@ static char const * const AlertViewTagKey = "AlertViewTag";
     [controller presentViewController:self animated:YES completion:nil];
 }
 
+- (void)dealloc
+{
+    
+}
+
 @end
 
 
@@ -252,7 +257,7 @@ static char const * const AlertViewTagKey = "AlertViewTag";
             
         } else {
             // iOS <= 7.x
-            self.alertController = [UIAlertViewHelper alertView];
+            self.alertController = [UIAlertViewHelper alertViewWithContainer:self];
         }
     }
     return self;
@@ -299,20 +304,18 @@ static char const * const AlertViewTagKey = "AlertViewTag";
 
 - (NSInteger)addButtonWithTitle:(NSString *)title style:(UIAlertActionStyle)style
 {
+    __weak __typeof(self)weakSelf = self;
     __block NSInteger buttonIndex = self.actions.count;
     
     [self addAction:[ACEAlertAction actionWithTitle:title
                                               style:style
                                             handler:^(ACEAlertAction *action) {
-                                                if (style == UIAlertActionStyleCancel && self.cancelBlock) {
-                                                    self.cancelBlock();
+                                                if (style == UIAlertActionStyleCancel && weakSelf.cancelBlock) {
+                                                    weakSelf.cancelBlock();
                                                     
-                                                } else if (style == UIAlertActionStyleDefault && self.selectBlock) {
-                                                    self.selectBlock(buttonIndex, title);
+                                                } else if (style == UIAlertActionStyleDefault && weakSelf.selectBlock) {
+                                                    weakSelf.selectBlock(buttonIndex, title);
                                                 }
-                                                
-                                                // this will free the memory
-                                                self.alertController = nil;
                                             }]];
     return buttonIndex;
 }
