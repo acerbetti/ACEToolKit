@@ -132,6 +132,16 @@
     return self;
 }
 
+- (void)setAlertViewStyle:(UIAlertViewStyle)style
+{
+    self.alertView.alertViewStyle = style;
+}
+
+- (UIAlertViewStyle)alertViewStyle
+{
+    return self.alertView.alertViewStyle;
+}
+
 - (void)setTitle:(NSString *)title
 {
     self.alertView.title = title;
@@ -162,6 +172,11 @@
     [self.alertView show];
 }
 
+- (UITextField *)textFieldAtIndex:(NSInteger)textFieldIndex
+{
+    return [self.alertView textFieldAtIndex:textFieldIndex];
+}
+
 - (void)dealloc
 {
     self.container = nil;
@@ -181,9 +196,6 @@
     void (^callback)(ACEAlertAction *action) = alertAction.handler;
     if (callback) {
         callback(alertAction);
-        
-        // clean the memory loop
-        self.container = nil;
     }
 }
 
@@ -352,9 +364,6 @@
                                                 } else if (style == UIAlertActionStyleDefault && weakSelf.selectBlock) {
                                                     weakSelf.selectBlock(buttonIndex, title);
                                                 }
-                                                
-                                                // clean the memory loop
-                                                weakSelf.alertController = nil;
                                             }]];
     return buttonIndex;
 }
