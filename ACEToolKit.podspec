@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.summary      = 'Development tools to make my life (and yours) a little bit easier.'
   s.source       = { :git => 'https://github.com/acerbetti/ACEToolKit.git', :tag => "v#{s.version}" }
   s.source_files = 'ACEToolKit/*.{h,m}'
-  s.platform     = :ios, '6.0'
-  s.dependency   = 'FFGlobalAlertController'
+  s.platform     = :ios, '8.0'
+  s.dependency     'FFGlobalAlertController'
   s.requires_arc = true
 end
