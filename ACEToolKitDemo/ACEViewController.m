@@ -46,7 +46,7 @@
                                                      self.messageLabel.text = [NSString stringWithFormat:@"Selected option '%@'", action.title];
                                                  }]];
     
-    [alertView showInViewController:self];
+    [alertView show];
 }
 
 - (IBAction)blockAlertView:(id)sender

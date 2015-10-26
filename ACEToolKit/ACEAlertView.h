@@ -40,9 +40,7 @@
             otherButtonTitles:(NSString *)otherButtonTitles, ... NS_REQUIRES_NIL_TERMINATION;
 
 
-// deprecated show methods
 - (void)showWithSelectBlock:(SelectBlock)select cancel:(DismissBlock)cancel;
-- (void)show;
 
 @end
 
@@ -61,6 +59,6 @@
 - (void)addTextFieldWithConfigurationHandler:(void (^)(UITextField *textField))configurationHandler;
 - (UITextField *)textFieldAtIndex:(NSInteger)textFieldIndex;
 
-- (void)showInViewController:(UIViewController *)controller;
+- (void)show;
 
 @end

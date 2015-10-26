@@ -23,6 +23,7 @@
 
 
 #import "ACEToolKit.h"
+#import "UIAlertController+Window.h"
 
 // disable the override method
 #ifdef UIAlertView
@@ -167,7 +168,7 @@
     [self.internalActions addObject:action];
 }
 
-- (void)showInViewController:(UIViewController *)controller
+- (void)show
 {
     [self.alertView show];
 }
@@ -258,22 +259,6 @@
 - (UITextField *)textFieldAtIndex:(NSInteger)textFieldIndex
 {
     return self.textFields[textFieldIndex];
-}
-
-- (void)showInViewController:(UIViewController *)controller
-{
-    if (controller == nil) {
-        // get the root controller on the main window
-        UIWindow *window = [[UIApplication sharedApplication] windows][0];
-        controller = window.rootViewController;
-    }
-    
-    if (controller.presentedViewController != nil) {
-        [controller.presentedViewController presentViewController:self animated:YES completion:nil];
-        
-    } else {
-        [controller presentViewController:self animated:YES completion:nil];
-    }
 }
 
 - (void)dealloc
@@ -376,11 +361,6 @@
     self.selectBlock = select;
     self.cancelBlock = cancel;
     [self show];
-}
-
-- (void)show
-{
-    [self showInViewController:nil];
 }
 
 

@@ -29,6 +29,7 @@
 		7BDE4BBD18E872DC00C3B114 /* ACEPathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDE4BBC18E872DC00C3B114 /* ACEPathUtils.m */; };
 		800834AC199BE4DD00249590 /* ACEErrorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 800834AB199BE4DD00249590 /* ACEErrorUtils.m */; };
 		803351FB1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 803351FA1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m */; };
+		807665051BDEABA50086E12A /* UIAlertController+Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 807665041BDEABA50086E12A /* UIAlertController+Window.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,8 @@
 		800834AB199BE4DD00249590 /* ACEErrorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEErrorUtils.m; sourceTree = "<group>"; };
 		803351F91981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+ACEToolKit.h"; sourceTree = "<group>"; };
 		803351FA1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+ACEToolKit.m"; sourceTree = "<group>"; };
+		807665031BDEABA50086E12A /* UIAlertController+Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Window.h"; sourceTree = "<group>"; };
+		807665041BDEABA50086E12A /* UIAlertController+Window.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Window.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,7 @@
 		7B035FF616AEEDCC002140DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				807665061BDEABFD0086E12A /* FFGlobalAlertController */,
 				7B035FF716AEEDCC002140DF /* ACEToolKitDemo-Info.plist */,
 				7B035FF816AEEDCC002140DF /* InfoPlist.strings */,
 				7B035FFB16AEEDCC002140DF /* main.m */,
@@ -195,6 +199,15 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
+		807665061BDEABFD0086E12A /* FFGlobalAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				807665031BDEABA50086E12A /* UIAlertController+Window.h */,
+				807665041BDEABA50086E12A /* UIAlertController+Window.m */,
+			);
+			name = FFGlobalAlertController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,7 +235,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ACE;
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Stefano Acerbetti";
 			};
 			buildConfigurationList = 7B035FE516AEEDCC002140DF /* Build configuration list for PBXProject "ACEToolKitDemo" */;
@@ -274,6 +287,7 @@
 				803351FB1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m in Sources */,
 				7B03603B16AF2014002140DF /* UIColor+ACEToolKit.m in Sources */,
 				800834AC199BE4DD00249590 /* ACEErrorUtils.m in Sources */,
+				807665051BDEABA50086E12A /* UIAlertController+Window.m in Sources */,
 				7B27004316AF4A9400B1531C /* UILabel+ACEToolKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +325,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -357,6 +372,7 @@
 				GCC_PREFIX_HEADER = "ACEToolKitDemo/ACEToolKitDemo-Prefix.pch";
 				INFOPLIST_FILE = "ACEToolKitDemo/ACEToolKitDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.acetools.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -369,6 +385,7 @@
 				GCC_PREFIX_HEADER = "ACEToolKitDemo/ACEToolKitDemo-Prefix.pch";
 				INFOPLIST_FILE = "ACEToolKitDemo/ACEToolKitDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.acetools.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
