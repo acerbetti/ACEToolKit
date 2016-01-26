@@ -38,4 +38,8 @@ typedef NSImage* ACEImageRef;
 
 + (ACEImageRef)imageWithColor:(ACEColorRef)color;
 
+// resize
+- (ACEImageRef)resizedImageToSize:(CGSize)dstSize;
+- (ACEImageRef)resizedImageToFitInSize:(CGSize)boundingSize scaleIfSmaller:(BOOL)scale;
+
 @end
