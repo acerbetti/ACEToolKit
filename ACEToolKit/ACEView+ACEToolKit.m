@@ -1,6 +1,6 @@
-// UIView+ACEToolKit.m
+// ACEView+ACEToolKit.m
 //
-// Copyright (c) 2014 Stefano Acerbetti
+// Copyright (c) 2016 Stefano Acerbetti
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -18,15 +18,13 @@
 // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.  Copyright (c) 2014 Stefano Acerbetti. All rights reserved.
+// THE SOFTWARE.  Copyright (c) 2016 Stefano Acerbetti. All rights reserved.
 //
 
 
 #import "ACEToolKit.h"
 
-#import <QuartzCore/QuartzCore.h>
-
-@implementation UIView (ACEToolKit)
+@implementation ACEView (ACEToolKit)
 
 #pragma mark - Shortcuts for frame properties
 
@@ -108,6 +106,20 @@
 
 #pragma mark - Shortcuts for positions
 
+#if !TARGET_OS_IOS
+
+- (CGPoint)center
+{
+    return CGPointMake(self.left + (self.width / 2), self.top + (self.height / 2));
+}
+
+- (void)setCenter:(CGPoint)center
+{
+    
+}
+
+#endif
+
 - (CGFloat)centerX
 {
     return self.center.x;
@@ -155,28 +167,30 @@
     self.frame = frame;
 }
 
+#if TARGET_OS_IOS
+
 - (CGFloat)orientationWidth
 {
-    return UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)
-    ? self.height : self.width;
+    return UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation) ? self.height : self.width;
 }
 
 - (CGFloat)orientationHeight
 {
-    return UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)
-    ? self.width : self.height;
+    return UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation) ? self.width : self.height;
 }
+
+#endif
 
 
 #pragma mark - Shortcuts for subviews
 
-- (UIView *)descendantOrSelfWithClass:(Class)cls
+- (ACEViewRef)descendantOrSelfWithClass:(Class)cls
 {
     if ([self isKindOfClass:cls])
         return self;
     
-    for (UIView * child in self.subviews) {
-        UIView *it = [child descendantOrSelfWithClass:cls];
+    for (ACEViewRef child in self.subviews) {
+        ACEViewRef it = [child descendantOrSelfWithClass:cls];
         if (it != nil) {
             return it;
         }
@@ -185,7 +199,7 @@
     return nil;
 }
 
-- (UIView*)ancestorOrSelfWithClass:(Class)cls
+- (ACEViewRef)ancestorOrSelfWithClass:(Class)cls
 {
     if ([self isKindOfClass:cls]) {
         return self;
@@ -201,30 +215,9 @@
 - (void)removeAllSubviews
 {
     while (self.subviews.count) {
-        UIView *child = self.subviews.lastObject;
+        ACEViewRef child = self.subviews.lastObject;
         [child removeFromSuperview];
     }
-}
-
-
-#pragma mark - Rounded corners
-
-- (void)setRoundedCorners:(UIRectCorner)corners radius:(CGFloat)radius
-{
-	CGRect rect = self.bounds;
-    
-    // Create the path
-    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:rect
-                                                   byRoundingCorners:corners
-                                                         cornerRadii:CGSizeMake(radius, radius)];
-    
-    // Create the shape layer and set its path
-    CAShapeLayer *maskLayer = [CAShapeLayer layer];
-    maskLayer.frame = rect;
-    maskLayer.path = maskPath.CGPath;
-    
-    // Set the newly created shape layer as the mask for the view's layer
-    self.layer.mask = maskLayer;
 }
 
 @end

@@ -1,6 +1,6 @@
-// UIColor+ACEToolKit.h
+// ACEColor+ACEToolKit.h
 //
-// Copyright (c) 2014 Stefano Acerbetti
+// Copyright (c) 2016 Stefano Acerbetti
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -18,12 +18,22 @@
 // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.  Copyright (c) 2014 Stefano Acerbetti. All rights reserved.
+// THE SOFTWARE.  Copyright (c) 2016 Stefano Acerbetti. All rights reserved.
 //
 
 
-#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
-#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+#if TARGET_OS_IOS
+#import <UIKit/UIKit.h>
+#define ACEColor UIColor
+typedef UIColor* ACEColorRef;
+#else
+#import <Cocoa/Cocoa.h>
+#define ACEColor NSColor
+typedef NSColor* ACEColorRef;
+#endif
+
+#define RGBCOLOR(r,g,b) [ACEColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define RGBACOLOR(r,g,b,a) [ACEColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
 
 extern NSString * const AliceBlue;
 extern NSString * const AntiqueWhite;
@@ -167,9 +177,9 @@ extern NSString * const WhiteSmoke;
 extern NSString * const Yellow;
 extern NSString * const YellowGreen;
 
-@interface UIColor (ACEToolKit)
+@interface ACEColor (ACEToolKit)
 
-+ (UIColor *)colorWithHex:(int)hex;
-+ (UIColor *)colorWithHexString:(NSString *)hexString;
++ (ACEColorRef)colorWithHex:(int)hex;
++ (ACEColorRef)colorWithHexString:(NSString *)hexString;
 
 @end

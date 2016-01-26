@@ -1,6 +1,6 @@
-// UIImage+ACEToolKit.m
+// ACEImage+ACEToolKit.m
 //
-// Copyright (c) 2014 Stefano Acerbetti
+// Copyright (c) 2016 Stefano Acerbetti
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -18,16 +18,20 @@
 // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.  Copyright (c) 2014 Stefano Acerbetti. All rights reserved.
+// THE SOFTWARE.  Copyright (c) 2016 Stefano Acerbetti. All rights reserved.
 //
 
 
 #import "ACEToolKit.h"
 
-@implementation UIImage (ACEToolKit)
+@implementation ACEImage (ACEToolKit)
 
-+ (UIImage *)imageWithColor:(UIColor *)color
++ (ACEImageRef)imageWithColor:(ACEColorRef)color
 {
+    ACEImageRef image;
+    
+#if TARGET_OS_IOS
+    
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -35,8 +39,19 @@
     CGContextSetFillColorWithColor(context, [color CGColor]);
     CGContextFillRect(context, rect);
     
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    
+#else
+    
+    image = [[NSImage alloc] initWithSize:NSMakeSize(1.0f, 1.0f)];
+    [image lockFocus];
+    
+    // Do your drawing here...
+    
+    [image unlockFocus];
+    
+#endif
     
     return image;
 }

@@ -1,6 +1,6 @@
-// UIColor+ACEToolKit.m
+// ACEColor+ACEToolKit.m
 //
-// Copyright (c) 2014 Stefano Acerbetti
+// Copyright (c) 2016 Stefano Acerbetti
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -18,7 +18,7 @@
 // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.  Copyright (c) 2014 Stefano Acerbetti. All rights reserved.
+// THE SOFTWARE.  Copyright (c) 2016 Stefano Acerbetti. All rights reserved.
 //
 
 
@@ -179,16 +179,16 @@ CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length
 
 #pragma mark -
 
-@implementation UIColor (ACEToolKit)
+@implementation ACEColor (ACEToolKit)
 
-+ (UIColor *)colorWithHex:(int)hex
++ (ACEColorRef)colorWithHex:(int)hex
 {
-    return [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16)) / 255.0
-                           green:((float)((hex & 0xFF00) >> 8)) / 255.0
-                            blue:((float)(hex & 0xFF)) / 255.0 alpha:1.0];
+    return [ACEColor colorWithRed:((float)((hex & 0xFF0000) >> 16)) / 255.0
+                            green:((float)((hex & 0xFF00) >> 8)) / 255.0
+                             blue:((float)(hex & 0xFF)) / 255.0 alpha:1.0];
 }
 
-+ (UIColor *)colorWithHexString:(NSString *)hexString
++ (ACEColorRef)colorWithHexString:(NSString *)hexString
 {
     CGFloat alpha, red, blue, green;
     
@@ -225,7 +225,7 @@ CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length
         default:
             return nil;
     }
-    return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
+    return [ACEColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
 @end

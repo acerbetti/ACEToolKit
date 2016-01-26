@@ -8,15 +8,23 @@
 
 #import "ViewController.h"
 
+#import "ACEToolKit.h"
+
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 
-    // Do any additional setup after loading the view.
+    ACEColorRef color = [ACEColor colorWithHexString:Aquamarine];
+    color = RGBCOLOR(23,34,67);
+    
+    CGFloat h = self.view.height;
+    h += 10;
 }
 
-- (void)setRepresentedObject:(id)representedObject {
+- (void)setRepresentedObject:(id)representedObject
+{
     [super setRepresentedObject:representedObject];
 
     // Update the view, if already loaded.

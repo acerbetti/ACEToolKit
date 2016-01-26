@@ -1,6 +1,6 @@
 // ACEToolKit.h
 //
-// Copyright (c) 2014 Stefano Acerbetti
+// Copyright (c) 2016 Stefano Acerbetti
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -18,27 +18,17 @@
 // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.  Copyright (c) 2014 Stefano Acerbetti. All rights reserved.
+// THE SOFTWARE.  Copyright (c) 2016 Stefano Acerbetti. All rights reserved.
 //
 
 
-
-// ARC
-#if __has_feature(objc_arc)
-#define ACE_HAS_ARC 1
-#define ACE_RETAIN(exp) (exp)
-#define ACE_RELEASE(exp)
-#define ACE_AUTORELEASE(exp) (exp)
-#else
-#define ACE_HAS_ARC 0
-#define ACE_RETAIN(exp) [(exp) retain]
-#define ACE_RELEASE(exp) [(exp) release]
-#define ACE_AUTORELEASE(exp) [(exp) autorelease]
-#endif
-
-
 #import <Foundation/Foundation.h>
+
+#if TARGET_OS_IOS
+
 #import <UIKit/UIKit.h>
+
+typedef UIImage ACEImage;
 
 // blocks
 typedef BOOL (^SelectBlock)(NSInteger index, NSString *title);
@@ -51,16 +41,26 @@ typedef BOOL (^DismissBlock)(void);
 #import "ACENavigationController.h"
 
 #import "ACEErrorUtils.h"
-#import "ACEPathUtils.h"
 
 // additions
-#import "NSMutableDictionary+ACEToolKit.h"
-#import "UIColor+ACEToolKit.h"
 #import "UILabel+ACEToolKit.h"
-#import "UIImage+ACEToolKit.h"
-#import "UIView+ACEToolKit.h"
 #import "UIViewController+ACEToolKit.h"
 
 // override default classes
 #define UIActionSheet       ACEActionSheet
 #define UIAlertView         ACEAlertView
+
+#else
+
+typedef NSImage ACEImage;
+
+#endif
+
+
+#import "ACEColor+ACEToolKit.h"
+#import "ACEImage+ACEToolKit.h"
+#import "ACEView+ACEToolKit.h"
+
+#import "ACEPathUtils.h"
+
+#import "NSMutableDictionary+ACEToolKit.h"
