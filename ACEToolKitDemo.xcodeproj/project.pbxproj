@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		50163BAF19B6CD110037E304 /* ACENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50163BAE19B6CD110037E304 /* ACENavigationController.m */; };
+		50348AFF1C574DAB0094C40E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50348AFE1C574DAB0094C40E /* AppDelegate.m */; };
+		50348B021C574DAB0094C40E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50348B011C574DAB0094C40E /* main.m */; };
+		50348B051C574DAB0094C40E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50348B041C574DAB0094C40E /* ViewController.m */; };
+		50348B071C574DAB0094C40E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50348B061C574DAB0094C40E /* Assets.xcassets */; };
+		50348B0A1C574DAB0094C40E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50348B081C574DAB0094C40E /* Main.storyboard */; };
 		7B035FF016AEEDCC002140DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B035FEF16AEEDCC002140DF /* UIKit.framework */; };
 		7B035FF216AEEDCC002140DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B035FF116AEEDCC002140DF /* Foundation.framework */; };
 		7B035FF416AEEDCC002140DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B035FF316AEEDCC002140DF /* CoreGraphics.framework */; };
@@ -35,6 +40,15 @@
 /* Begin PBXFileReference section */
 		50163BAD19B6CD110037E304 /* ACENavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACENavigationController.h; sourceTree = "<group>"; };
 		50163BAE19B6CD110037E304 /* ACENavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACENavigationController.m; sourceTree = "<group>"; };
+		50348AFB1C574DAB0094C40E /* ACEToolKitDemoMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACEToolKitDemoMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50348AFD1C574DAB0094C40E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		50348AFE1C574DAB0094C40E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		50348B011C574DAB0094C40E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50348B031C574DAB0094C40E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		50348B041C574DAB0094C40E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		50348B061C574DAB0094C40E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		50348B091C574DAB0094C40E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		50348B0B1C574DAB0094C40E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B035FEB16AEEDCC002140DF /* ACEToolKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACEToolKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B035FEF16AEEDCC002140DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7B035FF116AEEDCC002140DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -76,6 +90,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		50348AF81C574DAB0094C40E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B035FE816AEEDCC002140DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,10 +111,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50348AFC1C574DAB0094C40E /* ACEToolKitDemoMac */ = {
+			isa = PBXGroup;
+			children = (
+				50348AFD1C574DAB0094C40E /* AppDelegate.h */,
+				50348AFE1C574DAB0094C40E /* AppDelegate.m */,
+				50348B031C574DAB0094C40E /* ViewController.h */,
+				50348B041C574DAB0094C40E /* ViewController.m */,
+				50348B061C574DAB0094C40E /* Assets.xcassets */,
+				50348B081C574DAB0094C40E /* Main.storyboard */,
+				50348B0B1C574DAB0094C40E /* Info.plist */,
+				50348B001C574DAB0094C40E /* Supporting Files */,
+			);
+			path = ACEToolKitDemoMac;
+			sourceTree = "<group>";
+		};
+		50348B001C574DAB0094C40E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50348B011C574DAB0094C40E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		7B035FE016AEEDCC002140DF = {
 			isa = PBXGroup;
 			children = (
 				7B035FF516AEEDCC002140DF /* ACEToolKitDemo */,
+				50348AFC1C574DAB0094C40E /* ACEToolKitDemoMac */,
 				7B035FEE16AEEDCC002140DF /* Frameworks */,
 				7B035FEC16AEEDCC002140DF /* Products */,
 			);
@@ -103,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				7B035FEB16AEEDCC002140DF /* ACEToolKitDemo.app */,
+				50348AFB1C574DAB0094C40E /* ACEToolKitDemoMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,6 +257,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		50348AFA1C574DAB0094C40E /* ACEToolKitDemoMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50348B0E1C574DAB0094C40E /* Build configuration list for PBXNativeTarget "ACEToolKitDemoMac" */;
+			buildPhases = (
+				50348AF71C574DAB0094C40E /* Sources */,
+				50348AF81C574DAB0094C40E /* Frameworks */,
+				50348AF91C574DAB0094C40E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ACEToolKitDemoMac;
+			productName = ACEToolKitDemoMac;
+			productReference = 50348AFB1C574DAB0094C40E /* ACEToolKitDemoMac.app */;
+			productType = "com.apple.product-type.application";
+		};
 		7B035FEA16AEEDCC002140DF /* ACEToolKitDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B03600F16AEEDCC002140DF /* Build configuration list for PBXNativeTarget "ACEToolKitDemo" */;
@@ -237,6 +300,11 @@
 				CLASSPREFIX = ACE;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Stefano Acerbetti";
+				TargetAttributes = {
+					50348AFA1C574DAB0094C40E = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
 			};
 			buildConfigurationList = 7B035FE516AEEDCC002140DF /* Build configuration list for PBXProject "ACEToolKitDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -244,6 +312,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 7B035FE016AEEDCC002140DF;
 			productRefGroup = 7B035FEC16AEEDCC002140DF /* Products */;
@@ -251,11 +320,21 @@
 			projectRoot = "";
 			targets = (
 				7B035FEA16AEEDCC002140DF /* ACEToolKitDemo */,
+				50348AFA1C574DAB0094C40E /* ACEToolKitDemoMac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		50348AF91C574DAB0094C40E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50348B071C574DAB0094C40E /* Assets.xcassets in Resources */,
+				50348B0A1C574DAB0094C40E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B035FE916AEEDCC002140DF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -271,6 +350,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		50348AF71C574DAB0094C40E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50348B051C574DAB0094C40E /* ViewController.m in Sources */,
+				50348B021C574DAB0094C40E /* main.m in Sources */,
+				50348AFF1C574DAB0094C40E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B035FE716AEEDCC002140DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -295,6 +384,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		50348B081C574DAB0094C40E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50348B091C574DAB0094C40E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		7B035FF816AEEDCC002140DF /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -314,6 +411,72 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		50348B0C1C574DAB0094C40E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = ACEToolKitDemoMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.acerbetti.ACEToolKitDemoMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		50348B0D1C574DAB0094C40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = ACEToolKitDemoMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.acerbetti.ACEToolKitDemoMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		7B03600D16AEEDCC002140DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -394,6 +557,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		50348B0E1C574DAB0094C40E /* Build configuration list for PBXNativeTarget "ACEToolKitDemoMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50348B0C1C574DAB0094C40E /* Debug */,
+				50348B0D1C574DAB0094C40E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		7B035FE516AEEDCC002140DF /* Build configuration list for PBXProject "ACEToolKitDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
