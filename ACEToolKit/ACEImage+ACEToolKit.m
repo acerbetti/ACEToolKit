@@ -70,6 +70,10 @@
 
 - (ACEImageRef)resizedImageToSize:(CGSize)dstSize
 {
+    ACEImageRef image;
+    
+#if TARGET_OS_IOS
+    
     CGImageRef imgRef = self.CGImage;
     // the below values are regardless of orientation : for UIImages from Camera, width>height (landscape)
     CGSize  srcSize = CGSizeMake(CGImageGetWidth(imgRef), CGImageGetHeight(imgRef)); // not equivalent to self.size (which is dependant on the imageOrientation)!
@@ -151,11 +155,25 @@
     
     // we use srcSize (and not dstSize) as the size to specify is in user space (and we use the CTM to apply a scaleRatio)
     CGContextDrawImage(UIGraphicsGetCurrentContext(), CGRectMake(0, 0, srcSize.width, srcSize.height), imgRef);
-    UIImage* resizedImage = UIGraphicsGetImageFromCurrentImageContext();
+    image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    return resizedImage;
+#else
+    
+    image = [[NSImage alloc] initWithSize:dstSize];
+    [image lockFocus];
+    [[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
+    [self drawInRect:NSMakeRect(0.0f, 0.0f, dstSize.width, dstSize.height)
+            fromRect:NSMakeRect(0.0f, 0.0f, self.size.width, self.size.height)
+           operation:NSCompositeCopy
+            fraction:1.0f];
+    [image unlockFocus];
+    
+#endif
+    
+    return image;
 }
+
 
 
 
@@ -165,9 +183,13 @@
 
 - (ACEImageRef)resizedImageToFitInSize:(CGSize)boundingSize scaleIfSmaller:(BOOL)scale
 {
+    CGSize srcSize;
+    
+#if TARGET_OS_IOS
+    
     // get the image size (independant of imageOrientation)
     CGImageRef imgRef = self.CGImage;
-    CGSize srcSize = CGSizeMake(CGImageGetWidth(imgRef), CGImageGetHeight(imgRef)); // not equivalent to self.size (which depends on the imageOrientation)!
+    srcSize = CGSizeMake(CGImageGetWidth(imgRef), CGImageGetHeight(imgRef)); // not equivalent to self.size (which depends on the imageOrientation)!
     
     // adjust boundingSize to make it independant on imageOrientation too for farther computations
     UIImageOrientation orient = self.imageOrientation;
@@ -183,13 +205,19 @@
             break;
     }
     
+#else
+    
+    srcSize = self.size;
+    
+#endif
+    
     // Compute the target CGRect in order to keep aspect-ratio
     CGSize dstSize;
     
     if ( !scale && (srcSize.width < boundingSize.width) && (srcSize.height < boundingSize.height) ) {
         //NSLog(@"Image is smaller, and we asked not to scale it in this case (scaleIfSmaller:NO)");
         dstSize = srcSize; // no resize (we could directly return 'self' here, but we draw the image anyway to take image orientation into account)
-    } else {		
+    } else {
         CGFloat wRatio = boundingSize.width / srcSize.width;
         CGFloat hRatio = boundingSize.height / srcSize.height;
         
