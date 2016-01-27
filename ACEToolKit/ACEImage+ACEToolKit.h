@@ -40,6 +40,10 @@ typedef NSImage* ACEImageRef;
 
 #if TARGET_OS_IOS
 - (instancetype)initWithCGImage:(CGImageRef)cgImage size:(CGSize)size;
+
+// templates
+- (ACEImageRef)imageTemplate;
+
 #endif
 
 // resize
