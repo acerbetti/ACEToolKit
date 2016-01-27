@@ -40,11 +40,8 @@ typedef BOOL (^DismissBlock)(void);
 #import "ACEAlertView.h"
 #import "ACENavigationController.h"
 
+// error manager
 #import "ACEErrorUtils.h"
-
-// additions
-#import "UILabel+ACEToolKit.h"
-#import "UIViewController+ACEToolKit.h"
 
 // override default classes
 #define UIActionSheet       ACEActionSheet
@@ -60,6 +57,7 @@ typedef NSImage ACEImage;
 #import "ACEColor+ACEToolKit.h"
 #import "ACEImage+ACEToolKit.h"
 #import "ACEView+ACEToolKit.h"
+#import "ACEViewController+ACEToolKit.h"
 
 #import "ACEPathUtils.h"
 

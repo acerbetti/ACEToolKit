@@ -29,7 +29,17 @@
 @property (nonatomic, assign) UIInterfaceOrientation preferredInterfaceOrientation;
 @end
 
+#pragma mark -
+
 // fixed orientation in portrait
 @interface ACEPortraitNavigationController : UINavigationController
+
+@end
+
+#pragma mark -
+
+@interface UIViewController (ACENavigationController)
+
+- (ACENavigationController *)aceNavigationController;
 
 @end

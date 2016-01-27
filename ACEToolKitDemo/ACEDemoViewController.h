@@ -1,5 +1,5 @@
 //
-//  ACEViewController.h
+//  ACEDemoViewController.h
 //  ACEToolKitDemo
 //
 //  Created by Stefano Acerbetti on 1/22/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ACEViewController : UIViewController
+@interface ACEDemoViewController : UIViewController
 
 @property (nonatomic, unsafe_unretained) IBOutlet UILabel *messageLabel;
 

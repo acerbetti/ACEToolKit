@@ -8,7 +8,7 @@
 
 #import "ACEAppDelegate.h"
 
-#import "ACEViewController.h"
+#import "ACEDemoViewController.h"
 
 @implementation ACEAppDelegate
 
@@ -16,7 +16,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ACEViewController alloc] initWithNibName:@"ACEViewController" bundle:nil];
+    self.viewController = [[ACEDemoViewController alloc] initWithNibName:@"ACEDemoViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
