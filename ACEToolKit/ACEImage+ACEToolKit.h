@@ -34,20 +34,58 @@ typedef NSImage* ACEImageRef;
 
 #import "ACEColor+ACEToolKit.h"
 
+
+/**
+ * 'ACEImage' is a category to better manage images
+ */
 @interface ACEImage (ACEToolKit)
 
+/** 
+ * Returns a single pixel image with the desidered color
+ *
+ * @return The image reference
+ */
 + (ACEImageRef)imageWithColor:(ACEColorRef)color;
 
 #if TARGET_OS_IOS
+
+/**
+ * Make an UIImage referencing a CGImage.
+ * 
+ * The client should not assume anything about the image, other than that drawing it is equivalent to drawing the CGImage.
+ */
 - (instancetype)initWithCGImage:(CGImageRef)cgImage size:(CGSize)size;
 
-// templates
+/**
+ * The template image will ignore the colour information of image. And apply the colour according to the way the context is defined.
+ *
+ * Context is the tintColor of the superview of UIImageView where the image is added.
+ *
+ * @return The template image
+ */
 - (ACEImageRef)imageTemplate;
 
 #endif
 
-// resize
+
+/// --------------------
+/// @name Resize Methods
+/// --------------------
+
+/**
+ * Return a copy of the image in the desidered size
+ *
+ * @return The resized image
+ */
 - (ACEImageRef)resizedImageToSize:(CGSize)dstSize;
+
+/**
+ * Return a copy of the image in the desidered size with the option to make it bigger if necessary
+ *
+ * @params scale If you want to enlarge the image to fit the desidered size
+ *
+ * @return The resized image
+ */
 - (ACEImageRef)resizedImageToFitInSize:(CGSize)boundingSize scaleIfSmaller:(BOOL)scale;
 
 @end

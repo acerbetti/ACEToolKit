@@ -28,8 +28,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef UIImage ACEImage;
-
 // blocks
 typedef BOOL (^SelectBlock)(NSInteger index, NSString *title);
 typedef BOOL (^DismissBlock)(void);
@@ -46,10 +44,6 @@ typedef BOOL (^DismissBlock)(void);
 // override default classes
 #define UIActionSheet       ACEActionSheet
 #define UIAlertView         ACEAlertView
-
-#else
-
-typedef NSImage ACEImage;
 
 #endif
 
