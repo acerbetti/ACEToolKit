@@ -1,4 +1,4 @@
-// UIViewController+ACEToolKit.h
+// ACEViewController+ACEToolKit.h
 //
 // Copyright (c) 2016 Stefano Acerbetti
 //
@@ -22,13 +22,23 @@
 //
 
 
-@interface UIViewController (ACEToolKit)
+#if TARGET_OS_IOS
+#import <UIKit/UIKit.h>
+#define ACEViewController UIViewController
+typedef UIViewController* ACEViewControllerRef;
+#else
+#import <Cocoa/Cocoa.h>
+#define ACEViewController NSViewController
+typedef NSViewController* ACEViewControllerRef;
+#endif
+
+#import "ACEView+ACEToolKit.h"
+
+@interface ACEViewController (ACEToolKit)
 
 // child controllers
-- (void)containerAddChildViewController:(UIViewController *)childViewController parentView:(UIView *)view;
-- (void)containerAddChildViewController:(UIViewController *)childViewController;
-- (void)containerRemoveChildViewController:(UIViewController *)childViewController;
-
-- (ACENavigationController *)aceNavigationController;
+- (void)containerAddChildViewController:(ACEViewControllerRef)childViewController parentView:(ACEViewRef)parentView;
+- (void)containerAddChildViewController:(ACEViewControllerRef)childViewController;
+- (void)containerRemoveChildViewController:(ACEViewControllerRef)childViewController;
 
 @end

@@ -1,4 +1,4 @@
-// UILabel+ACEToolKit.h
+// ACEViewController+ACEToolKit.m
 //
 // Copyright (c) 2016 Stefano Acerbetti
 //
@@ -22,9 +22,34 @@
 //
 
 
-@interface UILabel (ACEToolKit)
+#import "ACEToolKit.h"
 
-- (void)topAlignmentWithPredefiniteHeight:(CGFloat)height;
-- (void)topAlignment;
+@implementation ACEViewController (ACEToolKit)
+
+- (void)containerAddChildViewController:(ACEViewControllerRef)childViewController parentView:(ACEViewRef)parentView
+{
+    [self addChildViewController:childViewController];
+    [parentView addSubview:childViewController.view];
+    [childViewController.view setFrame:parentView.bounds];
+    
+#if TARGET_OS_IOS
+    [childViewController didMoveToParentViewController:self];
+#endif
+}
+
+- (void)containerAddChildViewController:(ACEViewControllerRef)childViewController
+{
+    [self containerAddChildViewController:childViewController parentView:self.view];
+}
+
+- (void)containerRemoveChildViewController:(ACEViewControllerRef)childViewController
+{
+#if TARGET_OS_IOS
+    [childViewController willMoveToParentViewController:nil];
+#endif
+    
+    [childViewController.view removeFromSuperview];
+    [childViewController removeFromParentViewController];
+}
 
 @end

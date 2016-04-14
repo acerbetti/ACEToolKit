@@ -177,9 +177,23 @@ extern NSString * const WhiteSmoke;
 extern NSString * const Yellow;
 extern NSString * const YellowGreen;
 
+/**
+ * 'ACEColor' is a category to better manage the colors
+ */
 @interface ACEColor (ACEToolKit)
 
+/** 
+ * Returns a color ref from a hex value
+ *
+ * @return The desired color
+ */
 + (ACEColorRef)colorWithHex:(int)hex;
+
+/**
+ * Returns a color ref from a hex string. Examples are provided
+ *
+ * @return The desired color
+ */
 + (ACEColorRef)colorWithHexString:(NSString *)hexString;
 
 @end

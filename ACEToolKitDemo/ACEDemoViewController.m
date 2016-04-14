@@ -1,18 +1,18 @@
 //
-//  ACEViewController.m
+//  ACEDemoViewController.m
 //  ACEToolKitDemo
 //
 //  Created by Stefano Acerbetti on 1/22/13.
 //  Copyright (c) 2016 Stefano Acerbetti. All rights reserved.
 //
 
-#import "ACEViewController.h"
+#import "ACEDemoViewController.h"
 
-@interface ACEViewController ()<UIAlertViewDelegate, UIActionSheetDelegate>
+@interface ACEDemoViewController ()<UIAlertViewDelegate, UIActionSheetDelegate>
 
 @end
 
-@implementation ACEViewController
+@implementation ACEDemoViewController
 
 #pragma mark - Alert View
 

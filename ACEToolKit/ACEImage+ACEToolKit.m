@@ -65,8 +65,12 @@
     return self;
 }
 
-#endif
+- (ACEImageRef)imageTemplate
+{
+    return [self imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+}
 
+#endif
 
 - (ACEImageRef)resizedImageToSize:(CGSize)dstSize
 {

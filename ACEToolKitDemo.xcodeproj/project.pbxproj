@@ -30,18 +30,18 @@
 		7B03600216AEEDCC002140DF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B03600116AEEDCC002140DF /* Default.png */; };
 		7B03600416AEEDCC002140DF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B03600316AEEDCC002140DF /* Default@2x.png */; };
 		7B03600616AEEDCC002140DF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B03600516AEEDCC002140DF /* Default-568h@2x.png */; };
-		7B03600916AEEDCC002140DF /* ACEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03600816AEEDCC002140DF /* ACEViewController.m */; };
-		7B03600C16AEEDCC002140DF /* ACEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B03600A16AEEDCC002140DF /* ACEViewController.xib */; };
+		7B03600916AEEDCC002140DF /* ACEDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03600816AEEDCC002140DF /* ACEDemoViewController.m */; };
+		7B03600C16AEEDCC002140DF /* ACEDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B03600A16AEEDCC002140DF /* ACEDemoViewController.xib */; };
 		7B03602D16AF0132002140DF /* ACEActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03602916AF0132002140DF /* ACEActionSheet.m */; };
 		7B03602E16AF0132002140DF /* ACEAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03602B16AF0132002140DF /* ACEAlertView.m */; };
 		7B03603716AF1C1F002140DF /* ACEView+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03603616AF1C1F002140DF /* ACEView+ACEToolKit.m */; };
 		7B03603B16AF2014002140DF /* ACEColor+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03603A16AF2014002140DF /* ACEColor+ACEToolKit.m */; };
-		7B27004316AF4A9400B1531C /* UILabel+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B27004216AF4A9400B1531C /* UILabel+ACEToolKit.m */; };
 		7B64ECAB16B9E6710043763E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B64ECAA16B9E6710043763E /* QuartzCore.framework */; };
-		7B83BCB8186144C9000880FB /* UIViewController+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B83BCB7186144C9000880FB /* UIViewController+ACEToolKit.m */; };
+		7B83BCB8186144C9000880FB /* ACEViewController+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B83BCB7186144C9000880FB /* ACEViewController+ACEToolKit.m */; };
 		7BDE4BBD18E872DC00C3B114 /* ACEPathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDE4BBC18E872DC00C3B114 /* ACEPathUtils.m */; };
 		800834AC199BE4DD00249590 /* ACEErrorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 800834AB199BE4DD00249590 /* ACEErrorUtils.m */; };
 		803351FB1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 803351FA1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m */; };
+		8033E59A1C597B3D00F7DA88 /* ACEViewController+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B83BCB7186144C9000880FB /* ACEViewController+ACEToolKit.m */; };
 		807665051BDEABA50086E12A /* UIAlertController+Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 807665041BDEABA50086E12A /* UIAlertController+Window.m */; };
 /* End PBXBuildFile section */
 
@@ -74,9 +74,9 @@
 		7B03600116AEEDCC002140DF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7B03600316AEEDCC002140DF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7B03600516AEEDCC002140DF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		7B03600716AEEDCC002140DF /* ACEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACEViewController.h; sourceTree = "<group>"; };
-		7B03600816AEEDCC002140DF /* ACEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACEViewController.m; sourceTree = "<group>"; };
-		7B03600B16AEEDCC002140DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ACEViewController.xib; sourceTree = "<group>"; };
+		7B03600716AEEDCC002140DF /* ACEDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACEDemoViewController.h; sourceTree = "<group>"; };
+		7B03600816AEEDCC002140DF /* ACEDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACEDemoViewController.m; sourceTree = "<group>"; };
+		7B03600B16AEEDCC002140DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ACEDemoViewController.xib; sourceTree = "<group>"; };
 		7B03602816AF0132002140DF /* ACEActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEActionSheet.h; sourceTree = "<group>"; };
 		7B03602916AF0132002140DF /* ACEActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEActionSheet.m; sourceTree = "<group>"; };
 		7B03602A16AF0132002140DF /* ACEAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEAlertView.h; sourceTree = "<group>"; };
@@ -86,11 +86,9 @@
 		7B03603616AF1C1F002140DF /* ACEView+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ACEView+ACEToolKit.m"; sourceTree = "<group>"; };
 		7B03603916AF2014002140DF /* ACEColor+ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ACEColor+ACEToolKit.h"; sourceTree = "<group>"; };
 		7B03603A16AF2014002140DF /* ACEColor+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ACEColor+ACEToolKit.m"; sourceTree = "<group>"; };
-		7B27004116AF4A9400B1531C /* UILabel+ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ACEToolKit.h"; sourceTree = "<group>"; };
-		7B27004216AF4A9400B1531C /* UILabel+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ACEToolKit.m"; sourceTree = "<group>"; };
 		7B64ECAA16B9E6710043763E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		7B83BCB6186144C9000880FB /* UIViewController+ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ACEToolKit.h"; sourceTree = "<group>"; };
-		7B83BCB7186144C9000880FB /* UIViewController+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ACEToolKit.m"; sourceTree = "<group>"; };
+		7B83BCB6186144C9000880FB /* ACEViewController+ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ACEViewController+ACEToolKit.h"; sourceTree = "<group>"; };
+		7B83BCB7186144C9000880FB /* ACEViewController+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ACEViewController+ACEToolKit.m"; sourceTree = "<group>"; };
 		7BDE4BBB18E872DC00C3B114 /* ACEPathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEPathUtils.h; sourceTree = "<group>"; };
 		7BDE4BBC18E872DC00C3B114 /* ACEPathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEPathUtils.m; sourceTree = "<group>"; };
 		800834AA199BE4DD00249590 /* ACEErrorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEErrorUtils.h; sourceTree = "<group>"; };
@@ -182,9 +180,9 @@
 				7B03602716AF0132002140DF /* ACEToolKit */,
 				7B035FFE16AEEDCC002140DF /* ACEAppDelegate.h */,
 				7B035FFF16AEEDCC002140DF /* ACEAppDelegate.m */,
-				7B03600716AEEDCC002140DF /* ACEViewController.h */,
-				7B03600816AEEDCC002140DF /* ACEViewController.m */,
-				7B03600A16AEEDCC002140DF /* ACEViewController.xib */,
+				7B03600716AEEDCC002140DF /* ACEDemoViewController.h */,
+				7B03600816AEEDCC002140DF /* ACEDemoViewController.m */,
+				7B03600A16AEEDCC002140DF /* ACEDemoViewController.xib */,
 				7B035FF616AEEDCC002140DF /* Supporting Files */,
 			);
 			path = ACEToolKitDemo;
@@ -240,12 +238,10 @@
 				50348B141C57D60F0094C40E /* ACEImage+ACEToolKit.m */,
 				7B03603516AF1C1F002140DF /* ACEView+ACEToolKit.h */,
 				7B03603616AF1C1F002140DF /* ACEView+ACEToolKit.m */,
+				7B83BCB6186144C9000880FB /* ACEViewController+ACEToolKit.h */,
+				7B83BCB7186144C9000880FB /* ACEViewController+ACEToolKit.m */,
 				803351F91981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.h */,
 				803351FA1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m */,
-				7B27004116AF4A9400B1531C /* UILabel+ACEToolKit.h */,
-				7B27004216AF4A9400B1531C /* UILabel+ACEToolKit.m */,
-				7B83BCB6186144C9000880FB /* UIViewController+ACEToolKit.h */,
-				7B83BCB7186144C9000880FB /* UIViewController+ACEToolKit.m */,
 			);
 			name = Additions;
 			sourceTree = "<group>";
@@ -359,7 +355,7 @@
 				7B03600216AEEDCC002140DF /* Default.png in Resources */,
 				7B03600416AEEDCC002140DF /* Default@2x.png in Resources */,
 				7B03600616AEEDCC002140DF /* Default-568h@2x.png in Resources */,
-				7B03600C16AEEDCC002140DF /* ACEViewController.xib in Resources */,
+				7B03600C16AEEDCC002140DF /* ACEDemoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +371,7 @@
 				50348B161C57D60F0094C40E /* ACEImage+ACEToolKit.m in Sources */,
 				50348B021C574DAB0094C40E /* main.m in Sources */,
 				50348B0F1C57CDD40094C40E /* ACEColor+ACEToolKit.m in Sources */,
+				8033E59A1C597B3D00F7DA88 /* ACEViewController+ACEToolKit.m in Sources */,
 				50348B111C57CF470094C40E /* ACEView+ACEToolKit.m in Sources */,
 				50348B101C57CF100094C40E /* NSMutableDictionary+ACEToolKit.m in Sources */,
 				50348AFF1C574DAB0094C40E /* AppDelegate.m in Sources */,
@@ -388,8 +385,8 @@
 			files = (
 				7B035FFC16AEEDCC002140DF /* main.m in Sources */,
 				7B03600016AEEDCC002140DF /* ACEAppDelegate.m in Sources */,
-				7B83BCB8186144C9000880FB /* UIViewController+ACEToolKit.m in Sources */,
-				7B03600916AEEDCC002140DF /* ACEViewController.m in Sources */,
+				7B83BCB8186144C9000880FB /* ACEViewController+ACEToolKit.m in Sources */,
+				7B03600916AEEDCC002140DF /* ACEDemoViewController.m in Sources */,
 				50163BAF19B6CD110037E304 /* ACENavigationController.m in Sources */,
 				7BDE4BBD18E872DC00C3B114 /* ACEPathUtils.m in Sources */,
 				7B03602D16AF0132002140DF /* ACEActionSheet.m in Sources */,
@@ -401,7 +398,6 @@
 				800834AC199BE4DD00249590 /* ACEErrorUtils.m in Sources */,
 				807665051BDEABA50086E12A /* UIAlertController+Window.m in Sources */,
 				50348B151C57D60F0094C40E /* ACEImage+ACEToolKit.m in Sources */,
-				7B27004316AF4A9400B1531C /* UILabel+ACEToolKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,12 +420,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		7B03600A16AEEDCC002140DF /* ACEViewController.xib */ = {
+		7B03600A16AEEDCC002140DF /* ACEDemoViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7B03600B16AEEDCC002140DF /* en */,
 			);
-			name = ACEViewController.xib;
+			name = ACEDemoViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

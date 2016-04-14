@@ -43,6 +43,7 @@
 
 @end
 
+#pragma mark -
 
 @implementation ACEPortraitNavigationController
 
@@ -64,6 +65,20 @@
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
 {
     return UIInterfaceOrientationPortrait;
+}
+
+@end
+
+#pragma mark -
+
+@implementation UIViewController (ACENavigationController)
+
+- (ACENavigationController *)aceNavigationController
+{
+    if ([self.navigationController isKindOfClass:[ACENavigationController class]]) {
+        return (ACENavigationController *)self.navigationController;
+    }
+    return nil;
 }
 
 @end

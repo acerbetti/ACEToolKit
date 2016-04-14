@@ -28,8 +28,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef UIImage ACEImage;
-
 // blocks
 typedef BOOL (^SelectBlock)(NSInteger index, NSString *title);
 typedef BOOL (^DismissBlock)(void);
@@ -40,19 +38,12 @@ typedef BOOL (^DismissBlock)(void);
 #import "ACEAlertView.h"
 #import "ACENavigationController.h"
 
+// error manager
 #import "ACEErrorUtils.h"
-
-// additions
-#import "UILabel+ACEToolKit.h"
-#import "UIViewController+ACEToolKit.h"
 
 // override default classes
 #define UIActionSheet       ACEActionSheet
 #define UIAlertView         ACEAlertView
-
-#else
-
-typedef NSImage ACEImage;
 
 #endif
 
@@ -60,6 +51,7 @@ typedef NSImage ACEImage;
 #import "ACEColor+ACEToolKit.h"
 #import "ACEImage+ACEToolKit.h"
 #import "ACEView+ACEToolKit.h"
+#import "ACEViewController+ACEToolKit.h"
 
 #import "ACEPathUtils.h"
 #import "ACETextLabel.h"
