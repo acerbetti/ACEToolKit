@@ -1,6 +1,6 @@
-// ACEToolKit.h
+// ACETextLabel.m
 //
-// Copyright (c) 2016 Stefano Acerbetti
+// Copyright (c) 2014 Stefano Acerbetti
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -18,50 +18,30 @@
 // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.  Copyright (c) 2016 Stefano Acerbetti. All rights reserved.
+// THE SOFTWARE.  Copyright (c) 2014 Stefano Acerbetti. All rights reserved.
 //
 
 
-#import <Foundation/Foundation.h>
+#import "ACEToolKit.h"
+
+@implementation ACETextLabel (ACEToolKit)
 
 #if TARGET_OS_IOS
 
-#import <UIKit/UIKit.h>
-
-typedef UIImage ACEImage;
-
-// blocks
-typedef BOOL (^SelectBlock)(NSInteger index, NSString *title);
-typedef BOOL (^DismissBlock)(void);
-
-
-// import all the headers
-#import "ACEActionSheet.h"
-#import "ACEAlertView.h"
-#import "ACENavigationController.h"
-
-#import "ACEErrorUtils.h"
-
-// additions
-#import "UILabel+ACEToolKit.h"
-#import "UIViewController+ACEToolKit.h"
-
-// override default classes
-#define UIActionSheet       ACEActionSheet
-#define UIAlertView         ACEAlertView
+@dynamic drawsBackground;
 
 #else
 
-typedef NSImage ACEImage;
+- (NSString *)text
+{
+    return self.stringValue;
+}
+
+- (void)setText:(NSString *)text
+{
+    self.stringValue = text ?: @"";
+}
 
 #endif
 
-
-#import "ACEColor+ACEToolKit.h"
-#import "ACEImage+ACEToolKit.h"
-#import "ACEView+ACEToolKit.h"
-
-#import "ACEPathUtils.h"
-#import "ACETextLabel.h"
-
-#import "NSMutableDictionary+ACEToolKit.h"
+@end

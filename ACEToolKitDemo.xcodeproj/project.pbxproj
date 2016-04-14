@@ -19,6 +19,8 @@
 		50348B121C57D2A30094C40E /* ACEPathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDE4BBC18E872DC00C3B114 /* ACEPathUtils.m */; };
 		50348B151C57D60F0094C40E /* ACEImage+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 50348B141C57D60F0094C40E /* ACEImage+ACEToolKit.m */; };
 		50348B161C57D60F0094C40E /* ACEImage+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 50348B141C57D60F0094C40E /* ACEImage+ACEToolKit.m */; };
+		50CFA6E51CBFE2D100E46B30 /* ACETextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CFA6E41CBFE2D100E46B30 /* ACETextLabel.m */; };
+		50CFA6E61CBFE2D100E46B30 /* ACETextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CFA6E41CBFE2D100E46B30 /* ACETextLabel.m */; };
 		7B035FF016AEEDCC002140DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B035FEF16AEEDCC002140DF /* UIKit.framework */; };
 		7B035FF216AEEDCC002140DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B035FF116AEEDCC002140DF /* Foundation.framework */; };
 		7B035FF416AEEDCC002140DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B035FF316AEEDCC002140DF /* CoreGraphics.framework */; };
@@ -57,6 +59,8 @@
 		50348B0B1C574DAB0094C40E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50348B131C57D60F0094C40E /* ACEImage+ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ACEImage+ACEToolKit.h"; sourceTree = "<group>"; };
 		50348B141C57D60F0094C40E /* ACEImage+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ACEImage+ACEToolKit.m"; sourceTree = "<group>"; };
+		50CFA6E31CBFE2D100E46B30 /* ACETextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACETextLabel.h; sourceTree = "<group>"; };
+		50CFA6E41CBFE2D100E46B30 /* ACETextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACETextLabel.m; sourceTree = "<group>"; };
 		7B035FEB16AEEDCC002140DF /* ACEToolKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACEToolKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B035FEF16AEEDCC002140DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7B035FF116AEEDCC002140DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -221,6 +225,8 @@
 				7B03602B16AF0132002140DF /* ACEAlertView.m */,
 				50163BAD19B6CD110037E304 /* ACENavigationController.h */,
 				50163BAE19B6CD110037E304 /* ACENavigationController.m */,
+				50CFA6E31CBFE2D100E46B30 /* ACETextLabel.h */,
+				50CFA6E41CBFE2D100E46B30 /* ACETextLabel.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -372,6 +378,7 @@
 				50348B111C57CF470094C40E /* ACEView+ACEToolKit.m in Sources */,
 				50348B101C57CF100094C40E /* NSMutableDictionary+ACEToolKit.m in Sources */,
 				50348AFF1C574DAB0094C40E /* AppDelegate.m in Sources */,
+				50CFA6E61CBFE2D100E46B30 /* ACETextLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +393,7 @@
 				50163BAF19B6CD110037E304 /* ACENavigationController.m in Sources */,
 				7BDE4BBD18E872DC00C3B114 /* ACEPathUtils.m in Sources */,
 				7B03602D16AF0132002140DF /* ACEActionSheet.m in Sources */,
+				50CFA6E51CBFE2D100E46B30 /* ACETextLabel.m in Sources */,
 				7B03602E16AF0132002140DF /* ACEAlertView.m in Sources */,
 				7B03603716AF1C1F002140DF /* ACEView+ACEToolKit.m in Sources */,
 				803351FB1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m in Sources */,
@@ -580,6 +588,7 @@
 				50348B0D1C574DAB0094C40E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B035FE516AEEDCC002140DF /* Build configuration list for PBXProject "ACEToolKitDemo" */ = {
 			isa = XCConfigurationList;

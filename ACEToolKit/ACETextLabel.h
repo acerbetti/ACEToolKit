@@ -1,6 +1,6 @@
-// ACEToolKit.h
+// ACETextLabel.h
 //
-// Copyright (c) 2016 Stefano Acerbetti
+// Copyright (c) 2014 Stefano Acerbetti
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -18,50 +18,27 @@
 // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.  Copyright (c) 2016 Stefano Acerbetti. All rights reserved.
+// THE SOFTWARE.  Copyright (c) 2014 Stefano Acerbetti. All rights reserved.
 //
 
 
-#import <Foundation/Foundation.h>
-
 #if TARGET_OS_IOS
-
 #import <UIKit/UIKit.h>
-
-typedef UIImage ACEImage;
-
-// blocks
-typedef BOOL (^SelectBlock)(NSInteger index, NSString *title);
-typedef BOOL (^DismissBlock)(void);
-
-
-// import all the headers
-#import "ACEActionSheet.h"
-#import "ACEAlertView.h"
-#import "ACENavigationController.h"
-
-#import "ACEErrorUtils.h"
-
-// additions
-#import "UILabel+ACEToolKit.h"
-#import "UIViewController+ACEToolKit.h"
-
-// override default classes
-#define UIActionSheet       ACEActionSheet
-#define UIAlertView         ACEAlertView
-
+#define ACETextLabel UITextField
+typedef UITextField* ACETextLabelRef;
 #else
-
-typedef NSImage ACEImage;
-
+#import <Cocoa/Cocoa.h>
+#define ACETextLabel NSTextField
+typedef NSTextField* ACETextLabelRef;
 #endif
 
 
-#import "ACEColor+ACEToolKit.h"
-#import "ACEImage+ACEToolKit.h"
-#import "ACEView+ACEToolKit.h"
+@interface ACETextLabel (ACEToolKit)
 
-#import "ACEPathUtils.h"
-#import "ACETextLabel.h"
+#if TARGET_OS_IOS
+@property (nonatomic, assign) BOOL drawsBackground;
+#else
+@property (nonatomic, copy, nullable) NSString *text;
+#endif
 
-#import "NSMutableDictionary+ACEToolKit.h"
+@end
