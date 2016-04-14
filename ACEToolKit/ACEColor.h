@@ -1,4 +1,4 @@
-// ACEColor+ACEToolKit.h
+// ACEColor.h
 //
 // Copyright (c) 2016 Stefano Acerbetti
 //

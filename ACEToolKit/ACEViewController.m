@@ -1,4 +1,4 @@
-// ACEViewController+ACEToolKit.h
+// ACEViewController.m
 //
 // Copyright (c) 2016 Stefano Acerbetti
 //
@@ -22,23 +22,34 @@
 //
 
 
+#import "ACEToolKit.h"
+
+@implementation ACEViewController (ACEToolKit)
+
+- (void)containerAddChildViewController:(ACEViewControllerRef)childViewController parentView:(ACEViewRef)parentView
+{
+    [self addChildViewController:childViewController];
+    [parentView addSubview:childViewController.view];
+    [childViewController.view setFrame:parentView.bounds];
+    
 #if TARGET_OS_IOS
-#import <UIKit/UIKit.h>
-#define ACEViewController UIViewController
-typedef UIViewController* ACEViewControllerRef;
-#else
-#import <Cocoa/Cocoa.h>
-#define ACEViewController NSViewController
-typedef NSViewController* ACEViewControllerRef;
+    [childViewController didMoveToParentViewController:self];
 #endif
+}
 
-#import "ACEView+ACEToolKit.h"
+- (void)containerAddChildViewController:(ACEViewControllerRef)childViewController
+{
+    [self containerAddChildViewController:childViewController parentView:self.view];
+}
 
-@interface ACEViewController (ACEToolKit)
-
-// child controllers
-- (void)containerAddChildViewController:(ACEViewControllerRef)childViewController parentView:(ACEViewRef)parentView;
-- (void)containerAddChildViewController:(ACEViewControllerRef)childViewController;
-- (void)containerRemoveChildViewController:(ACEViewControllerRef)childViewController;
+- (void)containerRemoveChildViewController:(ACEViewControllerRef)childViewController
+{
+#if TARGET_OS_IOS
+    [childViewController willMoveToParentViewController:nil];
+#endif
+    
+    [childViewController.view removeFromSuperview];
+    [childViewController removeFromParentViewController];
+}
 
 @end

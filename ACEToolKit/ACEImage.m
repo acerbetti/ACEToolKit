@@ -1,4 +1,4 @@
-// ACEImage+ACEToolKit.m
+// ACEImage.m
 //
 // Copyright (c) 2016 Stefano Acerbetti
 //

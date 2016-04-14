@@ -48,12 +48,12 @@ typedef BOOL (^DismissBlock)(void);
 #endif
 
 
-#import "ACEColor+ACEToolKit.h"
-#import "ACEImage+ACEToolKit.h"
-#import "ACEView+ACEToolKit.h"
-#import "ACEViewController+ACEToolKit.h"
-
+#import "ACEColor.h"
+#import "ACEImage.h"
 #import "ACEPathUtils.h"
 #import "ACETextLabel.h"
+#import "ACEView.h"
+#import "ACEViewController.h"
+
 
 #import "NSMutableDictionary+ACEToolKit.h"

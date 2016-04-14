@@ -1,4 +1,4 @@
-// ACEView+ACEToolKit.h
+// ACEViewController.h
 //
 // Copyright (c) 2016 Stefano Acerbetti
 //
@@ -24,46 +24,21 @@
 
 #if TARGET_OS_IOS
 #import <UIKit/UIKit.h>
-#define ACEView UIView
-typedef UIView* ACEViewRef;
+#define ACEViewController UIViewController
+typedef UIViewController* ACEViewControllerRef;
 #else
 #import <Cocoa/Cocoa.h>
-#define ACEView NSView
-typedef NSView* ACEViewRef;
+#define ACEViewController NSViewController
+typedef NSViewController* ACEViewControllerRef;
 #endif
 
-@interface ACEView (ACEToolKit)
+#import "ACEView.h"
 
-// shortcuts for frame properties
-@property (nonatomic, assign) CGPoint origin;
-@property (nonatomic, assign) CGSize size;
+@interface ACEViewController (ACEToolKit)
 
-// shortcuts for the coords
-@property (nonatomic, assign) CGFloat left;
-@property (nonatomic, assign) CGFloat top;
-@property (nonatomic, assign) CGFloat right;
-@property (nonatomic, assign) CGFloat bottom;
-
-// shortcuts for positions
-@property (nonatomic, assign) CGFloat centerX;
-@property (nonatomic, assign) CGFloat centerY;
-
-#if !TARGET_OS_IOS
-@property (nonatomic, assign) CGPoint center;
-#endif
-
-// shortcuts for dimensions
-@property (nonatomic, assign) CGFloat width;
-@property (nonatomic, assign) CGFloat height;
-
-#if TARGET_OS_IOS
-@property (nonatomic, readonly) CGFloat orientationWidth;
-@property (nonatomic, readonly) CGFloat orientationHeight;
-#endif
-
-// shortcuts for subviews
-- (ACEViewRef)descendantOrSelfWithClass:(Class)cls;
-- (ACEViewRef)ancestorOrSelfWithClass:(Class)cls;
-- (void)removeAllSubviews;
+// child controllers
+- (void)containerAddChildViewController:(ACEViewControllerRef)childViewController parentView:(ACEViewRef)parentView;
+- (void)containerAddChildViewController:(ACEViewControllerRef)childViewController;
+- (void)containerRemoveChildViewController:(ACEViewControllerRef)childViewController;
 
 @end

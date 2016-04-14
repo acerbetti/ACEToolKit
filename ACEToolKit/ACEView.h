@@ -1,4 +1,4 @@
-// ACEViewController+ACEToolKit.m
+// ACEView.h
 //
 // Copyright (c) 2016 Stefano Acerbetti
 //
@@ -22,34 +22,48 @@
 //
 
 
-#import "ACEToolKit.h"
-
-@implementation ACEViewController (ACEToolKit)
-
-- (void)containerAddChildViewController:(ACEViewControllerRef)childViewController parentView:(ACEViewRef)parentView
-{
-    [self addChildViewController:childViewController];
-    [parentView addSubview:childViewController.view];
-    [childViewController.view setFrame:parentView.bounds];
-    
 #if TARGET_OS_IOS
-    [childViewController didMoveToParentViewController:self];
+#import <UIKit/UIKit.h>
+#define ACEView UIView
+typedef UIView* ACEViewRef;
+#else
+#import <Cocoa/Cocoa.h>
+#define ACEView NSView
+typedef NSView* ACEViewRef;
 #endif
-}
 
-- (void)containerAddChildViewController:(ACEViewControllerRef)childViewController
-{
-    [self containerAddChildViewController:childViewController parentView:self.view];
-}
+@interface ACEView (ACEToolKit)
 
-- (void)containerRemoveChildViewController:(ACEViewControllerRef)childViewController
-{
+// shortcuts for frame properties
+@property (nonatomic, assign) CGPoint origin;
+@property (nonatomic, assign) CGSize size;
+
+// shortcuts for the coords
+@property (nonatomic, assign) CGFloat left;
+@property (nonatomic, assign) CGFloat top;
+@property (nonatomic, assign) CGFloat right;
+@property (nonatomic, assign) CGFloat bottom;
+
+// shortcuts for positions
+@property (nonatomic, assign) CGFloat centerX;
+@property (nonatomic, assign) CGFloat centerY;
+
+#if !TARGET_OS_IOS
+@property (nonatomic, assign) CGPoint center;
+#endif
+
+// shortcuts for dimensions
+@property (nonatomic, assign) CGFloat width;
+@property (nonatomic, assign) CGFloat height;
+
 #if TARGET_OS_IOS
-    [childViewController willMoveToParentViewController:nil];
+@property (nonatomic, readonly) CGFloat orientationWidth;
+@property (nonatomic, readonly) CGFloat orientationHeight;
 #endif
-    
-    [childViewController.view removeFromSuperview];
-    [childViewController removeFromParentViewController];
-}
+
+// shortcuts for subviews
+- (ACEViewRef)descendantOrSelfWithClass:(Class)cls;
+- (ACEViewRef)ancestorOrSelfWithClass:(Class)cls;
+- (void)removeAllSubviews;
 
 @end

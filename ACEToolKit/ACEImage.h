@@ -1,4 +1,4 @@
-// ACEImage+ACEToolKit.h
+// ACEImage.h
 //
 // Copyright (c) 2016 Stefano Acerbetti
 //
@@ -32,7 +32,7 @@ typedef UIImage* ACEImageRef;
 typedef NSImage* ACEImageRef;
 #endif
 
-#import "ACEColor+ACEToolKit.h"
+#import "ACEColor.h"
 
 
 /**

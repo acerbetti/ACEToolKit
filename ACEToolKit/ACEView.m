@@ -1,4 +1,4 @@
-// ACEView+ACEToolKit.m
+// ACEView.m
 //
 // Copyright (c) 2016 Stefano Acerbetti
 //
