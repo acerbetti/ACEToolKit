@@ -1,4 +1,4 @@
-// ACEToolKit.h
+// NSString+ACEToolKit.h
 //
 // Copyright (c) 2016 Stefano Acerbetti
 //
@@ -24,37 +24,8 @@
 
 #import <Foundation/Foundation.h>
 
-#if TARGET_OS_IOS
+@interface NSString (ACEToolKit)
 
-#import <UIKit/UIKit.h>
++ (NSString *)formatTimeInSeconds:(NSInteger)seconds;
 
-// blocks
-typedef BOOL (^SelectBlock)(NSInteger index, NSString *title);
-typedef BOOL (^DismissBlock)(void);
-
-
-// import all the headers
-#import "ACEActionSheet.h"
-#import "ACEAlertView.h"
-#import "ACENavigationController.h"
-
-// error manager
-#import "ACEErrorUtils.h"
-
-// override default classes
-#define UIActionSheet       ACEActionSheet
-#define UIAlertView         ACEAlertView
-
-#endif
-
-
-#import "ACEColor.h"
-#import "ACEImage.h"
-#import "ACEPathUtils.h"
-#import "ACETextLabel.h"
-#import "ACEView.h"
-#import "ACEViewController.h"
-
-
-#import "NSMutableDictionary+ACEToolKit.h"
-#import "NSString+ACEToolKit.h"
+@end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5005E5861CED521300F7CB26 /* NSString+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5005E5851CED521300F7CB26 /* NSString+ACEToolKit.m */; };
+		5005E5871CED521300F7CB26 /* NSString+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5005E5851CED521300F7CB26 /* NSString+ACEToolKit.m */; };
 		50163BAF19B6CD110037E304 /* ACENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50163BAE19B6CD110037E304 /* ACENavigationController.m */; };
 		50348AFF1C574DAB0094C40E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50348AFE1C574DAB0094C40E /* AppDelegate.m */; };
 		50348B021C574DAB0094C40E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50348B011C574DAB0094C40E /* main.m */; };
@@ -46,6 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5005E5841CED521300F7CB26 /* NSString+ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ACEToolKit.h"; sourceTree = "<group>"; };
+		5005E5851CED521300F7CB26 /* NSString+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ACEToolKit.m"; sourceTree = "<group>"; };
 		50163BAD19B6CD110037E304 /* ACENavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACENavigationController.h; sourceTree = "<group>"; };
 		50163BAE19B6CD110037E304 /* ACENavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACENavigationController.m; sourceTree = "<group>"; };
 		50348AFB1C574DAB0094C40E /* ACEToolKitDemoMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACEToolKitDemoMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +238,8 @@
 			children = (
 				803351F91981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.h */,
 				803351FA1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m */,
+				5005E5841CED521300F7CB26 /* NSString+ACEToolKit.h */,
+				5005E5851CED521300F7CB26 /* NSString+ACEToolKit.m */,
 			);
 			name = Additions;
 			sourceTree = "<group>";
@@ -374,6 +380,7 @@
 				8033E59A1C597B3D00F7DA88 /* ACEViewController.m in Sources */,
 				50348B111C57CF470094C40E /* ACEView.m in Sources */,
 				50348B101C57CF100094C40E /* NSMutableDictionary+ACEToolKit.m in Sources */,
+				5005E5871CED521300F7CB26 /* NSString+ACEToolKit.m in Sources */,
 				50348AFF1C574DAB0094C40E /* AppDelegate.m in Sources */,
 				50CFA6E61CBFE2D100E46B30 /* ACETextLabel.m in Sources */,
 			);
@@ -385,6 +392,7 @@
 			files = (
 				7B035FFC16AEEDCC002140DF /* main.m in Sources */,
 				7B03600016AEEDCC002140DF /* ACEAppDelegate.m in Sources */,
+				5005E5861CED521300F7CB26 /* NSString+ACEToolKit.m in Sources */,
 				7B83BCB8186144C9000880FB /* ACEViewController.m in Sources */,
 				7B03600916AEEDCC002140DF /* ACEDemoViewController.m in Sources */,
 				50163BAF19B6CD110037E304 /* ACENavigationController.m in Sources */,

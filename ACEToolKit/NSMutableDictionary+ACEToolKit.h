@@ -1,4 +1,4 @@
-// UIColor+ACEToolKit.h
+// NSMutableDictionary+ACEToolKit.h
 //
 // Copyright (c) 2016 Stefano Acerbetti
 //
