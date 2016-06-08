@@ -62,11 +62,6 @@
     }
 }
 
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
-{
-    return UIInterfaceOrientationPortrait;
-}
-
 @end
 
 #pragma mark -
