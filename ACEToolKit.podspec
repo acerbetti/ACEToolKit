@@ -21,20 +21,14 @@ Pod::Spec.new do |s|
 
   s.subspec 'AppExtension' do |ss|
 
-    pch_AF = <<-EOS
-      #define ACE_APP_EXTENSION 1
-    EOS
-    ss.prefix_header_contents = pch_AF
-
     ss.ios.deployment_target = '8.0'
     ss.source_files = 'ACEToolKit/*.{h,m}'
-    ss.exclude_files = 
-        'ACEToolKit/ACEActionSheet.{m,h}', 
-        'ACEToolKit/ACEAlertView.{m,h}', 
-        'ACEToolKit/ACENavigationController.{m,h}', 
-        'ACEToolKit/ACETextLabel.{m,h}', 
-        'ACEToolKit/ACEErrorUtils.{m,h}'
-    
+    ss.exclude_files = 'ACEToolKit/ACEActionSheet.{m,h}', 
+                       'ACEToolKit/ACEAlertView.{m,h}', 
+                       'ACEToolKit/ACENavigationController.{m,h}', 
+                       'ACEToolKit/ACETextLabel.{m,h}', 
+                       'ACEToolKit/ACEErrorUtils.{m,h}'
+    ss.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ACE_APP_EXTENSION=1' }
     ss.requires_arc = true
   end
 
