@@ -24,7 +24,7 @@
 
 #import <Foundation/Foundation.h>
 
-#if TARGET_OS_IOS
+#if (TARGET_OS_IOS && !ACE_APP_EXTENSION)
 
 #import <UIKit/UIKit.h>
 

@@ -1,6 +1,7 @@
 Pod::Spec.new do |s|
+
   s.name         = 'ACEToolKit'
-  s.version      = '0.3.3'
+  s.version      = '0.3.4'
   s.homepage     = 'https://github.com/acerbetti/ACEToolKit'
   s.author       = { 'Stefano Acerbetti' => 'acerbetti@gmail.com' }
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
@@ -17,5 +18,24 @@ Pod::Spec.new do |s|
                         'ACEToolKit/ACEAlertView.*',
                         'ACEToolKit/ACEErrorUtils.*',
                         'ACEToolKit/ACENavigationController.*'
+
+  s.subspec 'AppExtension' do |ss|
+
+    pch_AF = <<-EOS
+      #define ACE_APP_EXTENSION 1
+    EOS
+    ss.prefix_header_contents = pch_AF
+
+    ss.ios.deployment_target = '8.0'
+    ss.source_files = 'ACEToolKit/*.{h,m}'
+    ss.exclude_files = 
+        'ACEToolKit/ACEActionSheet.{m,h}', 
+        'ACEToolKit/ACEAlertView.{m,h}', 
+        'ACEToolKit/ACENavigationController.{m,h}', 
+        'ACEToolKit/ACETextLabel.{m,h}', 
+        'ACEToolKit/ACEErrorUtils.{m,h}'
+    
+    ss.requires_arc = true
+  end
 
 end

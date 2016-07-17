@@ -56,7 +56,7 @@ typedef NSView* ACEViewRef;
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
 
-#if TARGET_OS_IOS
+#if TARGET_OS_IOS && !ACE_APP_EXTENSION
 @property (nonatomic, readonly) CGFloat orientationWidth;
 @property (nonatomic, readonly) CGFloat orientationHeight;
 #endif
