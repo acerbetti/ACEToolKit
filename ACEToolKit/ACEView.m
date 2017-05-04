@@ -167,7 +167,7 @@
     self.frame = frame;
 }
 
-#if (TARGET_OS_IOS && !ACE_APP_EXTENSION)
+#if TARGET_OS_IOS
 
 - (CGFloat)orientationWidth
 {

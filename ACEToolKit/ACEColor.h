@@ -159,7 +159,7 @@ extern NSString * const ACEColorSeaShell;
 extern NSString * const ACEColorSienna;
 extern NSString * const ACEColorSilver;
 extern NSString * const ACEColorSkyBlue;
-extern NSString * const ACEColorSlateBlue ;
+extern NSString * const ACEColorSlateBlue;
 extern NSString * const ACEColorSlateGray;
 extern NSString * const ACEColorSnow;
 extern NSString * const ACEColorSpringGreen;

@@ -56,9 +56,9 @@ typedef NSView* ACEViewRef;
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
 
-#if TARGET_OS_IOS && !ACE_APP_EXTENSION
-@property (nonatomic, readonly) CGFloat orientationWidth;
-@property (nonatomic, readonly) CGFloat orientationHeight;
+#if TARGET_OS_IOS
+@property (nonatomic, readonly) CGFloat orientationWidth  NS_EXTENSION_UNAVAILABLE_IOS("Use width instead.");
+@property (nonatomic, readonly) CGFloat orientationHeight NS_EXTENSION_UNAVAILABLE_IOS("Use height instead.");
 #endif
 
 // shortcuts for subviews
