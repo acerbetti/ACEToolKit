@@ -1,0 +1,21 @@
+PODS:
+  - ACEToolKit (0.3.4):
+    - ACEToolKit/Core (= 0.3.4)
+  - ACEToolKit/Core (0.3.4):
+    - FFGlobalAlertController
+  - FFGlobalAlertController (1.0.2)
+
+DEPENDENCIES:
+  - ACEToolKit (from `../`)
+
+EXTERNAL SOURCES:
+  ACEToolKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ACEToolKit: 8093b6277f236d6d0a54d6ae412065479c66f9a1
+  FFGlobalAlertController: 40c66500ae173895085911ba19d79d045bd26742
+
+PODFILE CHECKSUM: 194236e91273022c759aabcabc4c6368e39a9d64
+
+COCOAPODS: 1.2.0

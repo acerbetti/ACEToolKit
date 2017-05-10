@@ -7,22 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5005E5861CED521300F7CB26 /* NSString+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5005E5851CED521300F7CB26 /* NSString+ACEToolKit.m */; };
-		5005E5871CED521300F7CB26 /* NSString+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5005E5851CED521300F7CB26 /* NSString+ACEToolKit.m */; };
-		50163BAF19B6CD110037E304 /* ACENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50163BAE19B6CD110037E304 /* ACENavigationController.m */; };
 		50348AFF1C574DAB0094C40E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50348AFE1C574DAB0094C40E /* AppDelegate.m */; };
 		50348B021C574DAB0094C40E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50348B011C574DAB0094C40E /* main.m */; };
 		50348B051C574DAB0094C40E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50348B041C574DAB0094C40E /* ViewController.m */; };
 		50348B071C574DAB0094C40E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50348B061C574DAB0094C40E /* Assets.xcassets */; };
 		50348B0A1C574DAB0094C40E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50348B081C574DAB0094C40E /* Main.storyboard */; };
-		50348B0F1C57CDD40094C40E /* ACEColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03603A16AF2014002140DF /* ACEColor.m */; };
-		50348B101C57CF100094C40E /* NSMutableDictionary+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 803351FA1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m */; };
-		50348B111C57CF470094C40E /* ACEView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03603616AF1C1F002140DF /* ACEView.m */; };
-		50348B121C57D2A30094C40E /* ACEPathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDE4BBC18E872DC00C3B114 /* ACEPathUtils.m */; };
-		50348B151C57D60F0094C40E /* ACEImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 50348B141C57D60F0094C40E /* ACEImage.m */; };
-		50348B161C57D60F0094C40E /* ACEImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 50348B141C57D60F0094C40E /* ACEImage.m */; };
-		50CFA6E51CBFE2D100E46B30 /* ACETextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CFA6E41CBFE2D100E46B30 /* ACETextLabel.m */; };
-		50CFA6E61CBFE2D100E46B30 /* ACETextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CFA6E41CBFE2D100E46B30 /* ACETextLabel.m */; };
 		7B035FF016AEEDCC002140DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B035FEF16AEEDCC002140DF /* UIKit.framework */; };
 		7B035FF216AEEDCC002140DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B035FF116AEEDCC002140DF /* Foundation.framework */; };
 		7B035FF416AEEDCC002140DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B035FF316AEEDCC002140DF /* CoreGraphics.framework */; };
@@ -34,24 +23,12 @@
 		7B03600616AEEDCC002140DF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B03600516AEEDCC002140DF /* Default-568h@2x.png */; };
 		7B03600916AEEDCC002140DF /* ACEDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03600816AEEDCC002140DF /* ACEDemoViewController.m */; };
 		7B03600C16AEEDCC002140DF /* ACEDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B03600A16AEEDCC002140DF /* ACEDemoViewController.xib */; };
-		7B03602D16AF0132002140DF /* ACEActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03602916AF0132002140DF /* ACEActionSheet.m */; };
-		7B03602E16AF0132002140DF /* ACEAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03602B16AF0132002140DF /* ACEAlertView.m */; };
-		7B03603716AF1C1F002140DF /* ACEView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03603616AF1C1F002140DF /* ACEView.m */; };
-		7B03603B16AF2014002140DF /* ACEColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B03603A16AF2014002140DF /* ACEColor.m */; };
 		7B64ECAB16B9E6710043763E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B64ECAA16B9E6710043763E /* QuartzCore.framework */; };
-		7B83BCB8186144C9000880FB /* ACEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B83BCB7186144C9000880FB /* ACEViewController.m */; };
-		7BDE4BBD18E872DC00C3B114 /* ACEPathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDE4BBC18E872DC00C3B114 /* ACEPathUtils.m */; };
-		800834AC199BE4DD00249590 /* ACEErrorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 800834AB199BE4DD00249590 /* ACEErrorUtils.m */; };
-		803351FB1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 803351FA1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m */; };
-		8033E59A1C597B3D00F7DA88 /* ACEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B83BCB7186144C9000880FB /* ACEViewController.m */; };
-		807665051BDEABA50086E12A /* UIAlertController+Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 807665041BDEABA50086E12A /* UIAlertController+Window.m */; };
+		DF652A7072AF1E9CC36C5651 /* libPods-ACEToolKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 734B868C013CC462218AC831 /* libPods-ACEToolKitDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5005E5841CED521300F7CB26 /* NSString+ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ACEToolKit.h"; sourceTree = "<group>"; };
-		5005E5851CED521300F7CB26 /* NSString+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ACEToolKit.m"; sourceTree = "<group>"; };
-		50163BAD19B6CD110037E304 /* ACENavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACENavigationController.h; sourceTree = "<group>"; };
-		50163BAE19B6CD110037E304 /* ACENavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACENavigationController.m; sourceTree = "<group>"; };
+		298EAE3216D674CC0B410E75 /* Pods-ACEToolKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACEToolKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACEToolKitDemo/Pods-ACEToolKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		50348AFB1C574DAB0094C40E /* ACEToolKitDemoMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACEToolKitDemoMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50348AFD1C574DAB0094C40E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		50348AFE1C574DAB0094C40E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,10 +38,7 @@
 		50348B061C574DAB0094C40E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50348B091C574DAB0094C40E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50348B0B1C574DAB0094C40E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50348B131C57D60F0094C40E /* ACEImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEImage.h; sourceTree = "<group>"; };
-		50348B141C57D60F0094C40E /* ACEImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEImage.m; sourceTree = "<group>"; };
-		50CFA6E31CBFE2D100E46B30 /* ACETextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACETextLabel.h; sourceTree = "<group>"; };
-		50CFA6E41CBFE2D100E46B30 /* ACETextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACETextLabel.m; sourceTree = "<group>"; };
+		734B868C013CC462218AC831 /* libPods-ACEToolKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ACEToolKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B035FEB16AEEDCC002140DF /* ACEToolKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACEToolKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B035FEF16AEEDCC002140DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7B035FF116AEEDCC002140DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -81,26 +55,8 @@
 		7B03600716AEEDCC002140DF /* ACEDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACEDemoViewController.h; sourceTree = "<group>"; };
 		7B03600816AEEDCC002140DF /* ACEDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACEDemoViewController.m; sourceTree = "<group>"; };
 		7B03600B16AEEDCC002140DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ACEDemoViewController.xib; sourceTree = "<group>"; };
-		7B03602816AF0132002140DF /* ACEActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEActionSheet.h; sourceTree = "<group>"; };
-		7B03602916AF0132002140DF /* ACEActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEActionSheet.m; sourceTree = "<group>"; };
-		7B03602A16AF0132002140DF /* ACEAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEAlertView.h; sourceTree = "<group>"; };
-		7B03602B16AF0132002140DF /* ACEAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEAlertView.m; sourceTree = "<group>"; };
-		7B03602C16AF0132002140DF /* ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEToolKit.h; sourceTree = "<group>"; };
-		7B03603516AF1C1F002140DF /* ACEView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEView.h; sourceTree = "<group>"; };
-		7B03603616AF1C1F002140DF /* ACEView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEView.m; sourceTree = "<group>"; };
-		7B03603916AF2014002140DF /* ACEColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEColor.h; sourceTree = "<group>"; };
-		7B03603A16AF2014002140DF /* ACEColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEColor.m; sourceTree = "<group>"; };
 		7B64ECAA16B9E6710043763E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		7B83BCB6186144C9000880FB /* ACEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEViewController.h; sourceTree = "<group>"; };
-		7B83BCB7186144C9000880FB /* ACEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEViewController.m; sourceTree = "<group>"; };
-		7BDE4BBB18E872DC00C3B114 /* ACEPathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEPathUtils.h; sourceTree = "<group>"; };
-		7BDE4BBC18E872DC00C3B114 /* ACEPathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEPathUtils.m; sourceTree = "<group>"; };
-		800834AA199BE4DD00249590 /* ACEErrorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEErrorUtils.h; sourceTree = "<group>"; };
-		800834AB199BE4DD00249590 /* ACEErrorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEErrorUtils.m; sourceTree = "<group>"; };
-		803351F91981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+ACEToolKit.h"; sourceTree = "<group>"; };
-		803351FA1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+ACEToolKit.m"; sourceTree = "<group>"; };
-		807665031BDEABA50086E12A /* UIAlertController+Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Window.h"; sourceTree = "<group>"; };
-		807665041BDEABA50086E12A /* UIAlertController+Window.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Window.m"; sourceTree = "<group>"; };
+		965993BD9F147B553CFAF012 /* Pods-ACEToolKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACEToolKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ACEToolKitDemo/Pods-ACEToolKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +75,22 @@
 				7B035FF016AEEDCC002140DF /* UIKit.framework in Frameworks */,
 				7B035FF216AEEDCC002140DF /* Foundation.framework in Frameworks */,
 				7B035FF416AEEDCC002140DF /* CoreGraphics.framework in Frameworks */,
+				DF652A7072AF1E9CC36C5651 /* libPods-ACEToolKitDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3778DDAD3C63CDAADE91BA41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				965993BD9F147B553CFAF012 /* Pods-ACEToolKitDemo.debug.xcconfig */,
+				298EAE3216D674CC0B410E75 /* Pods-ACEToolKitDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		50348AFC1C574DAB0094C40E /* ACEToolKitDemoMac */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +121,7 @@
 				50348AFC1C574DAB0094C40E /* ACEToolKitDemoMac */,
 				7B035FEE16AEEDCC002140DF /* Frameworks */,
 				7B035FEC16AEEDCC002140DF /* Products */,
+				3778DDAD3C63CDAADE91BA41 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,6 +141,7 @@
 				7B035FF116AEEDCC002140DF /* Foundation.framework */,
 				7B64ECAA16B9E6710043763E /* QuartzCore.framework */,
 				7B035FEF16AEEDCC002140DF /* UIKit.framework */,
+				734B868C013CC462218AC831 /* libPods-ACEToolKitDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -181,7 +149,6 @@
 		7B035FF516AEEDCC002140DF /* ACEToolKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				7B03602716AF0132002140DF /* ACEToolKit */,
 				7B035FFE16AEEDCC002140DF /* ACEAppDelegate.h */,
 				7B035FFF16AEEDCC002140DF /* ACEAppDelegate.m */,
 				7B03600716AEEDCC002140DF /* ACEDemoViewController.h */,
@@ -195,7 +162,6 @@
 		7B035FF616AEEDCC002140DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				807665061BDEABFD0086E12A /* FFGlobalAlertController */,
 				7B035FF716AEEDCC002140DF /* ACEToolKitDemo-Info.plist */,
 				7B035FF816AEEDCC002140DF /* InfoPlist.strings */,
 				7B035FFB16AEEDCC002140DF /* main.m */,
@@ -205,71 +171,6 @@
 				7B03600516AEEDCC002140DF /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7B03602716AF0132002140DF /* ACEToolKit */ = {
-			isa = PBXGroup;
-			children = (
-				7B03603816AF1C26002140DF /* Additions */,
-				7BDE4BBE18E872DF00C3B114 /* Core */,
-				7B03603416AF1B30002140DF /* UI */,
-				7B03602C16AF0132002140DF /* ACEToolKit.h */,
-			);
-			path = ACEToolKit;
-			sourceTree = SOURCE_ROOT;
-		};
-		7B03603416AF1B30002140DF /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				7B03602816AF0132002140DF /* ACEActionSheet.h */,
-				7B03602916AF0132002140DF /* ACEActionSheet.m */,
-				7B03602A16AF0132002140DF /* ACEAlertView.h */,
-				7B03602B16AF0132002140DF /* ACEAlertView.m */,
-				50163BAD19B6CD110037E304 /* ACENavigationController.h */,
-				50163BAE19B6CD110037E304 /* ACENavigationController.m */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
-		7B03603816AF1C26002140DF /* Additions */ = {
-			isa = PBXGroup;
-			children = (
-				803351F91981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.h */,
-				803351FA1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m */,
-				5005E5841CED521300F7CB26 /* NSString+ACEToolKit.h */,
-				5005E5851CED521300F7CB26 /* NSString+ACEToolKit.m */,
-			);
-			name = Additions;
-			sourceTree = "<group>";
-		};
-		7BDE4BBE18E872DF00C3B114 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				7B03603916AF2014002140DF /* ACEColor.h */,
-				7B03603A16AF2014002140DF /* ACEColor.m */,
-				800834AA199BE4DD00249590 /* ACEErrorUtils.h */,
-				800834AB199BE4DD00249590 /* ACEErrorUtils.m */,
-				50348B131C57D60F0094C40E /* ACEImage.h */,
-				50348B141C57D60F0094C40E /* ACEImage.m */,
-				7BDE4BBB18E872DC00C3B114 /* ACEPathUtils.h */,
-				7BDE4BBC18E872DC00C3B114 /* ACEPathUtils.m */,
-				50CFA6E31CBFE2D100E46B30 /* ACETextLabel.h */,
-				50CFA6E41CBFE2D100E46B30 /* ACETextLabel.m */,
-				7B03603516AF1C1F002140DF /* ACEView.h */,
-				7B03603616AF1C1F002140DF /* ACEView.m */,
-				7B83BCB6186144C9000880FB /* ACEViewController.h */,
-				7B83BCB7186144C9000880FB /* ACEViewController.m */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		807665061BDEABFD0086E12A /* FFGlobalAlertController */ = {
-			isa = PBXGroup;
-			children = (
-				807665031BDEABA50086E12A /* UIAlertController+Window.h */,
-				807665041BDEABA50086E12A /* UIAlertController+Window.m */,
-			);
-			name = FFGlobalAlertController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B03600F16AEEDCC002140DF /* Build configuration list for PBXNativeTarget "ACEToolKitDemo" */;
 			buildPhases = (
+				871D2578EDE0C403D3D233EE /* [CP] Check Pods Manifest.lock */,
 				7B035FE716AEEDCC002140DF /* Sources */,
 				7B035FE816AEEDCC002140DF /* Frameworks */,
 				7B035FE916AEEDCC002140DF /* Resources */,
+				D67E76CA2E67CA350D589153 /* [CP] Embed Pods Frameworks */,
+				E013C052801E9F69AB84D944 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -367,22 +271,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		871D2578EDE0C403D3D233EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D67E76CA2E67CA350D589153 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACEToolKitDemo/Pods-ACEToolKitDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E013C052801E9F69AB84D944 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACEToolKitDemo/Pods-ACEToolKitDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		50348AF71C574DAB0094C40E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50348B121C57D2A30094C40E /* ACEPathUtils.m in Sources */,
 				50348B051C574DAB0094C40E /* ViewController.m in Sources */,
-				50348B161C57D60F0094C40E /* ACEImage.m in Sources */,
 				50348B021C574DAB0094C40E /* main.m in Sources */,
-				50348B0F1C57CDD40094C40E /* ACEColor.m in Sources */,
-				8033E59A1C597B3D00F7DA88 /* ACEViewController.m in Sources */,
-				50348B111C57CF470094C40E /* ACEView.m in Sources */,
-				50348B101C57CF100094C40E /* NSMutableDictionary+ACEToolKit.m in Sources */,
-				5005E5871CED521300F7CB26 /* NSString+ACEToolKit.m in Sources */,
 				50348AFF1C574DAB0094C40E /* AppDelegate.m in Sources */,
-				50CFA6E61CBFE2D100E46B30 /* ACETextLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,20 +336,7 @@
 			files = (
 				7B035FFC16AEEDCC002140DF /* main.m in Sources */,
 				7B03600016AEEDCC002140DF /* ACEAppDelegate.m in Sources */,
-				5005E5861CED521300F7CB26 /* NSString+ACEToolKit.m in Sources */,
-				7B83BCB8186144C9000880FB /* ACEViewController.m in Sources */,
 				7B03600916AEEDCC002140DF /* ACEDemoViewController.m in Sources */,
-				50163BAF19B6CD110037E304 /* ACENavigationController.m in Sources */,
-				7BDE4BBD18E872DC00C3B114 /* ACEPathUtils.m in Sources */,
-				7B03602D16AF0132002140DF /* ACEActionSheet.m in Sources */,
-				50CFA6E51CBFE2D100E46B30 /* ACETextLabel.m in Sources */,
-				7B03602E16AF0132002140DF /* ACEAlertView.m in Sources */,
-				7B03603716AF1C1F002140DF /* ACEView.m in Sources */,
-				803351FB1981793A006CCDD9 /* NSMutableDictionary+ACEToolKit.m in Sources */,
-				7B03603B16AF2014002140DF /* ACEColor.m in Sources */,
-				800834AC199BE4DD00249590 /* ACEErrorUtils.m in Sources */,
-				807665051BDEABA50086E12A /* UIAlertController+Window.m in Sources */,
-				50348B151C57D60F0094C40E /* ACEImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +459,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -549,7 +480,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -558,11 +489,12 @@
 		};
 		7B03601016AEEDCC002140DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 965993BD9F147B553CFAF012 /* Pods-ACEToolKitDemo.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ACEToolKitDemo/ACEToolKitDemo-Prefix.pch";
 				INFOPLIST_FILE = "ACEToolKitDemo/ACEToolKitDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acetools.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -571,11 +503,12 @@
 		};
 		7B03601116AEEDCC002140DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 298EAE3216D674CC0B410E75 /* Pods-ACEToolKitDemo.release.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ACEToolKitDemo/ACEToolKitDemo-Prefix.pch";
 				INFOPLIST_FILE = "ACEToolKitDemo/ACEToolKitDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acetools.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

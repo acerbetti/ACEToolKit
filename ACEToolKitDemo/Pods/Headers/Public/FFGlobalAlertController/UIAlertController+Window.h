@@ -1,0 +1,1 @@
+../../../FFGlobalAlertController/Pod/Classes/UIAlertController+Window.h

@@ -1,0 +1,3 @@
+target 'ACEToolKitDemo' do
+    pod 'ACEToolKit', :path => '../'
+end
