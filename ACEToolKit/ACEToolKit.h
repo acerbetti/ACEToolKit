@@ -24,14 +24,9 @@
 
 #import <Foundation/Foundation.h>
 
-#if (TARGET_OS_IOS && !ACE_APP_EXTENSION)
+#if TARGET_OS_IOS
 
 #import <UIKit/UIKit.h>
-
-// blocks
-typedef BOOL (^SelectBlock)(NSInteger index, NSString *title);
-typedef BOOL (^DismissBlock)(void);
-
 
 // import all the headers
 #import "ACEActionSheet.h"

@@ -7,40 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B4C4B8557A1935144FBFA5C6172599E /* ACETextLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = D8ED72E52D4356304F407793F4CD94EE /* ACETextLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15DB980F3B5BAF40C7F7AF6D5BC78113 /* ACEActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CDFE1725C2FB86409C3F897E95B1EF /* ACEActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1995018024B3A485FA3A22F401F8E0DF /* NSString+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1239FBFC5129A98E4061A5AA72CFE3 /* NSString+ACEToolKit.m */; };
-		22DF1E39537E264280DDA67E75E0B544 /* ACEToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DC464054972DD16697D3F62D1ED8E5C /* ACEToolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		27ED07D34E450DDDCC2308EA82E1AE22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		307D102F5AE5B5597C7D09EC51B865D9 /* ACEPathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F747A3EF7AC0421EF1620F1C968328 /* ACEPathUtils.m */; };
-		308D0E033375085A1C7E316A684B0A0E /* FFGlobalAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AD6369267FFBC5F00A5389DCDCAD4 /* FFGlobalAlertController-dummy.m */; };
-		30FF70E83A39AA4AE64DB8F8962704B0 /* ACETextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E6A5A0AE6C26106B22839891482588 /* ACETextLabel.m */; };
-		3CD560C49CBE0167B81BDF55A5A8A941 /* ACEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E13EDE7187646BB0AA9F4A1849C2CDE /* ACEViewController.m */; };
-		459D76C1168FEBC745A08865CD2036BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
-		4656A05E1E605EDCA05EFEE5B97A18A0 /* ACEImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 598A20B9B8707290AF389B47F5566854 /* ACEImage.m */; };
-		4D5FD760167E3CC45190FDB6B19D9784 /* ACEView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6193B2284214320D20A6921A2073CC5E /* ACEView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5FA69A2B0DC787504DCC42DD6A4A9618 /* ACEColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FF20DEF33E35C60908EF45F04D0AB55 /* ACEColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		61461E54E77621D257461C90007BE06B /* ACENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DD2343A8BF64317497D7830EF219D7 /* ACENavigationController.m */; };
-		64F127E9A660FBB8AB0E2239C0C765CB /* ACEAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 00FB0DA197AC98D4C852A4822AA3FFE6 /* ACEAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		68905EDF76802AADB41FFFAAA85E19B0 /* ACEViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E575BB006B35643CA33CBB5B6BCF4428 /* ACEViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		77657CDB59ECB4E78B3AE6780349B056 /* ACEActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 235BE864B163430C195A2A013DEA95BB /* ACEActionSheet.m */; };
-		7B77B8161D70EB0508E63645FE7D3BCE /* ACEPathUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 1817A526FDE7DFCD42D7E3D0CAA30B63 /* ACEPathUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D7A25B0267478FBEBD74F80AF847FFA /* NSMutableDictionary+ACEToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3257086C6FD53516EDD6232C73C1EFED /* NSMutableDictionary+ACEToolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		845874675334A9D5372E6C4BEBD61050 /* ACEToolKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CB36AD550B39635B07E13C1D4CF945 /* ACEToolKit-dummy.m */; };
-		91A619A03D485F0DA7E16C744CCFDBEC /* ACEErrorUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 05946994E59FE9D0957491A820A0D4FD /* ACEErrorUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		933B7893F7E9312C480B909ECD3C0622 /* ACEView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7749BFE98C42F3EEA1A5B9BED479773 /* ACEView.m */; };
-		A7B715A7B47EA9A898172F91DB3C373A /* NSString+ACEToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BA1DF443D849EE9420C38E6DE0C074CB /* NSString+ACEToolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A8E20274380572D7B15A8F9537DD108A /* NSMutableDictionary+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1170E0D0A647D9712C5CE415A991B1E7 /* NSMutableDictionary+ACEToolKit.m */; };
-		AA7A3EF56577300CF43F112FF31E62FF /* ACEErrorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9758593A65B20B98DE9FCC04000D9AED /* ACEErrorUtils.m */; };
+		051C41DC1CF263E3EBDBDEB0BB53BDA5 /* UIAlertController+Window.h in Headers */ = {isa = PBXBuildFile; fileRef = D9B728290F0A7E16417CE183B18BD39E /* UIAlertController+Window.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		097B269AE72F7CF301C338BEDD901D11 /* ACEPathUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = C40CCBA8A4A2802A8DC63C4F96C9F141 /* ACEPathUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12B04496AAD830C08E53B84C99505BA1 /* NSString+ACEToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 88C4207FFA5F51BFE1054480828EAC45 /* NSString+ACEToolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13390557F0139639A1A9F04310F71DBA /* ACEAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = C9515E9D232C26337E454C33ECEF528A /* ACEAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		158E7E873612688CDBCF03A26A166767 /* ACEActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 408F431DA6C6CDB82A6F9524DF121CC4 /* ACEActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D5DF4D23A7A8FFFC0F9C633BF43E1EB /* ACEColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B99CDF440E03F3AE55B4088A339A5FC /* ACEColor.m */; };
+		34023FC537AA167D0E6EDFB7A60D6168 /* ACEErrorUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 92E323908C330D281915304B182492BB /* ACEErrorUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F2AFB7E7BB71362B7AE27916126CDDB /* ACEAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA1EE0CF772C001012DBC1099F6EE02 /* ACEAlertView.m */; };
+		400C78B24ACBCD67F20F550A2643D03E /* ACEView.m in Sources */ = {isa = PBXBuildFile; fileRef = 328BF7A22ACB5114C459D3BD033653BD /* ACEView.m */; };
+		40D8802885221309514420BB724046B1 /* NSMutableDictionary+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD7309B7F306398EDEDBC4815D9EDDF /* NSMutableDictionary+ACEToolKit.m */; };
+		41E98063BE46A29F4A9B7A408DFBE648 /* ACEView.h in Headers */ = {isa = PBXBuildFile; fileRef = A75B991354CC96C1E409127502702D12 /* ACEView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4404F69428DE986FF3682A33ADE9E952 /* ACEViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 84EB9E434F39A555AF634FFF46D728AF /* ACEViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BCC9851A22558BECE6F0716C00DBBBF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		65BE76AC8F95D54CBDAAE92840F6A7E5 /* ACENavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = A54775F8482F7094A50E7C30BE46D5BC /* ACENavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67DEC9C36DE07B0DE1449A7C851BD745 /* ACEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5643930B94E23875BC3FFCB34B3D0C5E /* ACEViewController.m */; };
+		77B9DAD2BF7A3F26B755B3D8F659ACEA /* ACEErrorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E7F21307D6E7B9C986FAFC25AC834 /* ACEErrorUtils.m */; };
+		7D98734A2821F4FD951D06025BE17A45 /* ACEToolKitBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 606F16E2362FB5BFF84F153C95C818EA /* ACEToolKitBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		831DB4609E778FC2720F5C07350DF5B3 /* ACETextLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = BF8657008046C4241203DB3B9F8F17E9 /* ACETextLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C7F35D8D9760E649D59F226D7AE312E /* ACETextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F555A692E5F39DC202AA312E2B3DD2 /* ACETextLabel.m */; };
+		90C9FBAFD5B050C9FB1DA16BB9918FB8 /* NSString+ACEToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C65E671F6C65AE44127EA197A9EF82 /* NSString+ACEToolKit.m */; };
+		9842F4BD0A732C60F3D93611B0B0BC9C /* ACEToolKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CB36AD550B39635B07E13C1D4CF945 /* ACEToolKit-dummy.m */; };
+		9A7EE8281FE3E2D2280B628F8012F7ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		A9D6092B656F0307D8EED3C07BF7E81A /* ACEPathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB590ABEFEBA53631229BA4B054B27 /* ACEPathUtils.m */; };
+		AC82DAEFFFD5316C002108F4E6AC5C40 /* ACEImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F4A6A23E82B07C86F5F181626723DD /* ACEImage.m */; };
+		ADA6EF8D085954318180CACE61392B52 /* FFGlobalAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AD6369267FFBC5F00A5389DCDCAD4 /* FFGlobalAlertController-dummy.m */; };
+		B49B7EE6EB0D2AB00CB13FD600074CA7 /* ACENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D36B712BD46E8B2826A172F115AC083F /* ACENavigationController.m */; };
 		BC444D7454815176882BC8FB93A17C78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		DAA575767E42D0B7997522A8E2ADB24B /* ACEColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A51BC6A82BAF6710CA04904AECBE3ABF /* ACEColor.m */; };
-		DED3ED32D34A0174CB0BFF5971468759 /* ACENavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = F33791305AAB2A22DA22824D3BB7C002 /* ACENavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E220F35FE514EDDCC3DAD411DF3D2546 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		E55105FBEA92F39ECC113FD81E1EE433 /* ACEAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD18507C247CD7A05646C4BCD209562 /* ACEAlertView.m */; };
-		EF7E2B3AB13C8AF38406C5EFA3D3B951 /* ACEImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 070F2BC0716CBD9A79AA919521362F3A /* ACEImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB4AFCCFC1BC98EB0A45EC850B6BACDE /* ACEColor.h in Headers */ = {isa = PBXBuildFile; fileRef = AB2C2B4CD99B09DAB1647B53C2244E25 /* ACEColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1B3B368CCAF25EC37AFE8E86E36F59B /* ACEToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 553FAE1FD6F46F5D1ABC37B54BA5C865 /* ACEToolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E846CEF413E5069C89DECB173346EC1B /* NSMutableDictionary+ACEToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BA75E96D272E2802B9C880171C8D24A /* NSMutableDictionary+ACEToolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9A96EE8976DF1150EA76FD1209D0938 /* ACEImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C98BD76AA55C2B45D1F841F854D91F0 /* ACEImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC8DF5C8CD583C79865ED9D76925EE5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		ED7201EAAA4CA534FDE55C711D1AAB2C /* ACEActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 647BBADF5AFFC48B44399C63767787B1 /* ACEActionSheet.m */; };
 		F09A62968C48EA25D167FC4F9A34AD2A /* Pods-ACEToolKitDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D3078621C9AE19DA94A73345A2BEA /* Pods-ACEToolKitDemo-dummy.m */; };
-		F23B17EAC65602BE52A0AF85F2F4261D /* UIAlertController+Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 747B3727EEC60D1848DF9DB85CA3792F /* UIAlertController+Window.m */; };
-		F38F38AE8A3B3DAEFF8A8D18729BC56D /* UIAlertController+Window.h in Headers */ = {isa = PBXBuildFile; fileRef = D9B728290F0A7E16417CE183B18BD39E /* UIAlertController+Window.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F557B31CDE27EEDAC7CB11F27383ED13 /* UIAlertController+Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 747B3727EEC60D1848DF9DB85CA3792F /* UIAlertController+Window.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,93 +49,85 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9218B10E545D857EF24CD890F1913AB4;
+			remoteGlobalIDString = 424FA0087C9C8F48DB7EE7965AC7A112;
 			remoteInfo = ACEToolKit;
 		};
-		43E6571B07D8E1EA893D03C7CA6E23A5 /* PBXContainerItemProxy */ = {
+		B3B91079AEBE04B2CECBDF011F8825C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C71C5CC2938F9D844278A557C81BD595;
+			remoteGlobalIDString = 9305A557A0C3CE5AA59E9A85F2E34E43;
 			remoteInfo = FFGlobalAlertController;
-		};
-		5AEFBA25E01E81D7535E7FBFC6F0B4EB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 542709AE0C9A4D5659414D44915C810F;
-			remoteInfo = "FFGlobalAlertController-FFGlobalAlertController";
 		};
 		BB5D9C2ABE0BFF0C3EADE9286C21B366 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C71C5CC2938F9D844278A557C81BD595;
+			remoteGlobalIDString = 9305A557A0C3CE5AA59E9A85F2E34E43;
 			remoteInfo = FFGlobalAlertController;
+		};
+		CD6A692FB3969A10ED7E01BA7D028EB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F89C867113D784BD307BD08052094BF;
+			remoteInfo = "FFGlobalAlertController-FFGlobalAlertController";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00FB0DA197AC98D4C852A4822AA3FFE6 /* ACEAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEAlertView.h; sourceTree = "<group>"; };
-		05946994E59FE9D0957491A820A0D4FD /* ACEErrorUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEErrorUtils.h; sourceTree = "<group>"; };
-		06CDFE1725C2FB86409C3F897E95B1EF /* ACEActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEActionSheet.h; sourceTree = "<group>"; };
-		070F2BC0716CBD9A79AA919521362F3A /* ACEImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEImage.h; sourceTree = "<group>"; };
-		0DC464054972DD16697D3F62D1ED8E5C /* ACEToolKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEToolKit.h; sourceTree = "<group>"; };
-		1170E0D0A647D9712C5CE415A991B1E7 /* NSMutableDictionary+ACEToolKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+ACEToolKit.m"; sourceTree = "<group>"; };
-		1817A526FDE7DFCD42D7E3D0CAA30B63 /* ACEPathUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEPathUtils.h; sourceTree = "<group>"; };
-		1E13EDE7187646BB0AA9F4A1849C2CDE /* ACEViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACEViewController.m; sourceTree = "<group>"; };
+		0BA75E96D272E2802B9C880171C8D24A /* NSMutableDictionary+ACEToolKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+ACEToolKit.h"; sourceTree = "<group>"; };
 		1ED5BE9AA9ADF1E3EA361829CCC3B576 /* FFGlobalAlertController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FFGlobalAlertController.xcconfig; sourceTree = "<group>"; };
-		235BE864B163430C195A2A013DEA95BB /* ACEActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACEActionSheet.m; sourceTree = "<group>"; };
 		256451DCA602B1844041F2A001019B30 /* Pods-ACEToolKitDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ACEToolKitDemo-frameworks.sh"; sourceTree = "<group>"; };
 		31E7CFEE8477521317D7699C93D0F7D3 /* ACEToolKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ACEToolKit-prefix.pch"; sourceTree = "<group>"; };
-		3257086C6FD53516EDD6232C73C1EFED /* NSMutableDictionary+ACEToolKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+ACEToolKit.h"; sourceTree = "<group>"; };
-		32DD2343A8BF64317497D7830EF219D7 /* ACENavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACENavigationController.m; sourceTree = "<group>"; };
+		328BF7A22ACB5114C459D3BD033653BD /* ACEView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACEView.m; sourceTree = "<group>"; };
 		332FE4EF3EFD223CCACE87C98743998F /* Pods-ACEToolKitDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ACEToolKitDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		408F431DA6C6CDB82A6F9524DF121CC4 /* ACEActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEActionSheet.h; sourceTree = "<group>"; };
 		44910C25460488D97B695F1DC5223E15 /* ACEToolKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ACEToolKit.xcconfig; sourceTree = "<group>"; };
-		4F1239FBFC5129A98E4061A5AA72CFE3 /* NSString+ACEToolKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+ACEToolKit.m"; sourceTree = "<group>"; };
-		4FF20DEF33E35C60908EF45F04D0AB55 /* ACEColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEColor.h; sourceTree = "<group>"; };
+		4ECB590ABEFEBA53631229BA4B054B27 /* ACEPathUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACEPathUtils.m; sourceTree = "<group>"; };
 		518F6D8F10E6B27B866F2CDF73F31E73 /* Pods-ACEToolKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ACEToolKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		53CB36AD550B39635B07E13C1D4CF945 /* ACEToolKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ACEToolKit-dummy.m"; sourceTree = "<group>"; };
-		598A20B9B8707290AF389B47F5566854 /* ACEImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACEImage.m; sourceTree = "<group>"; };
-		6193B2284214320D20A6921A2073CC5E /* ACEView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEView.h; sourceTree = "<group>"; };
+		553FAE1FD6F46F5D1ABC37B54BA5C865 /* ACEToolKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEToolKit.h; sourceTree = "<group>"; };
+		5643930B94E23875BC3FFCB34B3D0C5E /* ACEViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACEViewController.m; sourceTree = "<group>"; };
+		606F16E2362FB5BFF84F153C95C818EA /* ACEToolKitBlocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEToolKitBlocks.h; sourceTree = "<group>"; };
+		647BBADF5AFFC48B44399C63767787B1 /* ACEActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACEActionSheet.m; sourceTree = "<group>"; };
 		6E7D84B80EE9C92231E293D177957C4F /* libPods-ACEToolKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ACEToolKitDemo.a"; path = "libPods-ACEToolKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		747B3727EEC60D1848DF9DB85CA3792F /* UIAlertController+Window.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertController+Window.m"; path = "Pod/Classes/UIAlertController+Window.m"; sourceTree = "<group>"; };
 		76E925A5CF64C102CC66DFF2B7E37A67 /* FFGlobalAlertController.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FFGlobalAlertController.bundle; path = FFGlobalAlertController.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C98BD76AA55C2B45D1F841F854D91F0 /* ACEImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEImage.h; sourceTree = "<group>"; };
+		7DA1EE0CF772C001012DBC1099F6EE02 /* ACEAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACEAlertView.m; sourceTree = "<group>"; };
 		80AB2117B1B16DD3D8C7E9E33831F89F /* libACEToolKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libACEToolKit.a; path = libACEToolKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		84EB9E434F39A555AF634FFF46D728AF /* ACEViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEViewController.h; sourceTree = "<group>"; };
 		85191E4CE6BF428EA3E74D51CDA748CB /* FFGlobalAlertController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FFGlobalAlertController-prefix.pch"; sourceTree = "<group>"; };
-		8CD18507C247CD7A05646C4BCD209562 /* ACEAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACEAlertView.m; sourceTree = "<group>"; };
+		88C4207FFA5F51BFE1054480828EAC45 /* NSString+ACEToolKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+ACEToolKit.h"; sourceTree = "<group>"; };
 		8D4D3078621C9AE19DA94A73345A2BEA /* Pods-ACEToolKitDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ACEToolKitDemo-dummy.m"; sourceTree = "<group>"; };
+		92E323908C330D281915304B182492BB /* ACEErrorUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEErrorUtils.h; sourceTree = "<group>"; };
 		9308CC96A15352D23925CF87BA6E2AD4 /* Pods-ACEToolKitDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ACEToolKitDemo-resources.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93BEBDDCCF41A66747C288B9583DA8FA /* ResourceBundle-FFGlobalAlertController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-FFGlobalAlertController-Info.plist"; sourceTree = "<group>"; };
-		9758593A65B20B98DE9FCC04000D9AED /* ACEErrorUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACEErrorUtils.m; sourceTree = "<group>"; };
+		93F555A692E5F39DC202AA312E2B3DD2 /* ACETextLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACETextLabel.m; sourceTree = "<group>"; };
+		9A1E7F21307D6E7B9C986FAFC25AC834 /* ACEErrorUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACEErrorUtils.m; sourceTree = "<group>"; };
+		9B99CDF440E03F3AE55B4088A339A5FC /* ACEColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACEColor.m; sourceTree = "<group>"; };
 		9C9AD6369267FFBC5F00A5389DCDCAD4 /* FFGlobalAlertController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FFGlobalAlertController-dummy.m"; sourceTree = "<group>"; };
-		A51BC6A82BAF6710CA04904AECBE3ABF /* ACEColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACEColor.m; sourceTree = "<group>"; };
+		A54775F8482F7094A50E7C30BE46D5BC /* ACENavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACENavigationController.h; sourceTree = "<group>"; };
+		A75B991354CC96C1E409127502702D12 /* ACEView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEView.h; sourceTree = "<group>"; };
+		AB2C2B4CD99B09DAB1647B53C2244E25 /* ACEColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEColor.h; sourceTree = "<group>"; };
+		ABD7309B7F306398EDEDBC4815D9EDDF /* NSMutableDictionary+ACEToolKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+ACEToolKit.m"; sourceTree = "<group>"; };
 		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		BA1DF443D849EE9420C38E6DE0C074CB /* NSString+ACEToolKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+ACEToolKit.h"; sourceTree = "<group>"; };
-		C7749BFE98C42F3EEA1A5B9BED479773 /* ACEView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACEView.m; sourceTree = "<group>"; };
+		B6C65E671F6C65AE44127EA197A9EF82 /* NSString+ACEToolKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+ACEToolKit.m"; sourceTree = "<group>"; };
+		BF8657008046C4241203DB3B9F8F17E9 /* ACETextLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACETextLabel.h; sourceTree = "<group>"; };
+		C40CCBA8A4A2802A8DC63C4F96C9F141 /* ACEPathUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEPathUtils.h; sourceTree = "<group>"; };
+		C9515E9D232C26337E454C33ECEF528A /* ACEAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEAlertView.h; sourceTree = "<group>"; };
 		CCB97EE23925DE6239D9D2965E43553B /* libFFGlobalAlertController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFFGlobalAlertController.a; path = libFFGlobalAlertController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D36B712BD46E8B2826A172F115AC083F /* ACENavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACENavigationController.m; sourceTree = "<group>"; };
+		D6F4A6A23E82B07C86F5F181626723DD /* ACEImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACEImage.m; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D8ED72E52D4356304F407793F4CD94EE /* ACETextLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACETextLabel.h; sourceTree = "<group>"; };
 		D9B728290F0A7E16417CE183B18BD39E /* UIAlertController+Window.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAlertController+Window.h"; path = "Pod/Classes/UIAlertController+Window.h"; sourceTree = "<group>"; };
-		E3F747A3EF7AC0421EF1620F1C968328 /* ACEPathUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACEPathUtils.m; sourceTree = "<group>"; };
-		E4E6A5A0AE6C26106B22839891482588 /* ACETextLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACETextLabel.m; sourceTree = "<group>"; };
-		E575BB006B35643CA33CBB5B6BCF4428 /* ACEViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACEViewController.h; sourceTree = "<group>"; };
 		E95E460CE923DC07C0DB4E961A7FD92C /* Pods-ACEToolKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ACEToolKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		F33791305AAB2A22DA22824D3BB7C002 /* ACENavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACENavigationController.h; sourceTree = "<group>"; };
 		F924D6B982965CB2ACF8DAD68C20A7EA /* Pods-ACEToolKitDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ACEToolKitDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1FD3C210EBBF37B34A3E244EA68445D0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				27ED07D34E450DDDCC2308EA82E1AE22 /* Foundation.framework in Frameworks */,
-				459D76C1168FEBC745A08865CD2036BC /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2749C7DC3852729A6EE86B1F8081872C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,18 +136,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9D80E187765FAA009800C6F209A7ACD7 /* Frameworks */ = {
+		B801DF9F72B3AF147E2A6E2CE088008A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC8DF5C8CD583C79865ED9D76925EE5A /* Foundation.framework in Frameworks */,
+				5BCC9851A22558BECE6F0716C00DBBBF /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D8A637241C6CE54F7DC7F48F8C875055 /* Frameworks */ = {
+		BCB17C30C79CE1C120734750BB219647 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E220F35FE514EDDCC3DAD411DF3D2546 /* Foundation.framework in Frameworks */,
+				9A7EE8281FE3E2D2280B628F8012F7ED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFFF046F3BA7B31C2AA1E80B7888500A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,10 +186,10 @@
 			path = "Target Support Files/Pods-ACEToolKitDemo";
 			sourceTree = "<group>";
 		};
-		23881C0FFEB806FBEDAF35472A391B25 /* Core */ = {
+		1B388AE43D1AB44FDFF955803C829F01 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				60F51AEF7F5E2A81EA20936A5E8D8DFC /* ACEToolKit */,
+				C839F994B96987A688D117FB5704C296 /* ACEToolKit */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -207,39 +209,6 @@
 				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		60F51AEF7F5E2A81EA20936A5E8D8DFC /* ACEToolKit */ = {
-			isa = PBXGroup;
-			children = (
-				06CDFE1725C2FB86409C3F897E95B1EF /* ACEActionSheet.h */,
-				235BE864B163430C195A2A013DEA95BB /* ACEActionSheet.m */,
-				00FB0DA197AC98D4C852A4822AA3FFE6 /* ACEAlertView.h */,
-				8CD18507C247CD7A05646C4BCD209562 /* ACEAlertView.m */,
-				4FF20DEF33E35C60908EF45F04D0AB55 /* ACEColor.h */,
-				A51BC6A82BAF6710CA04904AECBE3ABF /* ACEColor.m */,
-				05946994E59FE9D0957491A820A0D4FD /* ACEErrorUtils.h */,
-				9758593A65B20B98DE9FCC04000D9AED /* ACEErrorUtils.m */,
-				070F2BC0716CBD9A79AA919521362F3A /* ACEImage.h */,
-				598A20B9B8707290AF389B47F5566854 /* ACEImage.m */,
-				F33791305AAB2A22DA22824D3BB7C002 /* ACENavigationController.h */,
-				32DD2343A8BF64317497D7830EF219D7 /* ACENavigationController.m */,
-				1817A526FDE7DFCD42D7E3D0CAA30B63 /* ACEPathUtils.h */,
-				E3F747A3EF7AC0421EF1620F1C968328 /* ACEPathUtils.m */,
-				D8ED72E52D4356304F407793F4CD94EE /* ACETextLabel.h */,
-				E4E6A5A0AE6C26106B22839891482588 /* ACETextLabel.m */,
-				0DC464054972DD16697D3F62D1ED8E5C /* ACEToolKit.h */,
-				6193B2284214320D20A6921A2073CC5E /* ACEView.h */,
-				C7749BFE98C42F3EEA1A5B9BED479773 /* ACEView.m */,
-				E575BB006B35643CA33CBB5B6BCF4428 /* ACEViewController.h */,
-				1E13EDE7187646BB0AA9F4A1849C2CDE /* ACEViewController.m */,
-				3257086C6FD53516EDD6232C73C1EFED /* NSMutableDictionary+ACEToolKit.h */,
-				1170E0D0A647D9712C5CE415A991B1E7 /* NSMutableDictionary+ACEToolKit.m */,
-				BA1DF443D849EE9420C38E6DE0C074CB /* NSString+ACEToolKit.h */,
-				4F1239FBFC5129A98E4061A5AA72CFE3 /* NSString+ACEToolKit.m */,
-			);
-			name = ACEToolKit;
-			path = ACEToolKit;
 			sourceTree = "<group>";
 		};
 		73843FD8EA20737D60CA28686C29D14A /* Support Files */ = {
@@ -310,7 +279,7 @@
 		A77DF8337A7B6D62C6E208A65ACE35FF /* ACEToolKit */ = {
 			isa = PBXGroup;
 			children = (
-				23881C0FFEB806FBEDAF35472A391B25 /* Core */,
+				1B388AE43D1AB44FDFF955803C829F01 /* Core */,
 				9CD2B00B72CA979E1132D4C0057AC6C3 /* Support Files */,
 			);
 			name = ACEToolKit;
@@ -325,47 +294,100 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		C839F994B96987A688D117FB5704C296 /* ACEToolKit */ = {
+			isa = PBXGroup;
+			children = (
+				408F431DA6C6CDB82A6F9524DF121CC4 /* ACEActionSheet.h */,
+				647BBADF5AFFC48B44399C63767787B1 /* ACEActionSheet.m */,
+				C9515E9D232C26337E454C33ECEF528A /* ACEAlertView.h */,
+				7DA1EE0CF772C001012DBC1099F6EE02 /* ACEAlertView.m */,
+				AB2C2B4CD99B09DAB1647B53C2244E25 /* ACEColor.h */,
+				9B99CDF440E03F3AE55B4088A339A5FC /* ACEColor.m */,
+				92E323908C330D281915304B182492BB /* ACEErrorUtils.h */,
+				9A1E7F21307D6E7B9C986FAFC25AC834 /* ACEErrorUtils.m */,
+				7C98BD76AA55C2B45D1F841F854D91F0 /* ACEImage.h */,
+				D6F4A6A23E82B07C86F5F181626723DD /* ACEImage.m */,
+				A54775F8482F7094A50E7C30BE46D5BC /* ACENavigationController.h */,
+				D36B712BD46E8B2826A172F115AC083F /* ACENavigationController.m */,
+				C40CCBA8A4A2802A8DC63C4F96C9F141 /* ACEPathUtils.h */,
+				4ECB590ABEFEBA53631229BA4B054B27 /* ACEPathUtils.m */,
+				BF8657008046C4241203DB3B9F8F17E9 /* ACETextLabel.h */,
+				93F555A692E5F39DC202AA312E2B3DD2 /* ACETextLabel.m */,
+				553FAE1FD6F46F5D1ABC37B54BA5C865 /* ACEToolKit.h */,
+				606F16E2362FB5BFF84F153C95C818EA /* ACEToolKitBlocks.h */,
+				A75B991354CC96C1E409127502702D12 /* ACEView.h */,
+				328BF7A22ACB5114C459D3BD033653BD /* ACEView.m */,
+				84EB9E434F39A555AF634FFF46D728AF /* ACEViewController.h */,
+				5643930B94E23875BC3FFCB34B3D0C5E /* ACEViewController.m */,
+				0BA75E96D272E2802B9C880171C8D24A /* NSMutableDictionary+ACEToolKit.h */,
+				ABD7309B7F306398EDEDBC4815D9EDDF /* NSMutableDictionary+ACEToolKit.m */,
+				88C4207FFA5F51BFE1054480828EAC45 /* NSString+ACEToolKit.h */,
+				B6C65E671F6C65AE44127EA197A9EF82 /* NSString+ACEToolKit.m */,
+			);
+			name = ACEToolKit;
+			path = ACEToolKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		057F2D0201BCB7715AE6D09E74FE4802 /* Headers */ = {
+		83F57B391B0DF3838FC209D353270827 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F38F38AE8A3B3DAEFF8A8D18729BC56D /* UIAlertController+Window.h in Headers */,
+				158E7E873612688CDBCF03A26A166767 /* ACEActionSheet.h in Headers */,
+				13390557F0139639A1A9F04310F71DBA /* ACEAlertView.h in Headers */,
+				DB4AFCCFC1BC98EB0A45EC850B6BACDE /* ACEColor.h in Headers */,
+				34023FC537AA167D0E6EDFB7A60D6168 /* ACEErrorUtils.h in Headers */,
+				E9A96EE8976DF1150EA76FD1209D0938 /* ACEImage.h in Headers */,
+				65BE76AC8F95D54CBDAAE92840F6A7E5 /* ACENavigationController.h in Headers */,
+				097B269AE72F7CF301C338BEDD901D11 /* ACEPathUtils.h in Headers */,
+				831DB4609E778FC2720F5C07350DF5B3 /* ACETextLabel.h in Headers */,
+				E1B3B368CCAF25EC37AFE8E86E36F59B /* ACEToolKit.h in Headers */,
+				7D98734A2821F4FD951D06025BE17A45 /* ACEToolKitBlocks.h in Headers */,
+				41E98063BE46A29F4A9B7A408DFBE648 /* ACEView.h in Headers */,
+				4404F69428DE986FF3682A33ADE9E952 /* ACEViewController.h in Headers */,
+				E846CEF413E5069C89DECB173346EC1B /* NSMutableDictionary+ACEToolKit.h in Headers */,
+				12B04496AAD830C08E53B84C99505BA1 /* NSString+ACEToolKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F0FDABCF891371D7AC91B84CBD46EB42 /* Headers */ = {
+		C51233AC3FACAB5F458AE807939BD089 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15DB980F3B5BAF40C7F7AF6D5BC78113 /* ACEActionSheet.h in Headers */,
-				64F127E9A660FBB8AB0E2239C0C765CB /* ACEAlertView.h in Headers */,
-				5FA69A2B0DC787504DCC42DD6A4A9618 /* ACEColor.h in Headers */,
-				91A619A03D485F0DA7E16C744CCFDBEC /* ACEErrorUtils.h in Headers */,
-				EF7E2B3AB13C8AF38406C5EFA3D3B951 /* ACEImage.h in Headers */,
-				DED3ED32D34A0174CB0BFF5971468759 /* ACENavigationController.h in Headers */,
-				7B77B8161D70EB0508E63645FE7D3BCE /* ACEPathUtils.h in Headers */,
-				0B4C4B8557A1935144FBFA5C6172599E /* ACETextLabel.h in Headers */,
-				22DF1E39537E264280DDA67E75E0B544 /* ACEToolKit.h in Headers */,
-				4D5FD760167E3CC45190FDB6B19D9784 /* ACEView.h in Headers */,
-				68905EDF76802AADB41FFFAAA85E19B0 /* ACEViewController.h in Headers */,
-				7D7A25B0267478FBEBD74F80AF847FFA /* NSMutableDictionary+ACEToolKit.h in Headers */,
-				A7B715A7B47EA9A898172F91DB3C373A /* NSString+ACEToolKit.h in Headers */,
+				051C41DC1CF263E3EBDBDEB0BB53BDA5 /* UIAlertController+Window.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		542709AE0C9A4D5659414D44915C810F /* FFGlobalAlertController-FFGlobalAlertController */ = {
+		424FA0087C9C8F48DB7EE7965AC7A112 /* ACEToolKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1F93F2A3F59E30974C7A0C7C6E7A1CEE /* Build configuration list for PBXNativeTarget "FFGlobalAlertController-FFGlobalAlertController" */;
+			buildConfigurationList = DEB1F399EADB9946E888FF53A7147E0E /* Build configuration list for PBXNativeTarget "ACEToolKit" */;
 			buildPhases = (
-				631D7DC325C3B295D0BAEC7B18BE12E1 /* Sources */,
-				9D80E187765FAA009800C6F209A7ACD7 /* Frameworks */,
-				3AE946ECC5D41F91ADE2566C5DC8306D /* Resources */,
+				83A46300407B935DE9461F255A2DF5AF /* Sources */,
+				BCB17C30C79CE1C120734750BB219647 /* Frameworks */,
+				83F57B391B0DF3838FC209D353270827 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				960A34FE31547D9B1EFE5ECBDEE60BC1 /* PBXTargetDependency */,
+			);
+			name = ACEToolKit;
+			productName = ACEToolKit;
+			productReference = 80AB2117B1B16DD3D8C7E9E33831F89F /* libACEToolKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8F89C867113D784BD307BD08052094BF /* FFGlobalAlertController-FFGlobalAlertController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F5078D33404617D4A5DA3A9A4D78646 /* Build configuration list for PBXNativeTarget "FFGlobalAlertController-FFGlobalAlertController" */;
+			buildPhases = (
+				DD3FC9F6A54EE09FE62DAAFBC6366E84 /* Sources */,
+				BFFF046F3BA7B31C2AA1E80B7888500A /* Frameworks */,
+				AD0AAED5F8ABEFB09372E3F5D7C34632 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -376,36 +398,18 @@
 			productReference = 76E925A5CF64C102CC66DFF2B7E37A67 /* FFGlobalAlertController.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		9218B10E545D857EF24CD890F1913AB4 /* ACEToolKit */ = {
+		9305A557A0C3CE5AA59E9A85F2E34E43 /* FFGlobalAlertController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDDE50C1DB4039E863584A5A6C2171CC /* Build configuration list for PBXNativeTarget "ACEToolKit" */;
+			buildConfigurationList = 74EF4C4B03DD4DFA8D3FE1D86A64045C /* Build configuration list for PBXNativeTarget "FFGlobalAlertController" */;
 			buildPhases = (
-				F8970A437B6EBACEABF5928A2BB289B7 /* Sources */,
-				D8A637241C6CE54F7DC7F48F8C875055 /* Frameworks */,
-				F0FDABCF891371D7AC91B84CBD46EB42 /* Headers */,
+				0CBE2D8C708E24CBA80739846E4407DA /* Sources */,
+				B801DF9F72B3AF147E2A6E2CE088008A /* Frameworks */,
+				C51233AC3FACAB5F458AE807939BD089 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				72095DD9084835FC64F9008C95219E74 /* PBXTargetDependency */,
-			);
-			name = ACEToolKit;
-			productName = ACEToolKit;
-			productReference = 80AB2117B1B16DD3D8C7E9E33831F89F /* libACEToolKit.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		C71C5CC2938F9D844278A557C81BD595 /* FFGlobalAlertController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F315AF6B16D34511662652D3553A917C /* Build configuration list for PBXNativeTarget "FFGlobalAlertController" */;
-			buildPhases = (
-				7E6B27FC238D7BCA63AB299878983967 /* Sources */,
-				1FD3C210EBBF37B34A3E244EA68445D0 /* Frameworks */,
-				057F2D0201BCB7715AE6D09E74FE4802 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				618374AFEA5AF855BDF1DABB77EBF41F /* PBXTargetDependency */,
+				47BDD4809D0E745D653A4AE3622E02CC /* PBXTargetDependency */,
 			);
 			name = FFGlobalAlertController;
 			productName = FFGlobalAlertController;
@@ -451,16 +455,16 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9218B10E545D857EF24CD890F1913AB4 /* ACEToolKit */,
-				C71C5CC2938F9D844278A557C81BD595 /* FFGlobalAlertController */,
-				542709AE0C9A4D5659414D44915C810F /* FFGlobalAlertController-FFGlobalAlertController */,
+				424FA0087C9C8F48DB7EE7965AC7A112 /* ACEToolKit */,
+				9305A557A0C3CE5AA59E9A85F2E34E43 /* FFGlobalAlertController */,
+				8F89C867113D784BD307BD08052094BF /* FFGlobalAlertController-FFGlobalAlertController */,
 				D8E179A7A551CDB55A518FF0627A5AF2 /* Pods-ACEToolKitDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3AE946ECC5D41F91ADE2566C5DC8306D /* Resources */ = {
+		AD0AAED5F8ABEFB09372E3F5D7C34632 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -470,19 +474,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		631D7DC325C3B295D0BAEC7B18BE12E1 /* Sources */ = {
+		0CBE2D8C708E24CBA80739846E4407DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA6EF8D085954318180CACE61392B52 /* FFGlobalAlertController-dummy.m in Sources */,
+				F557B31CDE27EEDAC7CB11F27383ED13 /* UIAlertController+Window.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7E6B27FC238D7BCA63AB299878983967 /* Sources */ = {
+		83A46300407B935DE9461F255A2DF5AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				308D0E033375085A1C7E316A684B0A0E /* FFGlobalAlertController-dummy.m in Sources */,
-				F23B17EAC65602BE52A0AF85F2F4261D /* UIAlertController+Window.m in Sources */,
+				ED7201EAAA4CA534FDE55C711D1AAB2C /* ACEActionSheet.m in Sources */,
+				3F2AFB7E7BB71362B7AE27916126CDDB /* ACEAlertView.m in Sources */,
+				2D5DF4D23A7A8FFFC0F9C633BF43E1EB /* ACEColor.m in Sources */,
+				77B9DAD2BF7A3F26B755B3D8F659ACEA /* ACEErrorUtils.m in Sources */,
+				AC82DAEFFFD5316C002108F4E6AC5C40 /* ACEImage.m in Sources */,
+				B49B7EE6EB0D2AB00CB13FD600074CA7 /* ACENavigationController.m in Sources */,
+				A9D6092B656F0307D8EED3C07BF7E81A /* ACEPathUtils.m in Sources */,
+				8C7F35D8D9760E649D59F226D7AE312E /* ACETextLabel.m in Sources */,
+				9842F4BD0A732C60F3D93611B0B0BC9C /* ACEToolKit-dummy.m in Sources */,
+				400C78B24ACBCD67F20F550A2643D03E /* ACEView.m in Sources */,
+				67DEC9C36DE07B0DE1449A7C851BD745 /* ACEViewController.m in Sources */,
+				40D8802885221309514420BB724046B1 /* NSMutableDictionary+ACEToolKit.m in Sources */,
+				90C9FBAFD5B050C9FB1DA16BB9918FB8 /* NSString+ACEToolKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,56 +511,83 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F8970A437B6EBACEABF5928A2BB289B7 /* Sources */ = {
+		DD3FC9F6A54EE09FE62DAAFBC6366E84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77657CDB59ECB4E78B3AE6780349B056 /* ACEActionSheet.m in Sources */,
-				E55105FBEA92F39ECC113FD81E1EE433 /* ACEAlertView.m in Sources */,
-				DAA575767E42D0B7997522A8E2ADB24B /* ACEColor.m in Sources */,
-				AA7A3EF56577300CF43F112FF31E62FF /* ACEErrorUtils.m in Sources */,
-				4656A05E1E605EDCA05EFEE5B97A18A0 /* ACEImage.m in Sources */,
-				61461E54E77621D257461C90007BE06B /* ACENavigationController.m in Sources */,
-				307D102F5AE5B5597C7D09EC51B865D9 /* ACEPathUtils.m in Sources */,
-				30FF70E83A39AA4AE64DB8F8962704B0 /* ACETextLabel.m in Sources */,
-				845874675334A9D5372E6C4BEBD61050 /* ACEToolKit-dummy.m in Sources */,
-				933B7893F7E9312C480B909ECD3C0622 /* ACEView.m in Sources */,
-				3CD560C49CBE0167B81BDF55A5A8A941 /* ACEViewController.m in Sources */,
-				A8E20274380572D7B15A8F9537DD108A /* NSMutableDictionary+ACEToolKit.m in Sources */,
-				1995018024B3A485FA3A22F401F8E0DF /* NSString+ACEToolKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		618374AFEA5AF855BDF1DABB77EBF41F /* PBXTargetDependency */ = {
+		47BDD4809D0E745D653A4AE3622E02CC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "FFGlobalAlertController-FFGlobalAlertController";
-			target = 542709AE0C9A4D5659414D44915C810F /* FFGlobalAlertController-FFGlobalAlertController */;
-			targetProxy = 5AEFBA25E01E81D7535E7FBFC6F0B4EB /* PBXContainerItemProxy */;
+			target = 8F89C867113D784BD307BD08052094BF /* FFGlobalAlertController-FFGlobalAlertController */;
+			targetProxy = CD6A692FB3969A10ED7E01BA7D028EB0 /* PBXContainerItemProxy */;
 		};
-		72095DD9084835FC64F9008C95219E74 /* PBXTargetDependency */ = {
+		960A34FE31547D9B1EFE5ECBDEE60BC1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FFGlobalAlertController;
-			target = C71C5CC2938F9D844278A557C81BD595 /* FFGlobalAlertController */;
-			targetProxy = 43E6571B07D8E1EA893D03C7CA6E23A5 /* PBXContainerItemProxy */;
+			target = 9305A557A0C3CE5AA59E9A85F2E34E43 /* FFGlobalAlertController */;
+			targetProxy = B3B91079AEBE04B2CECBDF011F8825C4 /* PBXContainerItemProxy */;
 		};
 		CE411C5A028DE8DCCCF7357F09EAA9B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FFGlobalAlertController;
-			target = C71C5CC2938F9D844278A557C81BD595 /* FFGlobalAlertController */;
+			target = 9305A557A0C3CE5AA59E9A85F2E34E43 /* FFGlobalAlertController */;
 			targetProxy = BB5D9C2ABE0BFF0C3EADE9286C21B366 /* PBXContainerItemProxy */;
 		};
 		FB652E1C6F4F7DE4D2D3F93007556AA6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ACEToolKit;
-			target = 9218B10E545D857EF24CD890F1913AB4 /* ACEToolKit */;
+			target = 424FA0087C9C8F48DB7EE7965AC7A112 /* ACEToolKit */;
 			targetProxy = 30167ECFE67253FA3CD546202F1003D1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		05C0F4B0EA5F05DA398D8DD8A739CFF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ED5BE9AA9ADF1E3EA361829CCC3B576 /* FFGlobalAlertController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FFGlobalAlertController/FFGlobalAlertController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2AD1455AB4FECCAB74B4782685BCB1E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ED5BE9AA9ADF1E3EA361829CCC3B576 /* FFGlobalAlertController.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FFGlobalAlertController";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/FFGlobalAlertController/ResourceBundle-FFGlobalAlertController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = FFGlobalAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		34FE9531DA9AF2820790339988D5FF41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -588,19 +632,19 @@
 			};
 			name = Release;
 		};
-		5E62E1109B462F5A1E9AACEF23D25B14 /* Debug */ = {
+		4248CD2D9345CB6E0B1A6483D198BB41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 44910C25460488D97B695F1DC5223E15 /* ACEToolKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/ACEToolKit/ACEToolKit-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -609,7 +653,30 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
+		};
+		71B752B8E331FF6F13B7EB2272C45D07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ED5BE9AA9ADF1E3EA361829CCC3B576 /* FFGlobalAlertController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FFGlobalAlertController/FFGlobalAlertController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		9AFD29195103A11E5958A549AA0D31DB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -634,7 +701,7 @@
 			};
 			name = Release;
 		};
-		9D0FE3298DF2E27F62E0BDABA78B244A /* Debug */ = {
+		A95CE588B47129831D4A6BB03062D520 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1ED5BE9AA9ADF1E3EA361829CCC3B576 /* FFGlobalAlertController.xcconfig */;
 			buildSettings = {
@@ -650,23 +717,6 @@
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
-		};
-		9FF22495A95BE730880FEE7B40185C55 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1ED5BE9AA9ADF1E3EA361829CCC3B576 /* FFGlobalAlertController.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FFGlobalAlertController";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/FFGlobalAlertController/ResourceBundle-FFGlobalAlertController-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = FFGlobalAlertController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
 		};
 		C104F7F091290C3D1E248192F07FE689 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -716,19 +766,19 @@
 			};
 			name = Debug;
 		};
-		C506DC560DDC9F86EC90D4F926088D19 /* Release */ = {
+		CA2A9DF8C696BC149E7B610BE0267C37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 44910C25460488D97B695F1DC5223E15 /* ACEToolKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/ACEToolKit/ACEToolKit-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -737,7 +787,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		D085176E50AA1604180D33FAFD502D36 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -762,69 +812,32 @@
 			};
 			name = Debug;
 		};
-		D390B6122688D87DDA1AF1519C871DD2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1ED5BE9AA9ADF1E3EA361829CCC3B576 /* FFGlobalAlertController.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FFGlobalAlertController/FFGlobalAlertController-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		FA431FCDA93631381BE0599551FA1A48 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1ED5BE9AA9ADF1E3EA361829CCC3B576 /* FFGlobalAlertController.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FFGlobalAlertController/FFGlobalAlertController-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1F93F2A3F59E30974C7A0C7C6E7A1CEE /* Build configuration list for PBXNativeTarget "FFGlobalAlertController-FFGlobalAlertController" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9D0FE3298DF2E27F62E0BDABA78B244A /* Debug */,
-				9FF22495A95BE730880FEE7B40185C55 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C104F7F091290C3D1E248192F07FE689 /* Debug */,
 				34FE9531DA9AF2820790339988D5FF41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74EF4C4B03DD4DFA8D3FE1D86A64045C /* Build configuration list for PBXNativeTarget "FFGlobalAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05C0F4B0EA5F05DA398D8DD8A739CFF5 /* Debug */,
+				71B752B8E331FF6F13B7EB2272C45D07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F5078D33404617D4A5DA3A9A4D78646 /* Build configuration list for PBXNativeTarget "FFGlobalAlertController-FFGlobalAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A95CE588B47129831D4A6BB03062D520 /* Debug */,
+				2AD1455AB4FECCAB74B4782685BCB1E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -838,20 +851,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDDE50C1DB4039E863584A5A6C2171CC /* Build configuration list for PBXNativeTarget "ACEToolKit" */ = {
+		DEB1F399EADB9946E888FF53A7147E0E /* Build configuration list for PBXNativeTarget "ACEToolKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E62E1109B462F5A1E9AACEF23D25B14 /* Debug */,
-				C506DC560DDC9F86EC90D4F926088D19 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F315AF6B16D34511662652D3553A917C /* Build configuration list for PBXNativeTarget "FFGlobalAlertController" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D390B6122688D87DDA1AF1519C871DD2 /* Debug */,
-				FA431FCDA93631381BE0599551FA1A48 /* Release */,
+				CA2A9DF8C696BC149E7B610BE0267C37 /* Debug */,
+				4248CD2D9345CB6E0B1A6483D198BB41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

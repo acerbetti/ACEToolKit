@@ -22,7 +22,7 @@
 //
 
 
-#import "ACEToolKit.h"
+#import "ACEImage.h"
 
 @implementation ACEImage (ACEToolKit)
 

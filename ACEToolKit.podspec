@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'ACEToolKit'
-  s.version      = '0.3.5'
+  s.version      = '0.4.0'
   s.homepage     = 'https://github.com/acerbetti/ACEToolKit'
   s.summary      = 'Development tools to make my life (and yours) a little bit easier.'
   s.author       = { 'Stefano Acerbetti' => 'acerbetti@gmail.com' }
